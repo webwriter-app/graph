@@ -1,6 +1,6 @@
-import { AnimationType } from '../types';
+import { AnimationStep } from '../types';
 
-export function setAnimationStatus(status: string, emitter) {
+export function setAnimationStatus(status: string, emitter: EventTarget) {
     emitter.dispatchEvent(
         new CustomEvent('animation-status-update', {
             bubbles: true,
@@ -10,7 +10,7 @@ export function setAnimationStatus(status: string, emitter) {
     );
 }
 
-export function dispatchAnimationEvent(emitter) {
+export function dispatchAnimationEvent(emitter: EventTarget) {
     emitter.dispatchEvent(
         new CustomEvent('animate-graph', {
             bubbles: true,
@@ -19,7 +19,7 @@ export function dispatchAnimationEvent(emitter) {
     );
 }
 
-export function setAlgoEvent(emitter, algo: string) {
+export function setAlgoEvent(emitter: EventTarget, algo: string) {
     emitter.dispatchEvent(
         new CustomEvent('algo-update', {
             bubbles: true,
@@ -29,7 +29,7 @@ export function setAlgoEvent(emitter, algo: string) {
     );
 }
 
-export function dispatchGraphReset(emitter) {
+export function dispatchGraphReset(emitter: EventTarget) {
     emitter.dispatchEvent(
         new CustomEvent('reset-graph', {
             bubbles: true,
@@ -38,7 +38,7 @@ export function dispatchGraphReset(emitter) {
     );
 }
 
-export function setAnimationPosition(position: number, emitter) {
+export function setAnimationPosition(position: number, emitter: EventTarget) {
     emitter.dispatchEvent(
         new CustomEvent('animation-position-update', {
             bubbles: true,
@@ -48,12 +48,22 @@ export function setAnimationPosition(position: number, emitter) {
     );
 }
 
-export function setAnimation(animation: AnimationType, emitter) {
+export function setAnimation(animation: AnimationStep[], emitter: EventTarget) {
     emitter.dispatchEvent(
         new CustomEvent('animation-update', {
             bubbles: true,
             composed: true,
             detail: animation,
+        })
+    );
+}
+
+export function deleteAnimationStep(index: number, emitter: EventTarget) {
+    emitter.dispatchEvent(
+        new CustomEvent('delete-animation-step', {
+            bubbles: true,
+            composed: true,
+            detail: index,
         })
     );
 }

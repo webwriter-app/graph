@@ -1,45 +1,57 @@
-import { AnimationType } from "../types";
+import SHOELACE from "utils/shoelace";
+import { AlgorithmType, AnimationStep, iGraph } from "../types";
 
-export function dfs(start, graph, target) {
-  let animation: AnimationType = [];
+export default {
+  id: "dfs",
+  name: "Depth First Search",
+  function: dfs,
+  inputs: {
+    startNode: true,
+    targetNode: true,
+  },
+} as AlgorithmType;
 
-  let visited = {};
-  let adjacent = {};
+function dfs(graph: iGraph, start: number, target: number): AnimationStep[] {
+  let animation: AnimationStep[] = [];
+
+  let visited: Record<number, boolean> = {};
+  let adjacent: Record<number, number[]> = {};
   for (let n of graph.nodes) {
-    adjacent[n.name] = [];
-    visited[n.name] = false;
+    adjacent[n.id] = [];
+    visited[n.id] = false;
   }
   for (let l of graph.links) {
-    adjacent[l.source.name].push(l.target);
-    adjacent[l.target.name].push(l.source);
+    adjacent[l.source].push(l.target);
+    adjacent[l.target].push(l.source);
   }
 
-  let stack = [];
+  let stack: number[] = [];
   stack.push(start);
 
-  while (stack.length != 0) {
+  while (stack.length !== 0) {
     let current = stack.pop();
+    if (current === undefined) break;
 
     animation.push({
-      type: "NODE",
-      data: { names: [current.name], colors: ["green"] },
+      type: "node",
+      data: { names: [current], colors: [SHOELACE.color.yellow[500]] },
     });
 
-    if (current.name == target) {
+    if (current === target) {
       animation.push({
-        type: "NODE",
-        data: { names: [current.name], colors: ["#32CD32"] },
+        type: "node",
+        data: { names: [current], colors: [SHOELACE.color.green[500]] },
       });
       return animation;
     }
 
-    if (visited[current.name] == false) {
-      visited[current.name] = true;
+    if (visited[current] === false) {
+      visited[current] = true;
     }
 
-    for (let node = 0; node < adjacent[current.name].length; node++) {
-      if (!visited[adjacent[current.name][node].name])
-        stack.push(adjacent[current.name][node]);
+    for (let node = 0; node < adjacent[current].length; node++) {
+      if (!visited[adjacent[current][node]])
+        stack.push(adjacent[current][node]);
     }
   }
   return animation;
