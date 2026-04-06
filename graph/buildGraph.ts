@@ -244,6 +244,10 @@ export function buildChart(svg: Selection<Element, unknown, null, undefined>, wi
       });
   }
 
+  // Apply positions synchronously so elements are never painted at 0,0
+  // (This prevents issues when changing the graph component's width)
+  ticked();
+
   function dragstarted(event: D3DragEvent<SVGElement, d3Node, d3Node>, d: d3Node) {
     if (!event.active) simulation.alphaTarget(0.3).restart();
     d.fx = d.x;

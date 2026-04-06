@@ -8,8 +8,29 @@ import { select } from 'd3-selection';
 import { buildChart } from '../graph/buildGraph';
 
 export class Graph extends LitElementWw {
-    @property() accessor width: number = 798;
-    @property() accessor height: number = 600;
+    @property({ type: Number }) accessor width: number = 0;
+    @property({ type: Number }) accessor height: number = 600;
+
+    private _resizeObserver: ResizeObserver | null = null;
+
+    connectedCallback() {
+        super.connectedCallback();
+        this._resizeObserver = new ResizeObserver((entries) => {
+            for (const entry of entries) {
+                const newWidth = Math.floor(entry.contentRect.width);
+                if (newWidth > 0 && newWidth !== this.width) {
+                    this.width = newWidth;
+                }
+            }
+        });
+        this._resizeObserver.observe(this);
+    }
+
+    disconnectedCallback() {
+        super.disconnectedCallback();
+        this._resizeObserver?.disconnect();
+        this._resizeObserver = null;
+    }
 
     @property({ type: Number })
     accessor highlightedNode: number | null = null;
@@ -54,7 +75,7 @@ export class Graph extends LitElementWw {
     }
 
     updated(changedProperties: Map<string, unknown>) {
-        if (!this.shadowRoot) return;
+        if (!this.shadowRoot || this.width === 0) return;
         const svg = select(this.shadowRoot.querySelectorAll('.chart')[0])
             .attr('width', this.width)
             .attr('height', this.height);
@@ -140,6 +161,11 @@ export class Graph extends LitElementWw {
     }
 
     static styles = css`
+        :host {
+            display: block;
+            width: 100%;
+        }
+
         svg {
             -webkit-touch-callout: none;
             -webkit-user-select: none;

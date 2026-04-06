@@ -448,14 +448,6 @@ export default class GraphViz extends LitElementWw {
 
     render() {
         return html`
-        ${this.isContentEditable ? html`
-            <options-component
-                part="options"
-                .permissions=${this.permissions}
-
-                @permission-change=${this._handlePermissionChange}
-            ></options-component>
-        ` : null}
         <div>
             ${this.permissions.edit.enabled || this.permissions.algorithm.enabled || this.permissions.animation.enabled || this.permissions.general.play ? html`
                 <top-bar 
@@ -540,7 +532,16 @@ export default class GraphViz extends LitElementWw {
                     .linkCursorMode=${((this.mode === 'edit' && !this.addingEdge) || (this.selectedAnimationStep !== null && this.animation[this.selectedAnimationStep]?.type === 'link' && this.permissions.animation.editStep)) ? 'crosshair' : 'default'}
                 ></display-graph>
             </div>
-        </div>`;
+        </div>
+        
+        ${this.isContentEditable ? html`
+            <options-component
+                part="options"
+                .permissions=${this.permissions}
+
+                @permission-change=${this._handlePermissionChange}
+            ></options-component>
+        ` : null}`;
     }
 
     private _handleModeChange(e: CustomEvent) {

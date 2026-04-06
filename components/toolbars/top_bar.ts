@@ -79,9 +79,13 @@ export class TopBar extends LitElementWw {
 						)
 					: null}
 			</sl-button-group>
-			<div class="spacer"></div>
-			${this.renderCycleButton()}
-			<sl-button-group> ${this.renderActionButtons()} </sl-button-group>
+			<div class="right">
+				<div class="spacer"></div>
+				${this.renderCycleButton()}
+				<sl-button-group>
+					${this.renderActionButtons()}
+				</sl-button-group>
+			</div>
 		`;
 	}
 
@@ -114,7 +118,9 @@ export class TopBar extends LitElementWw {
 			if (this.animationStatus !== "RUN") {
 				actionButtons.push(
 					this.ActionButton(
-						this.mode === "algorithm" ? msg("Execute") : msg("Play"),
+						this.mode === "algorithm"
+							? msg("Execute")
+							: msg("Play"),
 						this.mode === "algorithm"
 							? "execute-algorithm"
 							: "start-animation",
