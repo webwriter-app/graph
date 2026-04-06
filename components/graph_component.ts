@@ -164,6 +164,7 @@ export class Graph extends LitElementWw {
         :host {
             display: block;
             width: 100%;
+            line-height: 0;
         }
 
         svg {

@@ -237,10 +237,10 @@ export function buildChart(svg: Selection<Element, unknown, null, undefined>, wi
 
     node
       .attr("cx", function (d) {
-        return (d.x = Math.max(radius, Math.min(width - radius, d.x ?? 0)));
+        return d.x ?? 0;
       })
       .attr("cy", function (d) {
-        return (d.y = Math.max(radius, Math.min(height - radius, d.y ?? 0)));
+        return d.y ?? 0;
       });
   }
 
