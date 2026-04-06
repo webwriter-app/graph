@@ -5,7 +5,7 @@ import { permissionsContext } from "utils/context";
 import { PermissionsType } from "types";
 import { localized, msg } from "@lit/localize";
 
-import algorithms from "algorithms";
+import algorithms, { getAlgorithmName } from "algorithms";
 
 import styles from "./algorithm_bar.styles";
 
@@ -90,7 +90,7 @@ export class AlgorithmBar extends LitElementWw {
 				>
 					${visibleAlgorithms.map(
 						(algo) => html`
-							<sl-option value=${algo.id}>${algo.name}</sl-option>
+							<sl-option value=${algo.id}>${getAlgorithmName(algo.id)}</sl-option>
 						`,
 					)}
 				</sl-select>

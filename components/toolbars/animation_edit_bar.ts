@@ -244,7 +244,7 @@ export class AnimationEditBar extends LitElementWw {
 		} else if (animationStep.type === "reset") {
 			output.push(html`
 				<div>
-					<span>reset &hellip;</span>
+					<span>${msg("reset")} &hellip;</span>
 					<sl-checkbox
 						size="small"
 						?disabled=${this.permissions?.animation?.editStep ===
@@ -256,7 +256,7 @@ export class AnimationEditBar extends LitElementWw {
 							}
 							this.updateStepData({ nodes: e.target.checked });
 						}}
-						>node colors</sl-checkbox
+						>${msg("node colors")}</sl-checkbox
 					>
 					<sl-checkbox
 						size="small"
@@ -269,7 +269,7 @@ export class AnimationEditBar extends LitElementWw {
 							}
 							this.updateStepData({ links: e.target.checked });
 						}}
-						>link colors</sl-checkbox
+						>${msg("edge colors")}</sl-checkbox
 					>
 					<sl-checkbox
 						size="small"
@@ -282,7 +282,7 @@ export class AnimationEditBar extends LitElementWw {
 							}
 							this.updateStepData({ subtexts: e.target.checked });
 						}}
-						>node subtexts</sl-checkbox
+						>${msg("node subtexts")}</sl-checkbox
 					>
 				</div>
 			`);
@@ -305,7 +305,7 @@ export class AnimationEditBar extends LitElementWw {
 					@click=${() => this.deleteStep(this.selectedStep)}
 				>
 					<sl-icon .src=${trash} slot="prefix"></sl-icon>
-					Delete step
+					${msg("Delete step")}
 				</sl-button>
 			`);
 		}

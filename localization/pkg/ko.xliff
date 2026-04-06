@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.1" srcLang="en" trgLang="ko">
+<file id="." original=".">
+<unit id="description"><segment><source>Visualize graphs, simulate common graph algorithms (Kruskal, Dijkstra, BFS, DFS, etc.), and record your own graph animations.</source><target>그래프를 시각화하고, 일반적인 그래프 알고리즘(크루스칼, 다이크스트라, BFS, DFS 등)을 시뮬레이션하며, 직접 만든 그래프 애니메이션을 기록해 보세요.</target></segment></unit>
+</file>
+</xliff>

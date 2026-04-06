@@ -144,7 +144,7 @@ export class AnimationBar extends LitElementWw {
 											.src=${link}
 											slot="prefix"
 										></sl-icon>
-										${msg("Add link animation")}
+										${msg("Add edge animation")}
 									</sl-menu-item>
 									<sl-menu-item value="reset">
 										<sl-icon

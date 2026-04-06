@@ -90,7 +90,7 @@ export class TopBar extends LitElementWw {
 			return [
 				this.permissions?.edit?.addNode !== false
 					? this.ActionButton(
-							"Add node",
+							msg("Add node"),
 							"add-node",
 							circlePlus,
 							html`${msg("Add a node to the graph")}`,
@@ -98,7 +98,7 @@ export class TopBar extends LitElementWw {
 					: null,
 				this.permissions?.edit?.addEdge !== false
 					? this.ActionButton(
-							"Add edge",
+							msg("Add edge"),
 							"add-edge",
 							linkPlus,
 							html`${msg("Add an edge to the graph")}`,
@@ -114,7 +114,7 @@ export class TopBar extends LitElementWw {
 			if (this.animationStatus !== "RUN") {
 				actionButtons.push(
 					this.ActionButton(
-						this.mode === "algorithm" ? "Execute" : "Play",
+						this.mode === "algorithm" ? msg("Execute") : msg("Play"),
 						this.mode === "algorithm"
 							? "execute-algorithm"
 							: "start-animation",
@@ -129,7 +129,7 @@ export class TopBar extends LitElementWw {
 			} else {
 				actionButtons.push(
 					this.ActionButton(
-						"Pause",
+						msg("Pause"),
 						"pause-animation",
 						pause,
 						html`${msg("Pause the animation")}`,
@@ -141,7 +141,7 @@ export class TopBar extends LitElementWw {
 		if (this.animationStatus !== "STOP") {
 			actionButtons.push(
 				this.ActionButton(
-					"Stop",
+					msg("Stop"),
 					"stop-animation",
 					stop,
 					html`${msg("Stop the animation")}`,

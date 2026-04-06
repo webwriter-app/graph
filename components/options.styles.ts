@@ -30,4 +30,14 @@ export default css`
 		flex-direction: column;
 		gap: var(--sl-spacing-x-small);
 	}
+
+	sl-switch::part(base) {
+		width: 100%;
+	}
+
+	sl-switch::part(label) {
+		white-space: normal;
+		hyphens: auto;
+		min-width: 0;
+	}
 `;

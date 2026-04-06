@@ -3,6 +3,9 @@ import { css, html, PropertyValueMap, PropertyValues } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { property } from 'lit/decorators/property.js';
 import { provide } from '@lit/context';
+import { localized } from '@lit/localize';
+// @ts-ignore
+import LOCALIZE from 'localization/generated';
 import { permissionsContext } from 'utils/context';
 import './components/graph_component.ts';
 import { animateLinks } from './graph/animateLinks';
@@ -37,8 +40,11 @@ import SlOption from '@shoelace-style/shoelace/dist/components/option/option.com
 import SlSelect from '@shoelace-style/shoelace/dist/components/select/select.component.js';
 import SlIcon from '@shoelace-style/shoelace/dist/components/icon/icon.component.js';
 
+@localized()
 @customElement('webwriter-graphviz')
 export default class GraphViz extends LitElementWw {
+    protected localize = LOCALIZE;
+
     private _graph: iGraph = {
         nodes: [
             { id: 0, name: 'Ana' },
@@ -590,7 +596,7 @@ export default class GraphViz extends LitElementWw {
     }
 
     private _handleDeleteStep(e: CustomEvent) {
-        this.selectedAnimationStep = null;
+        this._handleSelectStep(new CustomEvent('select-step', { detail: null }));
         const index = e.detail;
         if (index === null || this.animation.length <= index) {
             return;

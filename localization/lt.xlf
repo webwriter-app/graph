@@ -1,0 +1,306 @@
+<xliff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd" xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="lit-localize-inputs" datatype="plaintext" source-language="en" target-language="lt">
+    <body>
+      <trans-unit id="se8dca0132c66ae03">
+        <source>Permissions</source>
+        <target>Teisės</target>
+      </trans-unit>
+      <trans-unit id="s7a3752d246cad654">
+        <source>Select algorithm</source>
+        <target>Pasirinkite algoritmą</target>
+      </trans-unit>
+      <trans-unit id="se2dec838f45444f5">
+        <source>Start node</source>
+        <target>Pradinis mazgas</target>
+      </trans-unit>
+      <trans-unit id="sf25d9576a8a29524">
+        <source>Target node</source>
+        <target>Tikslinis mazgas</target>
+      </trans-unit>
+      <trans-unit id="s1567c07498a2213d">
+        <source>No animation steps yet. Execute an algorithm or click "Add step" to create one.</source>
+        <target>Kol kas nėra jokių animacijos etapų. Vykdykite algoritmą arba spustelėkite „Pridėti etapą“, kad jį sukurtumėte.</target>
+      </trans-unit>
+      <trans-unit id="sbe40166a3c6f22ee">
+        <source>Add step</source>
+        <target>Pridėti veiksmą</target>
+      </trans-unit>
+      <trans-unit id="s5eb124d3e409dfe6">
+        <source>Add node animation</source>
+        <target>Pridėti mazgo animaciją</target>
+      </trans-unit>
+      <trans-unit id="s5222ccfc3ee461f9">
+        <source>Add reset animation</source>
+        <target>Pridėti atstatymo animaciją</target>
+      </trans-unit>
+      <trans-unit id="s08c6c27f5b8452b1">
+        <source>Add node subtext</source>
+        <target>Pridėti mazgo paaiškinimą</target>
+      </trans-unit>
+      <trans-unit id="s15ecca25bdb0ae6d">
+        <source>Select color to toggle:</source>
+        <target>Pasirinkite spalvą, kurią norite įjungti arba išjungti:</target>
+      </trans-unit>
+      <trans-unit id="s63b6897fba47590c">
+        <source>Select a node to edit its subtext.</source>
+        <target>Pasirinkite mazgą, kad redaguotumėte jo paantraštę.</target>
+      </trans-unit>
+      <trans-unit id="sebb864582f7c8b1e">
+        <source>Set node subtext:</source>
+        <target>Nustatyti mazgo paantraštę:</target>
+      </trans-unit>
+      <trans-unit id="s8b1360ffe490828f">
+        <source>Click on two nodes to add an edge between them.</source>
+        <target>Spustelėkite du mazgus, kad tarp jų būtų sukurta briauna.</target>
+      </trans-unit>
+      <trans-unit id="sdc673e73b5c13aea">
+        <source>Delete</source>
+        <target>Ištrinti</target>
+      </trans-unit>
+      <trans-unit id="s5a4633ffef40fc2b">
+        <source>Select a node or an edge to view details.</source>
+        <target>Pasirinkite mazgą arba briauną, kad peržiūrėtumėte išsamią informaciją.</target>
+      </trans-unit>
+      <trans-unit id="sfeb99afb5a2e03ca">
+        <source>Edit the graph</source>
+        <target>Redaguoti diagramą</target>
+      </trans-unit>
+      <trans-unit id="s479a2b6569da2fd0">
+        <source>Execute an algorithm on the graph</source>
+        <target>Vykdyti algoritmą grafike</target>
+      </trans-unit>
+      <trans-unit id="s3e97886fa614a7cd">
+        <source>Create or customize the algorithm animation</source>
+        <target>Sukurti arba pritaikyti algoritmo animaciją</target>
+      </trans-unit>
+      <trans-unit id="s02c6eb5adcf9b685">
+        <source>Add a node to the graph</source>
+        <target>Pridėti mazgą į grafiką</target>
+      </trans-unit>
+      <trans-unit id="sbe6971c94588088a">
+        <source>Add an edge to the graph</source>
+        <target>Pridėti kraštinę prie grafiko</target>
+      </trans-unit>
+      <trans-unit id="s11337fae701e3905">
+        <source>Execute the selected algorithm</source>
+        <target>Vykdyti pasirinktą algoritmą</target>
+      </trans-unit>
+      <trans-unit id="s81446419d1cc2026">
+        <source>Play the animation</source>
+        <target>Paleisti animaciją</target>
+      </trans-unit>
+      <trans-unit id="s0868f4ad15f32174">
+        <source>Pause the animation</source>
+        <target>Sustabdyti animaciją</target>
+      </trans-unit>
+      <trans-unit id="s3aff6f35c46b2d1c">
+        <source>Stop the animation</source>
+        <target>Sustabdyti animaciją</target>
+      </trans-unit>
+      <trans-unit id="s64ef2a6c2dd1d3d1">
+        <source>Edit</source>
+        <target>Redaguoti</target>
+      </trans-unit>
+      <trans-unit id="s696c4e8dab058caa">
+        <source>Algorithm</source>
+        <target>Algoritmas</target>
+      </trans-unit>
+      <trans-unit id="sa602e3fd3f2d98fd">
+        <source>Animation</source>
+        <target>Animacija</target>
+      </trans-unit>
+      <trans-unit id="sd8f669bc8044fad5">
+        <source>Cycle playback speed</source>
+        <target>Ciklo atkūrimo greitis</target>
+      </trans-unit>
+      <trans-unit id="s5e3cb80d43a34044">
+        <source>Black</source>
+        <target>Juoda</target>
+      </trans-unit>
+      <trans-unit id="s9ff1de19feac1b7c">
+        <source>Red</source>
+        <target>Raudona</target>
+      </trans-unit>
+      <trans-unit id="s8f450dd0b7bdb8cb">
+        <source>Orange</source>
+        <target>Oranžinė</target>
+      </trans-unit>
+      <trans-unit id="s6baf78886c99db89">
+        <source>Yellow</source>
+        <target>Geltona</target>
+      </trans-unit>
+      <trans-unit id="s3d0296b47fe6323c">
+        <source>Lime</source>
+        <target>Lime</target>
+      </trans-unit>
+      <trans-unit id="scf00d78fd5953f1c">
+        <source>Green</source>
+        <target>Žalia</target>
+      </trans-unit>
+      <trans-unit id="s9b3c2f9cc32d565a">
+        <source>Cyan</source>
+        <target>Ciano</target>
+      </trans-unit>
+      <trans-unit id="secf3d3a7c1693e2d">
+        <source>Blue</source>
+        <target>Mėlyna</target>
+      </trans-unit>
+      <trans-unit id="s109991b0423f1512">
+        <source>Violet</source>
+        <target>Violetinė</target>
+      </trans-unit>
+      <trans-unit id="se9beed19c6a38fed">
+        <source>Pink</source>
+        <target>Rožinė</target>
+      </trans-unit>
+      <trans-unit id="s965e11e1dbf9b906">
+        <source>Select Color</source>
+        <target>Pasirinkite spalvą</target>
+      </trans-unit>
+      <trans-unit id="s1995a948733ac7bd">
+        <source>Custom color</source>
+        <target>Pasirinktinė spalva</target>
+      </trans-unit>
+      <trans-unit id="sc3ac225273c8316b">
+        <source>General</source>
+        <target>Bendrieji</target>
+      </trans-unit>
+      <trans-unit id="se35b9d5e01a54031">
+        <source>Play animation</source>
+        <target>Paleisti animaciją</target>
+      </trans-unit>
+      <trans-unit id="s7a0ef32e481ee934">
+        <source>Change playback rate</source>
+        <target>Pakeisti atkūrimo greitį</target>
+      </trans-unit>
+      <trans-unit id="s429f70243017494b">
+        <source>Show "Edit" tab</source>
+        <target>Rodyti skirtuką „Redaguoti“</target>
+      </trans-unit>
+      <trans-unit id="s93e1d90707d925b1">
+        <source>Add nodes</source>
+        <target>Pridėti mazgus</target>
+      </trans-unit>
+      <trans-unit id="s2a8381f6c75559d6">
+        <source>Add edges</source>
+        <target>Pridėti kraštus</target>
+      </trans-unit>
+      <trans-unit id="s1e6553efcf857c16">
+        <source>Edit node labels</source>
+        <target>Redaguoti mazgų pavadinimus</target>
+      </trans-unit>
+      <trans-unit id="sc64dc04864a90f93">
+        <source>Edit edge weights</source>
+        <target>Redaguoti kraštų svorius</target>
+      </trans-unit>
+      <trans-unit id="s1661e77a58ba4dfb">
+        <source>Delete nodes</source>
+        <target>Ištrinti mazgus</target>
+      </trans-unit>
+      <trans-unit id="sa581031d1301788c">
+        <source>Delete edges</source>
+        <target>Ištrinti briaunas</target>
+      </trans-unit>
+      <trans-unit id="s42b445d0b8ef5e0c">
+        <source>Show "Algorithm" tab</source>
+        <target>Rodyti skirtuką „Algoritmas“</target>
+      </trans-unit>
+      <trans-unit id="s07ada4fedbfa9525">
+        <source>Executable algorithms</source>
+        <target>Vykdomieji algoritmai</target>
+      </trans-unit>
+      <trans-unit id="seb1e51fbf69345e1">
+        <source>Show "Animation" tab</source>
+        <target>Rodyti skirtuką „Animacija“</target>
+      </trans-unit>
+      <trans-unit id="s74e8052a415f4b28">
+        <source>Edit animation steps</source>
+        <target>Redaguoti animacijos etapus</target>
+      </trans-unit>
+      <trans-unit id="s4ddda90d75c39e3f">
+        <source>Delete animation steps</source>
+        <target>Ištrinti animacijos etapus</target>
+      </trans-unit>
+      <trans-unit id="s405fdfa767fb6359">
+        <source>Breadth First Search</source>
+        <target>Paieška pagal plotį</target>
+      </trans-unit>
+      <trans-unit id="sb202f05c9211ece8">
+        <source>Depth First Search</source>
+        <target>Paieška pagal gylį</target>
+      </trans-unit>
+      <trans-unit id="s5ed298f51c2bbc54">
+        <source>Dijkstra's Algorithm</source>
+        <target>Dijkstros algoritmas</target>
+      </trans-unit>
+      <trans-unit id="sa38c309ccd6a88f9">
+        <source>Spanning Tree (Borůvka's Algorithm)</source>
+        <target>Sparčiausiasis medis (Borůvkos algoritmas)</target>
+      </trans-unit>
+      <trans-unit id="s6a01e45e773c6162">
+        <source>Cycle Detection</source>
+        <target>Ciklo nustatymas</target>
+      </trans-unit>
+      <trans-unit id="s1eac2cbaf3e3603e">
+        <source>Graph Coloring (Brute Force)</source>
+        <target>Grafų spalvinimas (brute force)</target>
+      </trans-unit>
+      <trans-unit id="s3becc96710a224ab">
+        <source>Add edge animation</source>
+        <target>Pridėti krašto animaciją</target>
+      </trans-unit>
+      <trans-unit id="s0f136ff2c086b760">
+        <source>reset</source>
+        <target>atstatyti</target>
+      </trans-unit>
+      <trans-unit id="s91bd3118111af6ef">
+        <source>node colors</source>
+        <target>mazgų spalvos</target>
+      </trans-unit>
+      <trans-unit id="s42929dd473f85b2d">
+        <source>node subtexts</source>
+        <target>mazgo kontekstai</target>
+      </trans-unit>
+      <trans-unit id="sf3659df71f61b3ec">
+        <source>Delete step</source>
+        <target>Ištrinti veiksmą</target>
+      </trans-unit>
+      <trans-unit id="sbb09e02e1b0afeef">
+        <source>Node label</source>
+        <target>Mazgo pavadinimas</target>
+      </trans-unit>
+      <trans-unit id="s22a7cbddf50e8584">
+        <source>Edge weight</source>
+        <target>Krašto svoris</target>
+      </trans-unit>
+      <trans-unit id="se63c78875f5b2178">
+        <source>Add node</source>
+        <target>Pridėti mazgą</target>
+      </trans-unit>
+      <trans-unit id="sceb35fbe10efb7a1">
+        <source>Add edge</source>
+        <target>Pridėti kraštą</target>
+      </trans-unit>
+      <trans-unit id="sc4fdeccf14be5378">
+        <source>Execute</source>
+        <target>Vykdyti</target>
+      </trans-unit>
+      <trans-unit id="scd105819b5a10243">
+        <source>Play</source>
+        <target>Žaisti</target>
+      </trans-unit>
+      <trans-unit id="s061cc20e3432dead">
+        <source>Pause</source>
+        <target>Pauzė</target>
+      </trans-unit>
+      <trans-unit id="sd9ad53251f2330a5">
+        <source>Stop</source>
+        <target>Sustok</target>
+      </trans-unit>
+      <trans-unit id="s597d652edb302c38">
+        <source>edge colors</source>
+        <target>kraštų spalvos</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

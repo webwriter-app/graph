@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.1" srcLang="en" trgLang="zh-Hans">
+<file id="." original=".">
+<unit id="description"><segment><source>Visualize graphs, simulate common graph algorithms (Kruskal, Dijkstra, BFS, DFS, etc.), and record your own graph animations.</source><target>可视化图结构，模拟常见的图算法（克鲁斯卡尔、迪杰斯特拉、广度优先搜索、深度优先搜索等），并录制您自己的图动画。</target></segment></unit>
+</file>
+</xliff>

@@ -137,7 +137,7 @@ export class EditBar extends LitElementWw {
 			)?.name;
 			return html`
 				${html`<sl-input
-					label="Node label"
+					label=${msg("Node label")}
 					size="small"
 					?disabled=${this.permissions?.edit?.editNode === false}
 					.value=${selectedNodeName ?? ""}
@@ -166,7 +166,7 @@ export class EditBar extends LitElementWw {
 			)?.weight;
 			return html`
 				${html`<sl-input
-					label="Edge weight"
+					label=${msg("Edge weight")}
 					size="small"
 					type="number"
 					autocomplete="off"

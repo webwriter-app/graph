@@ -45,8 +45,8 @@ export default css`
 	}
 
 	p {
-		line-height: 1;
-		margin-left: var(--sl-spacing-small);
+		line-height: 1.3;
+		margin: 0 0 0 var(--sl-spacing-small);
 		color: var(--sl-color-neutral-600);
 		font-size: var(--sl-font-size-small);
 	}

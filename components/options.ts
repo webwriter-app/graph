@@ -1,6 +1,8 @@
 import { LitElementWw } from "@webwriter/lit";
 import { html, TemplateResult } from "lit";
 import { localized, msg } from "@lit/localize";
+// @ts-ignore
+import LOCALIZE from "localization/generated";
 
 import styles from "./options.styles";
 
@@ -57,7 +59,7 @@ export class OptionsComponent extends LitElementWw {
 	}
 
 	protected renderPermissionGroup(
-		group: (typeof permissionGroups)[0],
+		group: ReturnType<typeof permissionGroups>[0],
 	): TemplateResult {
 		const groupPerms = this.permissions?.[group.id] as Record<string, any> | undefined;
 		return html`
@@ -71,6 +73,7 @@ export class OptionsComponent extends LitElementWw {
 						if (permission.type === "checkbox")
 							return html`
 								<sl-switch
+									lang=${LOCALIZE.getLocale()}
 									?checked=${groupPerms?.[permission.id]}
 									?disabled=${!groupPerms ||
 									(group.id !== "general" &&
@@ -139,7 +142,7 @@ export class OptionsComponent extends LitElementWw {
 	protected render(): TemplateResult {
 		return html`<h2>${msg("Permissions")}</h2>
 
-			${permissionGroups.map((group) =>
+			${permissionGroups().map((group) =>
 				this.renderPermissionGroup(group),
 			)} `;
 	}
