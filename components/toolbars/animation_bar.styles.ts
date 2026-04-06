@@ -44,9 +44,18 @@ export default css`
 		scroll-timeline: --scrollfade x;
 	}
 
+	.no-steps {
+		flex-grow: 1;
+		overflow-y: auto;
+		padding: var(--sl-spacing-x-small) var(--sl-spacing-small);
+		display: flex;
+		flex-direction: column;
+	}
+
 	p {
 		line-height: 1.3;
-		margin: 0 0 0 var(--sl-spacing-small);
+		padding-left: var(--sl-spacing-x-small);
+		margin-block: auto;
 		color: var(--sl-color-neutral-600);
 		font-size: var(--sl-font-size-small);
 	}

@@ -89,21 +89,20 @@ export class AnimationBar extends LitElementWw {
 
 	protected render(): TemplateResult<1> {
 		return html`<div class="container">
-			<div class="steps" @click=${this._handleStepsClick}>
-				${this.animation.length > 0
-					? this.animation.map((step, index) =>
+			${this.animation.length > 0
+				? html`<div class="steps" @click=${this._handleStepsClick}>
+						${this.animation.map((step, index) =>
 							this.renderStep(step, index),
-						)
-					: html`
-							<div class="no-steps">
-								<p>
-									${msg(
-										'No animation steps yet. Execute an algorithm or click "Add step" to create one.',
-									)}
-								</p>
-							</div>
-						`}
-			</div>
+						)}
+					</div>`
+				: html`<div class="no-steps" @click=${this._handleStepsClick}>
+						<p>
+							${msg(
+								'No animation steps yet. Execute an algorithm or click "Add step" to create one.',
+							)}
+						</p>
+					</div>`}
+
 
 			${this.permissions?.animation?.editStep !== false
 				? html` <div class="divider-container">
