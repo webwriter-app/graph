@@ -1,5 +1,5 @@
 {
-    "name": "@webwriter/graph-viz",
+    "name": "@webwriter/graph",
     "version": "1.0.0",
     "description": "Visualize graphs, simulate common graph algorithms (Kruskal, Dijkstra, BFS, DFS, etc.), and record your own graph animations.",
     "keywords": [
@@ -8,9 +8,9 @@
     ],
     "license": "MIT",
     "author": "Ferdinand Baumgarten <ferdinand.baumgarten@rwth-aachen.de>",
-    "main": "manual_index.ts",
+    "main": "ww-graph.ts",
     "repository": {
-        "url": "git@git.rwth-aachen.de:learntech-lufgi9/bama/webwriter/ww-graph-visualization.git",
+        "url": "github:webwriter-app/graph-structure",
         "type": "git"
     },
     "scripts": {
@@ -32,9 +32,10 @@
         "typescript": "^6.0.2"
     },
     "exports": {
-        "./widgets/webwriter-graphviz.*": {
-            "source": "./manual_index.ts",
-            "default": "./dist/widgets/webwriter-graphviz.*"
-        }
+        "./widgets/ww-graph.*": {
+            "source": "./ww-graph.ts",
+            "default": "./dist/widgets/ww-graph.*"
+        },
+        "./icon": "./icon.svg"
     }
 }

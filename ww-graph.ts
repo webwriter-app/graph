@@ -8,15 +8,15 @@ import { localized } from '@lit/localize';
 import LOCALIZE from 'localization/generated';
 import { permissionsContext } from 'utils/context';
 import './components/graph_component.ts';
-import { animateLinks } from './graph/animateLinks';
-import { animateNodes } from './graph/animateNodes';
-import { resetAnimation } from './graph/resetAnimation';
-import { setNodeSubTexts } from './graph/setNodeSubText';
-import { AlgorithmConfigEvent, AnimationStatusType, AnimationStep, iGraph, PermissionsType } from './types';
-import { delay, cancellableDelay } from './utils/sleep';
+import { animateLinks } from './graph/animateLinks.ts';
+import { animateNodes } from './graph/animateNodes.ts';
+import { resetAnimation } from './graph/resetAnimation.ts';
+import { setNodeSubTexts } from './graph/setNodeSubText.ts';
+import { AlgorithmConfigEvent, AnimationStatusType, AnimationStep, iGraph, PermissionsType } from './types.ts';
+import { delay, cancellableDelay } from './utils/sleep.ts';
 import { Selection } from 'd3-selection';
-import { Graph } from './components/graph_component';
-import { TopBar } from './components/toolbars/top_bar';
+import { Graph } from './components/graph_component.ts';
+import { TopBar } from './components/toolbars/top_bar.ts';
 import { AlgorithmBar } from 'components/toolbars/algorithm_bar.ts';
 import { EditBar } from 'components/toolbars/edit_bar.ts';
 import { addNode, addLink, containsLink } from 'utils/updateGraph.ts';
@@ -27,7 +27,7 @@ import { colorGraphForLinkAnimation } from 'graph/colorGraphForLinkAnimation.ts'
 import { OptionsComponent } from 'components/options.ts';
 import SHOELACE from 'utils/shoelace.ts';
 
-import algorithms from './algorithms';
+import algorithms from './algorithms/index.ts';
 
 import '@shoelace-style/shoelace/dist/themes/light.css';
 
@@ -41,8 +41,8 @@ import SlSelect from '@shoelace-style/shoelace/dist/components/select/select.com
 import SlIcon from '@shoelace-style/shoelace/dist/components/icon/icon.component.js';
 
 @localized()
-@customElement('webwriter-graphviz')
-export default class GraphViz extends LitElementWw {
+@customElement('ww-graph')
+export default class WwGraph extends LitElementWw {
     protected localize = LOCALIZE;
 
     private _graph: iGraph = {
