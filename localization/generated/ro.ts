@@ -10,6 +10,7 @@
 
     export const templates = {
       's02c6eb5adcf9b685': `Adaugă un nod în grafic`,
+'s030235bae1983f32': `Modifică subtextul:`,
 's061cc20e3432dead': `Pauză`,
 's07ada4fedbfa9525': `Algoritmi executabili`,
 's0868f4ad15f32174': `Oprește animația`,
@@ -79,7 +80,6 @@
 'se8dca0132c66ae03': `Permisiuni`,
 'se9beed19c6a38fed': `Roz`,
 'seb1e51fbf69345e1': `Afișează fila „Animație”`,
-'sebb864582f7c8b1e': `Setează subtextul nodului:`,
 'secf3d3a7c1693e2d': `Albastru`,
 'sf25d9576a8a29524': `Nod țintă`,
 'sf3659df71f61b3ec': `Șterge pasul`,

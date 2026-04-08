@@ -10,6 +10,7 @@
 
     export const templates = {
       's02c6eb5adcf9b685': `Tambahkan simpul ke grafik`,
+'s030235bae1983f32': `Ubah teks tersirat:`,
 's061cc20e3432dead': `Jeda`,
 's07ada4fedbfa9525': `Algoritma yang dapat dijalankan`,
 's0868f4ad15f32174': `Jeda animasi`,
@@ -79,7 +80,6 @@
 'se8dca0132c66ae03': `Izin`,
 'se9beed19c6a38fed': `Merah muda`,
 'seb1e51fbf69345e1': `Tampilkan tab "Animasi"`,
-'sebb864582f7c8b1e': `Tentukan teks tambahan node:`,
 'secf3d3a7c1693e2d': `Biru`,
 'sf25d9576a8a29524': `Node tujuan`,
 'sf3659df71f61b3ec': `Hapus langkah`,

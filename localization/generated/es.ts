@@ -10,6 +10,7 @@
 
     export const templates = {
       's02c6eb5adcf9b685': `Añadir un nodo al gráfico`,
+'s030235bae1983f32': `Cambiar el subtexto:`,
 's061cc20e3432dead': `Pausa`,
 's07ada4fedbfa9525': `Algoritmos ejecutables`,
 's0868f4ad15f32174': `Detener la animación`,
@@ -79,7 +80,6 @@
 'se8dca0132c66ae03': `Permisos`,
 'se9beed19c6a38fed': `Rosa`,
 'seb1e51fbf69345e1': `Mostrar la pestaña «Animación»`,
-'sebb864582f7c8b1e': `Establecer el subtítulo del nodo:`,
 'secf3d3a7c1693e2d': `Azul`,
 'sf25d9576a8a29524': `Nodo de destino`,
 'sf3659df71f61b3ec': `Eliminar paso`,

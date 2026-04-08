@@ -10,6 +10,7 @@
 
     export const templates = {
       's02c6eb5adcf9b685': `Csomópont hozzáadása a gráfhoz`,
+'s030235bae1983f32': `A szöveg alatti szöveg módosítása:`,
 's061cc20e3432dead': `Szünet`,
 's07ada4fedbfa9525': `Végrehajtható algoritmusok`,
 's0868f4ad15f32174': `Az animáció leállítása`,
@@ -79,7 +80,6 @@
 'se8dca0132c66ae03': `Jogosultságok`,
 'se9beed19c6a38fed': `Rózsaszín`,
 'seb1e51fbf69345e1': `Az „Animáció” fül megjelenítése`,
-'sebb864582f7c8b1e': `Csomópont alfeliratának beállítása:`,
 'secf3d3a7c1693e2d': `Kék`,
 'sf25d9576a8a29524': `Célcsomópont`,
 'sf3659df71f61b3ec': `Lépés törlése`,

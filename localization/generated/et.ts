@@ -10,6 +10,7 @@
 
     export const templates = {
       's02c6eb5adcf9b685': `Lisa graafikule sõlm`,
+'s030235bae1983f32': `Muuda alateksti:`,
 's061cc20e3432dead': `Paus`,
 's07ada4fedbfa9525': `Täidetavad algoritmid`,
 's0868f4ad15f32174': `Peata animatsioon`,
@@ -79,7 +80,6 @@
 'se8dca0132c66ae03': `Õigused`,
 'se9beed19c6a38fed': `Roosa`,
 'seb1e51fbf69345e1': `Näita vahekaarti „Animatsioon”`,
-'sebb864582f7c8b1e': `Määra sõlme alatekst:`,
 'secf3d3a7c1693e2d': `Sinine`,
 'sf25d9576a8a29524': `Sihtsõlm`,
 'sf3659df71f61b3ec': `Kustuta samm`,

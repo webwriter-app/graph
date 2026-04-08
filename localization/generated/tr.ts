@@ -10,6 +10,7 @@
 
     export const templates = {
       's02c6eb5adcf9b685': `Grafiğe bir düğüm ekle`,
+'s030235bae1983f32': `Alt metni değiştir:`,
 's061cc20e3432dead': `Duraklat`,
 's07ada4fedbfa9525': `Çalıştırılabilir algoritmalar`,
 's0868f4ad15f32174': `Animasyonu duraklat`,
@@ -79,7 +80,6 @@
 'se8dca0132c66ae03': `İzinler`,
 'se9beed19c6a38fed': `Pembe`,
 'seb1e51fbf69345e1': `"Animasyon" sekmesini göster`,
-'sebb864582f7c8b1e': `Düğümün alt metnini ayarla:`,
 'secf3d3a7c1693e2d': `Mavi`,
 'sf25d9576a8a29524': `Hedef düğüm`,
 'sf3659df71f61b3ec': `Adımı sil`,

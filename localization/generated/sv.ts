@@ -10,6 +10,7 @@
 
     export const templates = {
       's02c6eb5adcf9b685': `Lägg till en nod i grafen`,
+'s030235bae1983f32': `Ändra undertext:`,
 's061cc20e3432dead': `Paus`,
 's07ada4fedbfa9525': `Körbara algoritmer`,
 's0868f4ad15f32174': `Pausa animationen`,
@@ -79,7 +80,6 @@
 'se8dca0132c66ae03': `Behörigheter`,
 'se9beed19c6a38fed': `Rosa`,
 'seb1e51fbf69345e1': `Visa fliken "Animation"`,
-'sebb864582f7c8b1e': `Ange nodens undertext:`,
 'secf3d3a7c1693e2d': `Blå`,
 'sf25d9576a8a29524': `Målnod`,
 'sf3659df71f61b3ec': `Ta bort steg`,

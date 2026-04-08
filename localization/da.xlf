@@ -45,10 +45,6 @@
         <source>Select a node to edit its subtext.</source>
         <target>Vælg et knudepunkt for at redigere dets undertekst.</target>
       </trans-unit>
-      <trans-unit id="sebb864582f7c8b1e">
-        <source>Set node subtext:</source>
-        <target>Indstil node-undertekst:</target>
-      </trans-unit>
       <trans-unit id="s8b1360ffe490828f">
         <source>Click on two nodes to add an edge between them.</source>
         <target>Klik på to noder for at tilføje en kant mellem dem.</target>
@@ -300,6 +296,10 @@
       <trans-unit id="s597d652edb302c38">
         <source>edge colors</source>
         <target>kantfarver</target>
+      </trans-unit>
+      <trans-unit id="s030235bae1983f32">
+        <source>Change subtext:</source>
+        <target>Skift undertekst:</target>
       </trans-unit>
     </body>
   </file>

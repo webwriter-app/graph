@@ -45,10 +45,6 @@
         <source>Select a node to edit its subtext.</source>
         <target>Valitse solmu, jotta voit muokata sen alaotsikkoa.</target>
       </trans-unit>
-      <trans-unit id="sebb864582f7c8b1e">
-        <source>Set node subtext:</source>
-        <target>Määritä solmun alaotsikko:</target>
-      </trans-unit>
       <trans-unit id="s8b1360ffe490828f">
         <source>Click on two nodes to add an edge between them.</source>
         <target>Napsauta kahta solmua lisätäksesi niiden välille reunan.</target>
@@ -300,6 +296,10 @@
       <trans-unit id="s597d652edb302c38">
         <source>edge colors</source>
         <target>reunojen värit</target>
+      </trans-unit>
+      <trans-unit id="s030235bae1983f32">
+        <source>Change subtext:</source>
+        <target>Muuta tekstiä:</target>
       </trans-unit>
     </body>
   </file>

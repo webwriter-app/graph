@@ -45,10 +45,6 @@
         <source>Select a node to edit its subtext.</source>
         <target>Seleziona un nodo per modificarne il sottotesto.</target>
       </trans-unit>
-      <trans-unit id="sebb864582f7c8b1e">
-        <source>Set node subtext:</source>
-        <target>Imposta il sottotesto del nodo:</target>
-      </trans-unit>
       <trans-unit id="s8b1360ffe490828f">
         <source>Click on two nodes to add an edge between them.</source>
         <target>Clicca su due nodi per aggiungere un collegamento tra di essi.</target>
@@ -300,6 +296,10 @@
       <trans-unit id="s597d652edb302c38">
         <source>edge colors</source>
         <target>colori dei bordi</target>
+      </trans-unit>
+      <trans-unit id="s030235bae1983f32">
+        <source>Change subtext:</source>
+        <target>Modifica il sottotesto:</target>
       </trans-unit>
     </body>
   </file>

@@ -10,6 +10,7 @@
 
     export const templates = {
       's02c6eb5adcf9b685': `Dodaj vozlišče v graf`,
+'s030235bae1983f32': `Spremeni podtekst:`,
 's061cc20e3432dead': `Premor`,
 's07ada4fedbfa9525': `Izvedljivi algoritmi`,
 's0868f4ad15f32174': `Zaustavi animacijo`,
@@ -79,7 +80,6 @@
 'se8dca0132c66ae03': `Dovoljenja`,
 'se9beed19c6a38fed': `Roza`,
 'seb1e51fbf69345e1': `Pokaži zavihek »Animacija«`,
-'sebb864582f7c8b1e': `Nastavi podnaslov vozlišča:`,
 'secf3d3a7c1693e2d': `Modra`,
 'sf25d9576a8a29524': `Ciljno vozlišče`,
 'sf3659df71f61b3ec': `Izbriši korak`,

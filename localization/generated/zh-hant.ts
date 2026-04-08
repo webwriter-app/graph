@@ -62,7 +62,7 @@
 's1995a948733ac7bd': `Custom color`,
 's15ecca25bdb0ae6d': `Select color to toggle:`,
 's63b6897fba47590c': `Select a node to edit its subtext.`,
-'sebb864582f7c8b1e': `Set node subtext:`,
+'s030235bae1983f32': `Change subtext:`,
 's0f136ff2c086b760': `reset`,
 's91bd3118111af6ef': `node colors`,
 's597d652edb302c38': `edge colors`,

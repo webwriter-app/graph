@@ -10,6 +10,7 @@
 
     export const templates = {
       's02c6eb5adcf9b685': `Voeg een knooppunt toe aan de grafiek`,
+'s030235bae1983f32': `Subtekst wijzigen:`,
 's061cc20e3432dead': `Pauze`,
 's07ada4fedbfa9525': `Uitvoerbare algoritmen`,
 's0868f4ad15f32174': `De animatie pauzeren`,
@@ -79,7 +80,6 @@
 'se8dca0132c66ae03': `Rechten`,
 'se9beed19c6a38fed': `Roze`,
 'seb1e51fbf69345e1': `Toon het tabblad "Animatie"`,
-'sebb864582f7c8b1e': `De subtekst van het knooppunt instellen:`,
 'secf3d3a7c1693e2d': `Blauw`,
 'sf25d9576a8a29524': `Doelknooppunt`,
 'sf3659df71f61b3ec': `Stap verwijderen`,

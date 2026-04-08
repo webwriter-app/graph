@@ -10,6 +10,7 @@
 
     export const templates = {
       's02c6eb5adcf9b685': `Pridėti mazgą į grafiką`,
+'s030235bae1983f32': `Pakeisti potekstę:`,
 's061cc20e3432dead': `Pauzė`,
 's07ada4fedbfa9525': `Vykdomieji algoritmai`,
 's0868f4ad15f32174': `Sustabdyti animaciją`,
@@ -79,7 +80,6 @@
 'se8dca0132c66ae03': `Teisės`,
 'se9beed19c6a38fed': `Rožinė`,
 'seb1e51fbf69345e1': `Rodyti skirtuką „Animacija“`,
-'sebb864582f7c8b1e': `Nustatyti mazgo paantraštę:`,
 'secf3d3a7c1693e2d': `Mėlyna`,
 'sf25d9576a8a29524': `Tikslinis mazgas`,
 'sf3659df71f61b3ec': `Ištrinti veiksmą`,

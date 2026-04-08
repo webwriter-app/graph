@@ -10,6 +10,7 @@
 
     export const templates = {
       's02c6eb5adcf9b685': `Ajouter un nœud au graphe`,
+'s030235bae1983f32': `Modifier le sous-texte :`,
 's061cc20e3432dead': `Pause`,
 's07ada4fedbfa9525': `Algorithmes exécutables`,
 's0868f4ad15f32174': `Mettre l'animation en pause`,
@@ -79,7 +80,6 @@
 'se8dca0132c66ae03': `Autorisations`,
 'se9beed19c6a38fed': `Rose`,
 'seb1e51fbf69345e1': `Afficher l'onglet « Animation »`,
-'sebb864582f7c8b1e': `Définir le sous-texte du nœud :`,
 'secf3d3a7c1693e2d': `Bleu`,
 'sf25d9576a8a29524': `Nœud cible`,
 'sf3659df71f61b3ec': `Supprimer l'étape`,

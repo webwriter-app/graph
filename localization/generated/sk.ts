@@ -10,6 +10,7 @@
 
     export const templates = {
       's02c6eb5adcf9b685': `Pridať uzol do grafu`,
+'s030235bae1983f32': `Zmeniť podtext:`,
 's061cc20e3432dead': `Pauza`,
 's07ada4fedbfa9525': `Algoritmy, ktoré je možné spustiť`,
 's0868f4ad15f32174': `Pozastaviť animáciu`,
@@ -79,7 +80,6 @@
 'se8dca0132c66ae03': `Oprávnenia`,
 'se9beed19c6a38fed': `Ružová`,
 'seb1e51fbf69345e1': `Zobraziť kartu „Animácia“`,
-'sebb864582f7c8b1e': `Nastaviť podtext uzla:`,
 'secf3d3a7c1693e2d': `Modrá`,
 'sf25d9576a8a29524': `Cieľový uzol`,
 'sf3659df71f61b3ec': `Odstrániť krok`,

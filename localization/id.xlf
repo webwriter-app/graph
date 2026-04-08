@@ -45,10 +45,6 @@
         <source>Select a node to edit its subtext.</source>
         <target>Pilih sebuah node untuk mengedit teks di bawahnya.</target>
       </trans-unit>
-      <trans-unit id="sebb864582f7c8b1e">
-        <source>Set node subtext:</source>
-        <target>Tentukan teks tambahan node:</target>
-      </trans-unit>
       <trans-unit id="s8b1360ffe490828f">
         <source>Click on two nodes to add an edge between them.</source>
         <target>Klik dua simpul untuk menambahkan tepi di antara keduanya.</target>
@@ -300,6 +296,10 @@
       <trans-unit id="s597d652edb302c38">
         <source>edge colors</source>
         <target>warna tepi</target>
+      </trans-unit>
+      <trans-unit id="s030235bae1983f32">
+        <source>Change subtext:</source>
+        <target>Ubah teks tersirat:</target>
       </trans-unit>
     </body>
   </file>

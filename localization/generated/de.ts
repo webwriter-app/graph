@@ -10,6 +10,7 @@
 
     export const templates = {
       's02c6eb5adcf9b685': `Einen Knoten zum Graphen hinzufügen`,
+'s030235bae1983f32': `Untertext ändern:`,
 's061cc20e3432dead': `Pause`,
 's07ada4fedbfa9525': `Ausführbare Algorithmen`,
 's0868f4ad15f32174': `Animation anhalten`,
@@ -79,7 +80,6 @@
 'se8dca0132c66ae03': `Berechtigungen`,
 'se9beed19c6a38fed': `Rosa`,
 'seb1e51fbf69345e1': `Tab „Animation“ anzeigen`,
-'sebb864582f7c8b1e': `Knoten-Untertext festlegen:`,
 'secf3d3a7c1693e2d': `Blau`,
 'sf25d9576a8a29524': `Zielknoten`,
 'sf3659df71f61b3ec': `Schritt löschen`,

@@ -10,6 +10,7 @@
 
     export const templates = {
       's02c6eb5adcf9b685': `Pievienot mezglu grafikam`,
+'s030235bae1983f32': `Mainīt apakštekstu:`,
 's061cc20e3432dead': `Pauze`,
 's07ada4fedbfa9525': `Īstenojami algoritmi`,
 's0868f4ad15f32174': `Pauzēt animāciju`,
@@ -79,7 +80,6 @@
 'se8dca0132c66ae03': `Atļaujas`,
 'se9beed19c6a38fed': `Rozā`,
 'seb1e51fbf69345e1': `Rādīt cilni „Animācija“`,
-'sebb864582f7c8b1e': `Iestatīt mezgla apakštekstu:`,
 'secf3d3a7c1693e2d': `Zils`,
 'sf25d9576a8a29524': `Mērķa mezgls`,
 'sf3659df71f61b3ec': `Dzēst soli`,

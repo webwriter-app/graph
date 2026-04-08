@@ -101,6 +101,7 @@ export default class GraphViz extends LitElementWw {
 
     @state() private accessor mode: 'edit' | 'animation' | 'algorithm' | null = null;
 
+    private _preventFocusClear = false;
     private _animationController: AbortController | null = null;
     private _stepStartTime: number | null = null;
     private readonly _stepDuration = 2000;
@@ -350,10 +351,18 @@ export default class GraphViz extends LitElementWw {
             this.selectedLink = null;
         });
 
+        this.addEventListener('mousedown', (e: MouseEvent) => {
+            this._preventFocusClear = e.composedPath().some(el => el instanceof AnimationEditBar);
+        }, true);
+
         this.addEventListener('focusout', (e: FocusEvent) => {
+            if (this._preventFocusClear) {
+                this._preventFocusClear = false;
+                return;
+            }
             const newTarget = e.relatedTarget as Node;
             const stillInside = newTarget && (
-                this.contains(newTarget) || 
+                this.contains(newTarget) ||
                 this.shadowRoot?.contains(newTarget)
             );
             if (!stillInside) {
@@ -378,7 +387,20 @@ export default class GraphViz extends LitElementWw {
 
     protected updated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
         if (_changedProperties.has('animation') && this.selectedAnimationStep !== null && this.animation[this.selectedAnimationStep]) {
-            this.previewStep(this.animation[this.selectedAnimationStep]);
+            const step = this.animation[this.selectedAnimationStep];
+            if (step.type === 'subtext' && this.svg) {
+                const oldAnimation = _changedProperties.get('animation') as AnimationStep[] | undefined;
+                const oldStep = oldAnimation?.[this.selectedAnimationStep];
+                if (oldStep?.type === 'subtext') {
+                    const removedNodes = oldStep.data.nodes.filter(
+                        (id: number) => !step.data.nodes.includes(id)
+                    );
+                    if (removedNodes.length > 0) {
+                        setNodeSubTexts(this.svg, removedNodes, removedNodes.map(() => ''));
+                    }
+                }
+            }
+            this.previewStep(step);
         }
     }
 

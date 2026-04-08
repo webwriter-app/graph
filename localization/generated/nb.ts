@@ -10,6 +10,7 @@
 
     export const templates = {
       's02c6eb5adcf9b685': `Legg til en node i grafen`,
+'s030235bae1983f32': `Endre undertekst:`,
 's061cc20e3432dead': `Pause`,
 's07ada4fedbfa9525': `Algoritmer som kan kjøres`,
 's0868f4ad15f32174': `Stopp animasjonen`,
@@ -79,7 +80,6 @@
 'se8dca0132c66ae03': `Tillatelser`,
 'se9beed19c6a38fed': `Rosa`,
 'seb1e51fbf69345e1': `Vis fanen «Animasjon»`,
-'sebb864582f7c8b1e': `Angi undertekst for node:`,
 'secf3d3a7c1693e2d': `Blå`,
 'sf25d9576a8a29524': `Målnode`,
 'sf3659df71f61b3ec': `Slett trinn`,

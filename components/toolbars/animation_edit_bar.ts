@@ -197,21 +197,19 @@ export class AnimationEditBar extends LitElementWw {
 				const index = animationStep.data.nodes.indexOf(
 					this.selectedNode,
 				);
-				const text =
-					index !== -1 ? animationStep.data.texts[index] : "";
+				const included = index !== -1;
+				const text = included ? animationStep.data.texts[index] : "";
 
 				output.push(html`
 					<div>
-						<span>${msg("Set node subtext:")}</span>
-						<sl-input
+						<sl-checkbox
 							size="small"
-							.value=${text}
-							@sl-input=${(e: SlInputEvent) => {
-								if (!e.target || !("value" in e.target) || typeof e.target.value !== "string") {
+							?checked=${included}
+							@sl-change=${(e: SlChangeEvent) => {
+								if (!e.target || !("checked" in e.target)) {
 									return;
 								}
-								const newSubtext = e.target.value.trim();
-								if (index === -1) {
+								if (e.target.checked) {
 									this.updateStepData({
 										nodes: [
 											...animationStep.data.nodes,
@@ -219,23 +217,49 @@ export class AnimationEditBar extends LitElementWw {
 										],
 										texts: [
 											...animationStep.data.texts,
-											newSubtext,
+											"",
 										],
 									});
 								} else {
 									this.updateStepData({
-										texts: [
-											...animationStep.data.texts.slice(
-												0,
-												index,
-											),
-											newSubtext,
-											...animationStep.data.texts.slice(
-												index + 1,
-											),
-										],
+										nodes: animationStep.data.nodes.filter(
+											(_: number, i: number) =>
+												i !== index,
+										),
+										texts: animationStep.data.texts.filter(
+											(_: string, i: number) =>
+												i !== index,
+										),
 									});
 								}
+							}}
+							>${msg("Change subtext:")}</sl-checkbox
+						>
+						<sl-input
+							size="small"
+							.value=${text}
+							?disabled=${!included}
+							@sl-input=${(e: SlInputEvent) => {
+								if (
+									!e.target ||
+									!("value" in e.target) ||
+									typeof e.target.value !== "string"
+								) {
+									return;
+								}
+								const newSubtext = e.target.value.trim();
+								this.updateStepData({
+									texts: [
+										...animationStep.data.texts.slice(
+											0,
+											index,
+										),
+										newSubtext,
+										...animationStep.data.texts.slice(
+											index + 1,
+										),
+									],
+								});
 							}}
 						></sl-input>
 					</div>

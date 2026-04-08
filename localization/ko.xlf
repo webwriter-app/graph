@@ -45,10 +45,6 @@
         <source>Select a node to edit its subtext.</source>
         <target>노드를 선택하면 하위 텍스트를 편집할 수 있습니다.</target>
       </trans-unit>
-      <trans-unit id="sebb864582f7c8b1e">
-        <source>Set node subtext:</source>
-        <target>노드 서브텍스트 설정:</target>
-      </trans-unit>
       <trans-unit id="s8b1360ffe490828f">
         <source>Click on two nodes to add an edge between them.</source>
         <target>두 노드를 클릭하면 그 사이에 연결선이 생성됩니다.</target>
@@ -300,6 +296,10 @@
       <trans-unit id="s597d652edb302c38">
         <source>edge colors</source>
         <target>테두리 색상</target>
+      </trans-unit>
+      <trans-unit id="s030235bae1983f32">
+        <source>Change subtext:</source>
+        <target>하위 텍스트 변경:</target>
       </trans-unit>
     </body>
   </file>

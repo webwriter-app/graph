@@ -45,10 +45,6 @@
         <source>Select a node to edit its subtext.</source>
         <target>选择一个节点以编辑其子文本。</target>
       </trans-unit>
-      <trans-unit id="sebb864582f7c8b1e">
-        <source>Set node subtext:</source>
-        <target>设置节点内文：</target>
-      </trans-unit>
       <trans-unit id="s8b1360ffe490828f">
         <source>Click on two nodes to add an edge between them.</source>
         <target>点击两个节点，即可在它们之间添加一条边。</target>
@@ -300,6 +296,10 @@
       <trans-unit id="s597d652edb302c38">
         <source>edge colors</source>
         <target>边框颜色</target>
+      </trans-unit>
+      <trans-unit id="s030235bae1983f32">
+        <source>Change subtext:</source>
+        <target>更改副标题：</target>
       </trans-unit>
     </body>
   </file>

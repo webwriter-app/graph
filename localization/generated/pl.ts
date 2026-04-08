@@ -10,6 +10,7 @@
 
     export const templates = {
       's02c6eb5adcf9b685': `Dodaj węzeł do grafu`,
+'s030235bae1983f32': `Zmień podtekst:`,
 's061cc20e3432dead': `Pauza`,
 's07ada4fedbfa9525': `Algorytmy wykonalne`,
 's0868f4ad15f32174': `Zatrzymaj animację`,
@@ -79,7 +80,6 @@
 'se8dca0132c66ae03': `Uprawnienia`,
 'se9beed19c6a38fed': `Różowy`,
 'seb1e51fbf69345e1': `Pokaż zakładkę „Animacja”`,
-'sebb864582f7c8b1e': `Ustaw podtekst węzła:`,
 'secf3d3a7c1693e2d': `Niebieski`,
 'sf25d9576a8a29524': `Węzeł docelowy`,
 'sf3659df71f61b3ec': `Usuń krok`,

@@ -45,10 +45,6 @@
         <source>Select a node to edit its subtext.</source>
         <target>Selecteer een knooppunt om de bijbehorende tekst te bewerken.</target>
       </trans-unit>
-      <trans-unit id="sebb864582f7c8b1e">
-        <source>Set node subtext:</source>
-        <target>De subtekst van het knooppunt instellen:</target>
-      </trans-unit>
       <trans-unit id="s8b1360ffe490828f">
         <source>Click on two nodes to add an edge between them.</source>
         <target>Klik op twee knooppunten om een verbinding tussen beide toe te voegen.</target>
@@ -300,6 +296,10 @@
       <trans-unit id="s597d652edb302c38">
         <source>edge colors</source>
         <target>randkleuren</target>
+      </trans-unit>
+      <trans-unit id="s030235bae1983f32">
+        <source>Change subtext:</source>
+        <target>Subtekst wijzigen:</target>
       </trans-unit>
     </body>
   </file>

@@ -45,10 +45,6 @@
         <source>Select a node to edit its subtext.</source>
         <target>Selectați un nod pentru a-i edita textul secundar.</target>
       </trans-unit>
-      <trans-unit id="sebb864582f7c8b1e">
-        <source>Set node subtext:</source>
-        <target>Setează subtextul nodului:</target>
-      </trans-unit>
       <trans-unit id="s8b1360ffe490828f">
         <source>Click on two nodes to add an edge between them.</source>
         <target>Faceți clic pe două noduri pentru a adăuga o muchie între ele.</target>
@@ -300,6 +296,10 @@
       <trans-unit id="s597d652edb302c38">
         <source>edge colors</source>
         <target>culorile marginilor</target>
+      </trans-unit>
+      <trans-unit id="s030235bae1983f32">
+        <source>Change subtext:</source>
+        <target>Modifică subtextul:</target>
       </trans-unit>
     </body>
   </file>

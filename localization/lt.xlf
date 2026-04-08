@@ -45,10 +45,6 @@
         <source>Select a node to edit its subtext.</source>
         <target>Pasirinkite mazgą, kad redaguotumėte jo paantraštę.</target>
       </trans-unit>
-      <trans-unit id="sebb864582f7c8b1e">
-        <source>Set node subtext:</source>
-        <target>Nustatyti mazgo paantraštę:</target>
-      </trans-unit>
       <trans-unit id="s8b1360ffe490828f">
         <source>Click on two nodes to add an edge between them.</source>
         <target>Spustelėkite du mazgus, kad tarp jų būtų sukurta briauna.</target>
@@ -300,6 +296,10 @@
       <trans-unit id="s597d652edb302c38">
         <source>edge colors</source>
         <target>kraštų spalvos</target>
+      </trans-unit>
+      <trans-unit id="s030235bae1983f32">
+        <source>Change subtext:</source>
+        <target>Pakeisti potekstę:</target>
       </trans-unit>
     </body>
   </file>

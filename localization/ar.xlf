@@ -45,10 +45,6 @@
         <source>Select a node to edit its subtext.</source>
         <target>اختر عقدة لتعديل النص الفرعي الخاص بها.</target>
       </trans-unit>
-      <trans-unit id="sebb864582f7c8b1e">
-        <source>Set node subtext:</source>
-        <target>تعيين النص الفرعي للعقدة:</target>
-      </trans-unit>
       <trans-unit id="s8b1360ffe490828f">
         <source>Click on two nodes to add an edge between them.</source>
         <target>انقر على عقدتين لإضافة حافة بينهما.</target>
@@ -300,6 +296,10 @@
       <trans-unit id="s597d652edb302c38">
         <source>edge colors</source>
         <target>ألوان الحواف</target>
+      </trans-unit>
+      <trans-unit id="s030235bae1983f32">
+        <source>Change subtext:</source>
+        <target>تغيير النص الضمني:</target>
       </trans-unit>
     </body>
   </file>
