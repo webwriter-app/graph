@@ -1,41 +1,43 @@
 {
-    "name": "@webwriter/graph",
-    "version": "1.0.0",
-    "description": "Visualize graphs, simulate common graph algorithms (Kruskal, Dijkstra, BFS, DFS, etc.), and record your own graph animations.",
-    "keywords": [
-        "webwriter",
-        "webwriter-widget"
-    ],
-    "license": "MIT",
-    "author": "Ferdinand Baumgarten <ferdinand.baumgarten@rwth-aachen.de>",
-    "main": "ww-graph.ts",
-    "repository": {
-        "url": "github:webwriter-app/graph-structure",
-        "type": "git"
+  "name": "@webwriter/graph",
+  "version": "1.0.0",
+  "description": "Visualize graphs, simulate common graph algorithms (Kruskal, Dijkstra, BFS, DFS, etc.), and record your own graph animations.",
+  "keywords": [
+    "webwriter",
+    "webwriter-widget"
+  ],
+  "license": "MIT",
+  "author": "Ferdinand Baumgarten <ferdinand.baumgarten@rwth-aachen.de>",
+  "main": "ww-graph.ts",
+  "repository": {
+    "url": "github:webwriter-app/graph-structure",
+    "type": "git"
+  },
+  "scripts": {
+    "prepublishOnly": "npx @webwriter/build"
+  },
+  "dependencies": {
+    "@lit/context": "^1.1.6",
+    "@lit/localize": "^0.12.2",
+    "@shoelace-style/shoelace": "^2.15.1",
+    "@tabler/icons": "^3.36.1",
+    "@webwriter/lit": "^2.0.0",
+    "d3": "^7.6.1",
+    "lit": "^3.1.4"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/d3-selection": "^3.0.11",
+    "@types/d3-transition": "^3.0.9",
+    "typescript": "^6.0.2"
+  },
+  "exports": {
+    "./widgets/ww-graph.*": {
+      "source": "./ww-graph.ts",
+      "default": "./dist/widgets/ww-graph.*"
     },
-    "scripts": {
-        "prepublishOnly": "npx @webwriter/build"
-    },
-    "dependencies": {
-        "@lit/context": "^1.1.6",
-        "@lit/localize": "^0.12.2",
-        "@shoelace-style/shoelace": "^2.15.1",
-        "@tabler/icons": "^3.36.1",
-        "@webwriter/lit": "^2.0.0",
-        "d3": "^7.6.1",
-        "lit": "^3.1.4"
-    },
-    "devDependencies": {
-        "@types/d3": "^7.4.3",
-        "@types/d3-selection": "^3.0.11",
-        "@types/d3-transition": "^3.0.9",
-        "typescript": "^6.0.2"
-    },
-    "exports": {
-        "./widgets/ww-graph.*": {
-            "source": "./ww-graph.ts",
-            "default": "./dist/widgets/ww-graph.*"
-        },
-        "./icon": "./icon.svg"
-    }
+    "./icon": "./icon.svg",
+    "./custom-elements.json": "./custom-elements.json"
+  },
+  "customElements": "custom-elements.json"
 }

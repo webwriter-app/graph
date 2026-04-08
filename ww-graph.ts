@@ -68,9 +68,10 @@ export default class WwGraph extends LitElementWw {
         ],
     };
 
-    public get graph() {
+    public get graph(): iGraph {
         return this._graph;
     }
+    /** The graph data, containing labeled nodes and weighted links. */
     @property({ type: Object, attribute: true, reflect: true })
     public set graph(value: iGraph) {
         if (!value) {
@@ -92,6 +93,7 @@ export default class WwGraph extends LitElementWw {
         this._graph = g;
     }
 
+    /** Array of animation steps. Each step can color nodes/links, set node subtexts, or reset previous steps. */
     @property({ type: Array, attribute: true, reflect: true })
     accessor animation: AnimationStep[] = [];
 
@@ -129,9 +131,10 @@ export default class WwGraph extends LitElementWw {
     @state()
     private accessor playbackRate: number = 1;
 
+    /** Controls which features are available to the user (editing, algorithm execution, animation playback). */
     @provide({ context: permissionsContext })
     @property({ type: Object, attribute: true, reflect: true })
-    private accessor permissions: PermissionsType = {
+    accessor permissions: PermissionsType = {
         general: {
             play: true,
             playbackRate: true,
@@ -156,6 +159,7 @@ export default class WwGraph extends LitElementWw {
         },
     }
 
+    /** @internal */
     public static get scopedElements() {
         return {
             'sl-button': SlButton,
@@ -176,7 +180,7 @@ export default class WwGraph extends LitElementWw {
         };
     }
 
-    async animateGraph() {
+    private async animateGraph() {
         if (this.animationStatus === 'RUN') {
             const signal = this._animationController?.signal;
             if (this.animationPosition < this.animation.length) {
@@ -199,6 +203,7 @@ export default class WwGraph extends LitElementWw {
         }
     }
 
+    /** Applies a single animation step to the graph immediately. */
     animateStep(step: AnimationStep, signal?: AbortSignal) {
         if (!this.svg) {
             return;
@@ -218,6 +223,7 @@ export default class WwGraph extends LitElementWw {
         }
     }
 
+    /** Shows the final state of a single animation step without playing the transition animation. Used when editing steps. */
     previewStep(step: AnimationStep) {
         if (!this.svg) {
             return;
@@ -404,6 +410,7 @@ export default class WwGraph extends LitElementWw {
         }
     }
 
+    /** Resets the graph SVG layout by briefly clearing and restoring the graph data, triggering a re-render. */
     resetGraph() {
         const temp = { ...this.graph };
         this.graph = { nodes: [], links: [] };
@@ -740,7 +747,8 @@ export default class WwGraph extends LitElementWw {
         });
     }
 
-    private async executeAlgorithm() {
+    /** Runs the currently selected algorithm on the graph and starts playing the resulting animation. */
+    async executeAlgorithm() {
         if (this.animationStatus !== 'STOP') {
             this.startAnimation();
             return;
@@ -757,7 +765,8 @@ export default class WwGraph extends LitElementWw {
         this.startAnimation();
     }
 
-    private async startAnimation() {
+    /** Starts or resumes the animation playback from the current position. */
+    public async startAnimation() {
         this.selectedAnimationStep = null;
 
         if (this.animationStatus === 'RUN') return;
@@ -784,6 +793,7 @@ export default class WwGraph extends LitElementWw {
     }
 
 
+    /** Pauses the animation. If the current step just started, it rewinds to replay it on resume. */
     private pauseAnimation() {
         const elapsed = this._stepStartTime ? Date.now() - this._stepStartTime : 0;
         const effectiveDuration = this._stepDuration / this.playbackRate;
@@ -796,6 +806,7 @@ export default class WwGraph extends LitElementWw {
         this.animationStatus = 'PAUSE';
     }
 
+    /** Stops the animation, resets the position to the start, and clears all visual highlights. */
     private stopAlgorithm() {
         this._animationController?.abort();
         this._animationController = null;
