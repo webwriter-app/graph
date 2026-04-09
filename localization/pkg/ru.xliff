@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.1" srcLang="en" trgLang="ru">
+<file id="." original=".">
+<unit id="description"><segment><source>Visualize graphs, simulate common graph algorithms (Kruskal, Dijkstra, BFS, DFS, etc.), and record your own graph animations.</source><target>Визуализируйте графы, моделируйте распространенные алгоритмы для графов (Крускала, Дейкстра, BFS, DFS и т. д.) и записывайте собственные анимации графов.</target></segment></unit>
+</file>
+</xliff>

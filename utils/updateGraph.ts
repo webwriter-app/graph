@@ -1,3 +1,5 @@
+import { iGraph } from "types";
+
 type LinkNode = {
   index: number;
   name: string;
@@ -16,53 +18,58 @@ export type iGraphAfterRender = {
   }[];
 };
 
-export function deleteLink(graph, source, target) {
+export function deleteLink(graph: iGraph, source: number, target: number) {
   return {
     nodes: [...graph.nodes],
-    links: (graph as unknown as iGraphAfterRender).links.filter(
-      (link) => link.source.name !== source || link.target.name !== target
+    links: graph.links.filter(
+      (link) => link.source !== source || link.target !== target
     ),
   };
 }
 
-export function deleteNode(graph, name) {
+export function deleteNode(graph: iGraph, id: number) {
   return {
-    nodes: graph.nodes.filter((node) => node.name !== name),
-    links: (graph as unknown as iGraphAfterRender).links.filter(
-      (link) => link.source.name !== name && link.target.name !== name
+    nodes: graph.nodes.filter((node) => node.id !== id),
+    links: graph.links.filter(
+      (link) => link.source !== id && link.target !== id
     ),
   };
 }
 
-export function containsLink(graph, source, target) {
-  return (
-    (graph as unknown as iGraphAfterRender).links.filter(
-      (link) =>
-        (link.source.name === source && link.target.name === target) ||
-        (link.source.name === target && link.target.name === source)
-    ).length > 0
+export function containsLink(graph: iGraph, source: number, target: number) {
+  return graph.links.some(
+    (link) =>
+      (link.source === source && link.target === target) ||
+      (link.source === target && link.target === source)
   );
 }
 
-export function addNode(graph, name) {
-  {
-    if (!graph.nodes.map((node) => node.name).includes(name) && name) {
-      let x = {
-        newLink: "",
-        nodes: [...graph.nodes, { name }],
-        links: [...graph.links],
-      };
-      console.log(x);
-      return x;
-    } else {
-      return graph;
-    }
-  }
+export function addNode(graph: iGraph) {
+  return {
+    ...graph,
+    nodes: [
+      ...graph.nodes,
+      {
+        id: graph.nodes.length > 0 ? graph.nodes[graph.nodes.length - 1].id + 1 : 0,
+        name: `Node ${graph.nodes.length}`,
+      },
+    ],
+    links: [...graph.links],
+  };
 }
 
-export function addLink(graph, source, target, weight) {
+export function renameNode(graph: iGraph, id: number, newName: string) {
   return {
-    newLink: "",
+    ...graph,
+    nodes: graph.nodes.map((node) =>
+      node.id === id ? { ...node, name: newName } : node
+    ),
+    links: [...graph.links],
+  };
+}
+
+export function addLink(graph: iGraph, source: number, target: number, weight: number) {
+  return {
     nodes: [...graph.nodes],
     links: [
       ...graph.links,
@@ -73,4 +80,23 @@ export function addLink(graph, source, target, weight) {
       },
     ],
   };
+}
+
+export function updateLink(
+  graph: iGraph,
+  source: number,
+  target: number,
+  newWeight: number
+) {
+  if (newWeight < 0) return graph;
+
+  return {
+    ...graph,
+    nodes: [...graph.nodes],
+    links: graph.links.map((link) =>
+      link.source === source && link.target === target
+        ? { ...link, weight: newWeight }
+        : link
+    ),
+  };  
 }

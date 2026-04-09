@@ -1,51 +1,62 @@
-import { AnimationType } from "../types";
+import SHOELACE from "utils/shoelace";
+import { AlgorithmType, AnimationStep, iGraph } from "../types";
 
-export function bfs(start, graph, target) {
-  let animation: AnimationType = [];
+export default {
+  id: "bfs",
+  name: "Breadth First Search",
+  function: bfs,
+  inputs: {
+    startNode: true,
+    targetNode: true,
+  },
+} as AlgorithmType;
 
-  let visited = {};
-  let adjacent = {};
+function bfs(graph: iGraph, start: number, target: number): AnimationStep[] {
+  let animation: AnimationStep[] = [];
+
+  let visited: Record<number, boolean> = {};
+  let adjacent: Record<number, number[]> = {};
   for (let n of graph.nodes) {
-    adjacent[n.name] = [];
-    visited[n.name] = false;
+    adjacent[n.id] = [];
+    visited[n.id] = false;
   }
   for (let l of graph.links) {
-    adjacent[l.source.name].push(l.target);
-    adjacent[l.target.name].push(l.source);
+    adjacent[l.source].push(l.target);
+    adjacent[l.target].push(l.source);
   }
 
-  let queue = [];
+  let queue: number[] = [];
   queue.splice(0, 0, start);
-  visited[start.name] = true;
+  visited[start] = true;
 
-  while (queue.length != 0) {
+  while (queue.length !== 0) {
     let current = queue.pop();
+    if (current === undefined) break;
 
     animation.push({
-      type: "NODE",
-      data: { names: [current.name], colors: ["green"] },
+      type: "node",
+      data: { names: [current], colors: [SHOELACE.color.yellow[500]] },
     });
 
-    if (current.name == target) {
+    if (current === target) {
       animation.push({
-        type: "NODE",
-        data: { names: [current.name], colors: ["#32CD32"] },
+        type: "node",
+        data: { names: [current], colors: [SHOELACE.color.green[500]] },
       });
       return animation;
     }
 
-    if (visited[current.name] == false) {
-      visited[current.name] = true;
+    if (visited[current] === false) {
+      visited[current] = true;
     }
 
-    for (let node = 0; node < adjacent[current.name].length; node++) {
+    for (let node = 0; node < adjacent[current].length; node++) {
       if (
-        !visited[adjacent[current.name][node].name] &&
+        !visited[adjacent[current][node]] &&
         !queue
-          .map((node) => node.name)
-          .includes(adjacent[current.name][node].name)
+          .includes(adjacent[current][node])
       )
-        queue.splice(0, 0, adjacent[current.name][node]);
+        queue.splice(0, 0, adjacent[current][node]);
     }
   }
 

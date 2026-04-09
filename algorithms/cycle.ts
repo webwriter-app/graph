@@ -1,53 +1,68 @@
-import { AnimationType } from "../types";
+import SHOELACE from "utils/shoelace";
+import { AlgorithmType, AnimationStep, iGraph } from "../types";
 
-export function cycle(graph) {
-  let animation: AnimationType = [];
+export default {
+  id: "cycle",
+  name: "Cycle Detection",
+  function: cycle,
+  inputs: {
+    startNode: false,
+    targetNode: false,
+  },
+} as AlgorithmType;
 
-  let visited = {};
-  let finished = {};
-  let adjacent = {};
+function cycle(graph: iGraph): AnimationStep[] {
+  let animation: AnimationStep[] = [];
+
+  let visited: Record<number, boolean> = {};
+  let finished: Record<number, boolean> = {};
+  let adjacent: Record<number, number[]> = {};
   for (let n of graph.nodes) {
-    adjacent[n.name] = [];
-    visited[n.name] = false;
+    adjacent[n.id] = [];
+    visited[n.id] = false;
   }
   for (let l of graph.links) {
-    adjacent[l.source.name].push(l.target);
-    adjacent[l.target.name].push(l.source);
+    adjacent[l.source].push(l.target);
+    adjacent[l.target].push(l.source);
   }
 
-  function dfs(current, parent, start, path) {
-    if (finished[current.name]) return;
-    if (visited[current.name]) {
-      if (current.name == start) {
+  function dfs(current: number, parent: number, start: number, path: number[]) {
+    if (finished[current]) return;
+    if (visited[current]) {
+      if (current === start) {
         animation.push({
-          type: "NODE",
-          data: { names: path, colors: path.map((x) => "#32CD32") },
+          type: "node",
+          data: { names: path, colors: path.map((x) => SHOELACE.color.green[500]) },
         });
       }
       return;
     }
     animation.push({
-      type: "NODE",
-      data: { names: [current.name], colors: ["green"] },
+      type: "node",
+      data: { names: [current], colors: [SHOELACE.color.yellow[500]] },
     });
 
-    visited[current.name] = true;
-    for (let node = 0; node < adjacent[current.name].length; node++) {
-      if (adjacent[current.name][node].name !== parent)
-        dfs(adjacent[current.name][node], current.name, start, [
+    visited[current] = true;
+    for (let node = 0; node < adjacent[current].length; node++) {
+      if (adjacent[current][node] !== parent)
+        dfs(adjacent[current][node], current, start, [
           ...path,
-          current.name,
+          current,
         ]);
     }
-    finished[current.name] = true;
+    finished[current] = true;
   }
 
   for (let node of graph.nodes) {
     finished = {};
     visited = {};
-    dfs(node, node.name, node.name, []);
+    dfs(node.id, node.id, node.id, []);
 
-    animation.push({ type: "RESET", data: {} });
+    animation.push({ type: "reset", data: {
+      nodes: true,
+      links: true,
+      subtexts: true,
+    } });
   }
 
   return animation;

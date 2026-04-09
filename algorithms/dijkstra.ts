@@ -1,73 +1,84 @@
-import { AnimationType } from "../types";
+import SHOELACE from "utils/shoelace";
+import { AnimationStep, iGraph } from "../types";
 
-export const dijkstra = (start, graph) => {
-  let animation: AnimationType = [];
-  var dist = {};
-  var prev = {};
+export default {
+  id: "dijkstra",
+  name: "Dijkstra's Algorithm",
+  function: dijkstra,
+  inputs: {
+    startNode: true,
+    targetNode: false,
+  },
+}
 
-  var neighbors = {};
+function dijkstra(graph: iGraph, start: number): AnimationStep[] {
+  let animation: AnimationStep[] = [];
+  var dist: Record<number, number> = {};
+  var prev: Record<number, number | null> = {};
 
-  var q = [];
+  var neighbors: Record<number, { id: number, weight: number }[]> = {};
+
+  var q: number[] = [];
 
   for (var node of graph.nodes) {
-    dist[node.name] = Infinity;
-    prev[node.name] = [];
-    neighbors[node.name] = [];
-    q.push(node);
+    dist[node.id] = Infinity;
+    prev[node.id] = null;
+    neighbors[node.id] = [];
+    q.push(node.id);
   }
 
   for (var link of graph.links) {
-    neighbors[link.source.name].push({
-      name: link.target.name,
+    neighbors[link.source].push({
+      id: link.target,
       weight: link.weight,
     });
-    neighbors[link.target.name].push({
-      name: link.source.name,
+    neighbors[link.target].push({
+      id: link.source,
       weight: link.weight,
     });
   }
 
-  dist[start.name] = 0;
+  dist[start] = 0;
   animation.push({
-    type: "SetNodeSubText",
-    data: { node: start.name as string, text: 0 },
+    type: "subtext",
+    data: { nodes: [start], texts: [String(0)] },
   });
   while (q.length > 0) {
     var u = getNodeWithLowestDist(q, dist);
     animation.push({
-      type: "NODE",
-      data: { names: [u.name], colors: ["green"] },
+      type: "node",
+      data: { names: [u], colors: [SHOELACE.color.green[500]] },
     });
-    q = q.filter((e) => e.name !== u.name);
+    q = q.filter((e) => e !== u);
 
-    for (var n of neighbors[u.name]) {
-      var alt = dist[u.name] + n.weight;
+    for (var n of neighbors[u]) {
+      var alt = dist[u] + n.weight;
       animation.push({
-        type: "LINK",
+        type: "link",
         data: {
-          links: [{ source: u.name, target: n.name }],
-          colors: ["green"],
+          links: [{ source: u, target: n.id }],
+          colors: [SHOELACE.color.green[500]],
         },
       });
 
-      if (alt < dist[n.name]) {
-        dist[n.name] = alt;
+      if (alt < dist[n.id]) {
+        dist[n.id] = alt;
         animation.push({
-          type: "SetNodeSubText",
-          data: { node: n.name as string, text: alt },
+          type: "subtext",
+          data: { nodes: [n.id], texts: [String(alt)] },
         });
 
-        prev[n.name] = u.name;
+        prev[n.id] = u;
       }
     }
   }
   return animation;
 };
 
-function getNodeWithLowestDist(q, dist) {
+function getNodeWithLowestDist(q: number[], dist: Record<number, number>) {
   var currentMin = q[0];
   for (var node of q) {
-    if (dist[node.name] < dist[currentMin.name]) {
+    if (dist[node] < dist[currentMin]) {
       currentMin = node;
     }
   }

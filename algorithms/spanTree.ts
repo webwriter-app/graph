@@ -1,40 +1,51 @@
-import { AnimationType } from "../types";
+import SHOELACE from "utils/shoelace";
+import { AlgorithmType, AnimationStep, iGraph, iLink } from "../types";
 
-export function spanTree(graph) {
-  let animation: AnimationType = [];
+export default {
+  id: "spanTree",
+  name: "Spanning Tree (Borůvka's Algorithm)",
+  function: spanTree,
+  inputs: {
+    startNode: false,
+    targetNode: false,
+  },
+} as AlgorithmType;
+
+function spanTree(graph: iGraph): AnimationStep[] {
+  let animation: AnimationStep[] = [];
 
   let done = false;
 
-  let edgesOfSpan = [];
+  let edgesOfSpan: iLink[] = [];
 
-  let connectetComponents = [];
+  let connectedComponents: number[][] = [];
 
   for (let node of graph.nodes) {
-    connectetComponents.push([node.name]);
+    connectedComponents.push([node.id]);
   }
 
   while (!done) {
-    let cheapestEdges = connectetComponents.map((x) => null);
+    let cheapestEdges: (iLink | null)[] = connectedComponents.map((x) => null);
     for (let edge of graph.links) {
       if (
-        connectetComponents.some(
+        connectedComponents.some(
           (comp) =>
-            comp.includes(edge.source.name) && !comp.includes(edge.target.name)
+            comp.includes(edge.source) && !comp.includes(edge.target)
         )
       ) {
         if (
           ispreferredover(
             edge,
             cheapestEdges[
-              connectetComponents
-                .map((node) => node.includes(edge.source.name))
+              connectedComponents
+                .map((node) => node.includes(edge.source))
                 .indexOf(true)
             ]
           )
         ) {
           cheapestEdges[
-            connectetComponents
-              .map((node) => node.includes(edge.source.name))
+            connectedComponents
+              .map((node) => node.includes(edge.source))
               .indexOf(true)
           ] = edge;
         }
@@ -42,21 +53,21 @@ export function spanTree(graph) {
           ispreferredover(
             edge,
             cheapestEdges[
-              connectetComponents
-                .map((node) => node.includes(edge.target.name))
+              connectedComponents
+                .map((node) => node.includes(edge.target))
                 .indexOf(true)
             ]
           )
         ) {
           cheapestEdges[
-            connectetComponents
-              .map((node) => node.includes(edge.target.name))
+            connectedComponents
+              .map((node) => node.includes(edge.target))
               .indexOf(true)
           ] = edge;
         }
       }
     }
-    if (cheapestEdges.every((edge) => edge == null)) {
+    if (cheapestEdges.every((edge) => edge === null)) {
       done = true;
     } else {
       for (let edge of cheapestEdges) {
@@ -64,44 +75,44 @@ export function spanTree(graph) {
           edge !== null &&
           edgesOfSpan.every(
             (e) =>
-              e.source.name != edge.source.name ||
-              e.target.name != edge.target.name
+              e.source !== edge.source ||
+              e.target !== edge.target
           )
         ) {
           edgesOfSpan.push(edge);
           animation.push({
-            type: "LINK",
+            type: "link",
             data: {
-              links: [{ source: edge.source.name, target: edge.target.name }],
-              colors: ["green"],
+              links: [{ source: edge.source, target: edge.target }],
+              colors: [SHOELACE.color.green[500]],
             },
           });
         }
       }
 
-      let newComponents = [];
+      let newComponents: number[][] = [];
       for (let edge of edgesOfSpan) {
         for (let j = 0; j < newComponents.length; j++) {
           if (
-            newComponents[j].includes(edge.source.name) &&
-            !newComponents[j].includes(edge.target.name)
+            newComponents[j].includes(edge.source) &&
+            !newComponents[j].includes(edge.target)
           ) {
-            newComponents[j] = [...newComponents[j], edge.target.name];
+            newComponents[j] = [...newComponents[j], edge.target];
           }
           if (
-            newComponents[j].includes(edge.target.name) &&
-            !newComponents[j].includes(edge.source.name)
+            newComponents[j].includes(edge.target) &&
+            !newComponents[j].includes(edge.source)
           ) {
-            newComponents[j] = [...newComponents[j], edge.source.name];
+            newComponents[j] = [...newComponents[j], edge.source];
           }
           if (
-            newComponents[j].includes(edge.target.name) &&
-            newComponents[j].includes(edge.source.name)
+            newComponents[j].includes(edge.target) &&
+            newComponents[j].includes(edge.source)
           ) {
           }
         }
-        if (!newComponents.some((x) => x.includes(edge.source.name)))
-          newComponents.push([edge.source.name, edge.target.name]);
+        if (!newComponents.some((x) => x.includes(edge.source)))
+          newComponents.push([edge.source, edge.target]);
       }
 
       for (let i = 0; i < newComponents.length; i++) {
@@ -114,15 +125,15 @@ export function spanTree(graph) {
         }
       }
 
-      connectetComponents = [...newComponents];
+      connectedComponents = [...newComponents];
     }
   }
 
   return animation;
 }
 
-function ispreferredover(edge1, edge2) {
+function ispreferredover(edge1: iLink, edge2: iLink | null) {
   return (
-    edge2 == null || edge1.weight < edge2.weight || edge1.weight == edge2.weight
+    edge2 === null || edge1.weight <= edge2.weight
   );
 }
