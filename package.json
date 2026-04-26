@@ -9,7 +9,7 @@
   "license": "MIT",
   "author": "Ferdinand Baumgarten <ferdinand.baumgarten@rwth-aachen.de>",
   "main": "ww-graph.ts",
-  "repository": "github:@webwriter-app/graph-structure",
+  "repository": "github:@webwriter-app/graph",
   "scripts": {
     "prepublishOnly": "npx @webwriter/build"
   },
