@@ -622,6 +622,11 @@ export default class WwGraph extends LitElementWw {
             this.selectedNode = null;
         }
         this.selectedAnimationStep = index;
+        if (step.type === 'node' && step.data.colors.length > 0) {
+            this.nodeAnimationColor = step.data.colors[step.data.colors.length - 1];
+        } else if (step.type === 'link' && step.data.colors.length > 0) {
+            this.linkAnimationColor = step.data.colors[step.data.colors.length - 1];
+        }
         this.previewStep(step);
     }
 
