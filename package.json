@@ -1,6 +1,6 @@
 {
   "name": "@webwriter/graph",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Visualize graphs, simulate common graph algorithms (Kruskal, Dijkstra, BFS, DFS, etc.), and record your own graph animations.",
   "keywords": [
     "webwriter",
