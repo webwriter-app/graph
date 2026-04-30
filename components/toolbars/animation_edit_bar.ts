@@ -110,24 +110,6 @@ export class AnimationEditBar extends LitElementWw {
 		}
 
 		this._prevShouldShow = nowShow;
-
-		if (
-			changedProps.has("selectedStep") &&
-			this.selectedStep !== null &&
-			(this.animation[this.selectedStep]?.type === "node" ||
-				this.animation[this.selectedStep]?.type === "link")
-		) {
-			const step = this.animation[this.selectedStep];
-			if (step.type === "node") {
-				this.nodeColor =
-					step.data.colors[step.data.colors.length - 1] ??
-					this.nodeColor;
-			} else if (step.type === "link") {
-				this.linkColor =
-					step.data.colors[step.data.colors.length - 1] ??
-					this.linkColor;
-			}
-		}
 	}
 
 	updated(_changedProps: PropertyValues<this>) {
