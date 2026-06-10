@@ -100,6 +100,17 @@ export function buildChart(svg: Selection<Element, unknown, null, undefined>, wi
     .data(simGraph.links)
     .enter();
 
+  // Increase touch target size of links
+  var linktarget = glink
+    .append("line")
+    .attr("class", function (d) {
+      return `linktarget n${d.source.id}-n${d.target.id}`;
+    })
+    .attr("stroke", "transparent")
+    .attr("stroke-width", 24)
+    .style("pointer-events", "stroke")
+    .on("mousedown", async (d, i) => dispatchEvent(d, i, "LINK"));
+
   var link = glink
     .append("line")
     .attr("class", function (d) {
@@ -222,6 +233,20 @@ export function buildChart(svg: Selection<Element, unknown, null, undefined>, wi
         return ((d.source.y ?? 0) + (d.target.y ?? 0)) / 2;
       });
     link
+      .attr("x1", function (d) {
+        return d.source.x ?? 0;
+      })
+      .attr("y1", function (d) {
+        return d.source.y ?? 0;
+      })
+      .attr("x2", function (d) {
+        return d.target.x ?? 0;
+      })
+      .attr("y2", function (d) {
+        return d.target.y ?? 0;
+      });
+
+    linktarget
       .attr("x1", function (d) {
         return d.source.x ?? 0;
       })
