@@ -358,7 +358,7 @@ export default class WwGraph extends LitElementWw {
 
         this.addEventListener('focusout', (e: FocusEvent) => {
             const newTarget = e.relatedTarget as Node | null;
-            if (!newTarget || this.containsDeep(newTarget)) return;
+            if (!newTarget || this.containsDeep(newTarget) || newTarget.contains(this)) return;
             this.clearSelection();
         });
     }
