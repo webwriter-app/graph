@@ -3,7 +3,7 @@ import { css, html, PropertyValueMap, PropertyValues } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { property } from 'lit/decorators/property.js';
 import { provide } from '@lit/context';
-import { localized } from '@lit/localize';
+import { localized, msg } from '@lit/localize';
 // @ts-ignore
 import LOCALIZE from 'localization/generated';
 import { permissionsContext } from 'utils/context';
@@ -46,26 +46,8 @@ export default class WwGraph extends LitElementWw {
     protected localize = LOCALIZE;
 
     private _graph: iGraph = {
-        nodes: [
-            { id: 0, name: 'Ana' },
-            { id: 1, name: 'Bob' },
-            { id: 2, name: 'Chen' },
-            { id: 3, name: 'Ethan' },
-            { id: 4, name: 'Frank' },
-            { id: 5, name: 'George' },
-            { id: 6, name: 'Hanes' },
-            { id: 7, name: 'Ina' },
-        ],
-        links: [
-            { source: 7, target: 1, weight: 3 },
-            { source: 2, target: 1, weight: 2 },
-            { source: 0, target: 2, weight: 1 },
-            { source: 0, target: 4, weight: 1 },
-            { source: 2, target: 4, weight: 4 },
-            { source: 6, target: 4, weight: 4 },
-            { source: 6, target: 5, weight: 2 },
-            { source: 0, target: 3, weight: 1 },
-        ],
+        nodes: [],
+        links: [],
     };
 
     public get graph(): iGraph {
@@ -453,6 +435,20 @@ export default class WwGraph extends LitElementWw {
             width: fit-content;
             z-index: 10;
         }
+        .graph-empty-overlay {
+            position: absolute;
+            inset: 0;
+            padding: var(--sl-spacing-x-large);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+        .graph-empty-overlay span {
+            color: var(--sl-color-neutral-600);
+            font-size: var(--sl-font-size-large);
+        }
         sl-tab-group {
             --track-width: 0;
         }
@@ -527,6 +523,14 @@ export default class WwGraph extends LitElementWw {
             </sl-tab-group>
 
             <div class="graph">
+                ${this.graph.nodes.length === 0 ? html`
+                    <div class="graph-empty-overlay">
+                        <span>${this.mode === 'edit'
+                            ? msg("Add nodes and edges using the toolbar above.")
+                            : msg("Add nodes and edges using the toolbar in edit mode.")
+                        }</span>
+                    </div>
+                ` : null}
                 <animation-edit-bar
                     .animation=${this.animation}
                     .selectedStep=${this.mode === 'animation' ? this.selectedAnimationStep : null}

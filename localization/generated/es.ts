@@ -52,6 +52,7 @@
 's7a3752d246cad654': `Seleccionar algoritmo`,
 's81446419d1cc2026': `Reproduce la animación`,
 's8b1360ffe490828f': `Haz clic en dos nodos para añadir un borde entre ellos.`,
+'s8b2ae093ad5cd15c': `Añade nodos y aristas utilizando la barra de herramientas en el modo de edición.`,
 's8f450dd0b7bdb8cb': `Naranja`,
 's91bd3118111af6ef': `colores de los nodos`,
 's93e1d90707d925b1': `Añadir nodos`,
@@ -82,6 +83,7 @@
 'seb1e51fbf69345e1': `Mostrar la pestaña «Animación»`,
 'secf3d3a7c1693e2d': `Azul`,
 'sf25d9576a8a29524': `Nodo de destino`,
+'sf312d3743ff8d4b3': `Añade nodos y aristas utilizando la barra de herramientas de arriba.`,
 'sf3659df71f61b3ec': `Eliminar paso`,
 'sfeb99afb5a2e03ca': `Editar el gráfico`,
     };

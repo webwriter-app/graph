@@ -52,6 +52,7 @@
 's7a3752d246cad654': `Algoritme selecteren`,
 's81446419d1cc2026': `Speel de animatie af`,
 's8b1360ffe490828f': `Klik op twee knooppunten om een verbinding tussen beide toe te voegen.`,
+'s8b2ae093ad5cd15c': `Voeg knooppunten en verbindingen toe via de werkbalk in de bewerkingsmodus.`,
 's8f450dd0b7bdb8cb': `Oranje`,
 's91bd3118111af6ef': `knooppuntkleuren`,
 's93e1d90707d925b1': `Knooppunten toevoegen`,
@@ -82,6 +83,7 @@
 'seb1e51fbf69345e1': `Toon het tabblad "Animatie"`,
 'secf3d3a7c1693e2d': `Blauw`,
 'sf25d9576a8a29524': `Doelknooppunt`,
+'sf312d3743ff8d4b3': `Voeg knooppunten en verbindingen toe via de werkbalk hierboven.`,
 'sf3659df71f61b3ec': `Stap verwijderen`,
 'sfeb99afb5a2e03ca': `De grafiek bewerken`,
     };

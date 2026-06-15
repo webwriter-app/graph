@@ -51,7 +51,7 @@ export function addNode(graph: iGraph) {
       ...graph.nodes,
       {
         id: graph.nodes.length > 0 ? graph.nodes[graph.nodes.length - 1].id + 1 : 0,
-        name: `Node ${graph.nodes.length}`,
+        name: `Node ${graph.nodes.length + 1}`,
       },
     ],
     links: [...graph.links],

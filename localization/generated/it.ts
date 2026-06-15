@@ -52,6 +52,7 @@
 's7a3752d246cad654': `Seleziona algoritmo`,
 's81446419d1cc2026': `Riproduci l'animazione`,
 's8b1360ffe490828f': `Clicca su due nodi per aggiungere un collegamento tra di essi.`,
+'s8b2ae093ad5cd15c': `Aggiungi nodi e bordi utilizzando la barra degli strumenti in modalità modifica.`,
 's8f450dd0b7bdb8cb': `Arancione`,
 's91bd3118111af6ef': `colori dei nodi`,
 's93e1d90707d925b1': `Aggiungi nodi`,
@@ -82,6 +83,7 @@
 'seb1e51fbf69345e1': `Mostra la scheda "Animazione"`,
 'secf3d3a7c1693e2d': `Blu`,
 'sf25d9576a8a29524': `Nodo di destinazione`,
+'sf312d3743ff8d4b3': `Aggiungi nodi e bordi utilizzando la barra degli strumenti in alto.`,
 'sf3659df71f61b3ec': `Elimina passaggio`,
 'sfeb99afb5a2e03ca': `Modifica il grafico`,
     };

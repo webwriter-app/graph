@@ -52,6 +52,7 @@
 's7a3752d246cad654': `Selecionar algoritmo`,
 's81446419d1cc2026': `Reproduzir a animação`,
 's8b1360ffe490828f': `Clique em dois nós para adicionar uma aresta entre eles.`,
+'s8b2ae093ad5cd15c': `Adicione nós e arestas utilizando a barra de ferramentas no modo de edição.`,
 's8f450dd0b7bdb8cb': `Laranja`,
 's91bd3118111af6ef': `cores dos nós`,
 's93e1d90707d925b1': `Adicionar nós`,
@@ -82,6 +83,7 @@
 'seb1e51fbf69345e1': `Mostrar o separador «Animação»`,
 'secf3d3a7c1693e2d': `Azul`,
 'sf25d9576a8a29524': `Nó de destino`,
+'sf312d3743ff8d4b3': `Adicione nós e arestas utilizando a barra de ferramentas acima.`,
 'sf3659df71f61b3ec': `Eliminar etapa`,
 'sfeb99afb5a2e03ca': `Editar o gráfico`,
     };

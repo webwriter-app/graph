@@ -52,6 +52,7 @@
 's7a3752d246cad654': `Algoritmus kiválasztása`,
 's81446419d1cc2026': `Indítsd el az animációt`,
 's8b1360ffe490828f': `Kattintson két csomópontra, hogy élt hozzon létre közöttük.`,
+'s8b2ae093ad5cd15c': `A szerkesztési módban az eszköztár segítségével adhat hozzá csomópontokat és éleket.`,
 's8f450dd0b7bdb8cb': `Narancssárga`,
 's91bd3118111af6ef': `csomópontok színei`,
 's93e1d90707d925b1': `Csomópontok hozzáadása`,
@@ -82,6 +83,7 @@
 'seb1e51fbf69345e1': `Az „Animáció” fül megjelenítése`,
 'secf3d3a7c1693e2d': `Kék`,
 'sf25d9576a8a29524': `Célcsomópont`,
+'sf312d3743ff8d4b3': `A fenti eszköztár segítségével adjon hozzá csomópontokat és éleket.`,
 'sf3659df71f61b3ec': `Lépés törlése`,
 'sfeb99afb5a2e03ca': `A grafikon szerkesztése`,
     };

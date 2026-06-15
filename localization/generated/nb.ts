@@ -52,6 +52,7 @@
 's7a3752d246cad654': `Velg algoritme`,
 's81446419d1cc2026': `Spill av animasjonen`,
 's8b1360ffe490828f': `Klikk på to noder for å legge til en kant mellom dem.`,
+'s8b2ae093ad5cd15c': `Legg til noder og kanter ved hjelp av verktøylinjen i redigeringsmodus.`,
 's8f450dd0b7bdb8cb': `Oransje`,
 's91bd3118111af6ef': `nodefarger`,
 's93e1d90707d925b1': `Legg til noder`,
@@ -82,6 +83,7 @@
 'seb1e51fbf69345e1': `Vis fanen «Animasjon»`,
 'secf3d3a7c1693e2d': `Blå`,
 'sf25d9576a8a29524': `Målnode`,
+'sf312d3743ff8d4b3': `Legg til noder og kanter ved hjelp av verktøylinjen øverst.`,
 'sf3659df71f61b3ec': `Slett trinn`,
 'sfeb99afb5a2e03ca': `Rediger grafen`,
     };

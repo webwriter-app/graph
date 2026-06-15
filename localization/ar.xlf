@@ -301,6 +301,14 @@
         <source>Change subtext:</source>
         <target>تغيير النص الضمني:</target>
       </trans-unit>
+      <trans-unit id="sf312d3743ff8d4b3">
+        <source>Add nodes and edges using the toolbar above.</source>
+        <target>أضف العقد والحواف باستخدام شريط الأدوات أعلاه.</target>
+      </trans-unit>
+      <trans-unit id="s8b2ae093ad5cd15c">
+        <source>Add nodes and edges using the toolbar in edit mode.</source>
+        <target>أضف العقد والحواف باستخدام شريط الأدوات في وضع التحرير.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

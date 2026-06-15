@@ -52,6 +52,7 @@
 's7a3752d246cad654': `Wybierz algorytm`,
 's81446419d1cc2026': `Odtwórz animację`,
 's8b1360ffe490828f': `Kliknij dwa węzły, aby dodać między nimi krawędź.`,
+'s8b2ae093ad5cd15c': `Dodaj węzły i krawędzie za pomocą paska narzędzi w trybie edycji.`,
 's8f450dd0b7bdb8cb': `Pomarańczowy`,
 's91bd3118111af6ef': `kolory węzłów`,
 's93e1d90707d925b1': `Dodaj węzły`,
@@ -82,6 +83,7 @@
 'seb1e51fbf69345e1': `Pokaż zakładkę „Animacja”`,
 'secf3d3a7c1693e2d': `Niebieski`,
 'sf25d9576a8a29524': `Węzeł docelowy`,
+'sf312d3743ff8d4b3': `Dodaj węzły i krawędzie za pomocą paska narzędzi powyżej.`,
 'sf3659df71f61b3ec': `Usuń krok`,
 'sfeb99afb5a2e03ca': `Edytuj wykres`,
     };

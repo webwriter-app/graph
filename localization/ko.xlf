@@ -301,6 +301,14 @@
         <source>Change subtext:</source>
         <target>하위 텍스트 변경:</target>
       </trans-unit>
+      <trans-unit id="sf312d3743ff8d4b3">
+        <source>Add nodes and edges using the toolbar above.</source>
+        <target>상단의 도구 모음을 사용하여 노드와 에지를 추가하세요.</target>
+      </trans-unit>
+      <trans-unit id="s8b2ae093ad5cd15c">
+        <source>Add nodes and edges using the toolbar in edit mode.</source>
+        <target>편집 모드에서 도구 모음을 사용하여 노드와 에지를 추가하세요.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

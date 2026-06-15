@@ -301,6 +301,14 @@
         <source>Change subtext:</source>
         <target>Промени подтекста:</target>
       </trans-unit>
+      <trans-unit id="sf312d3743ff8d4b3">
+        <source>Add nodes and edges using the toolbar above.</source>
+        <target>Добавете възли и връзки чрез лентата с инструменти отгоре.</target>
+      </trans-unit>
+      <trans-unit id="s8b2ae093ad5cd15c">
+        <source>Add nodes and edges using the toolbar in edit mode.</source>
+        <target>Добавяйте възли и ръбове чрез лентата с инструменти в режим на редактиране.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

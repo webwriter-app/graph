@@ -52,6 +52,7 @@
 's7a3752d246cad654': `Pasirinkite algoritmą`,
 's81446419d1cc2026': `Paleisti animaciją`,
 's8b1360ffe490828f': `Spustelėkite du mazgus, kad tarp jų būtų sukurta briauna.`,
+'s8b2ae093ad5cd15c': `Redagavimo režime naudodami įrankių juostą pridėkite mazgus ir briaunas.`,
 's8f450dd0b7bdb8cb': `Oranžinė`,
 's91bd3118111af6ef': `mazgų spalvos`,
 's93e1d90707d925b1': `Pridėti mazgus`,
@@ -82,6 +83,7 @@
 'seb1e51fbf69345e1': `Rodyti skirtuką „Animacija“`,
 'secf3d3a7c1693e2d': `Mėlyna`,
 'sf25d9576a8a29524': `Tikslinis mazgas`,
+'sf312d3743ff8d4b3': `Pridėkite mazgus ir briaunas naudodami viršuje esantį įrankių juostą.`,
 'sf3659df71f61b3ec': `Ištrinti veiksmą`,
 'sfeb99afb5a2e03ca': `Redaguoti diagramą`,
     };

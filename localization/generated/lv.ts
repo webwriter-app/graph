@@ -52,6 +52,7 @@
 's7a3752d246cad654': `Izvēlieties algoritmu`,
 's81446419d1cc2026': `Atskaņot animāciju`,
 's8b1360ffe490828f': `Noklikšķiniet uz diviem mezgliem, lai izveidotu savienojumu starp tiem.`,
+'s8b2ae093ad5cd15c': `Pievienojiet mezglus un malas, izmantojot rīkjoslu rediģēšanas režīmā.`,
 's8f450dd0b7bdb8cb': `Oranža`,
 's91bd3118111af6ef': `mezglu krāsas`,
 's93e1d90707d925b1': `Pievienot mezglus`,
@@ -82,6 +83,7 @@
 'seb1e51fbf69345e1': `Rādīt cilni „Animācija“`,
 'secf3d3a7c1693e2d': `Zils`,
 'sf25d9576a8a29524': `Mērķa mezgls`,
+'sf312d3743ff8d4b3': `Pievienojiet mezglus un malas, izmantojot rīkjoslu augšā.`,
 'sf3659df71f61b3ec': `Dzēst soli`,
 'sfeb99afb5a2e03ca': `Rediģēt grafiku`,
     };

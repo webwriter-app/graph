@@ -52,6 +52,7 @@
 's7a3752d246cad654': `Vælg algoritme`,
 's81446419d1cc2026': `Afspil animationen`,
 's8b1360ffe490828f': `Klik på to noder for at tilføje en kant mellem dem.`,
+'s8b2ae093ad5cd15c': `Tilføj noder og kanter ved hjælp af værktøjslinjen i redigeringsfunktionen.`,
 's8f450dd0b7bdb8cb': `Orange`,
 's91bd3118111af6ef': `nodefarver`,
 's93e1d90707d925b1': `Tilføj noder`,
@@ -82,6 +83,7 @@
 'seb1e51fbf69345e1': `Vis fanen "Animation"`,
 'secf3d3a7c1693e2d': `Blå`,
 'sf25d9576a8a29524': `Målnode`,
+'sf312d3743ff8d4b3': `Tilføj noder og kanter ved hjælp af værktøjslinjen ovenfor.`,
 'sf3659df71f61b3ec': `Slet trin`,
 'sfeb99afb5a2e03ca': `Rediger grafen`,
     };

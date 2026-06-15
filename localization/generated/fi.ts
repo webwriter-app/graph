@@ -52,6 +52,7 @@
 's7a3752d246cad654': `Valitse algoritmi`,
 's81446419d1cc2026': `Toista animaatio`,
 's8b1360ffe490828f': `Napsauta kahta solmua lisätäksesi niiden välille reunan.`,
+'s8b2ae093ad5cd15c': `Lisää solmuja ja reunoja muokkaustilassa työkalurivin avulla.`,
 's8f450dd0b7bdb8cb': `Oranssi`,
 's91bd3118111af6ef': `solmujen värit`,
 's93e1d90707d925b1': `Lisää solmuja`,
@@ -82,6 +83,7 @@
 'seb1e51fbf69345e1': `Näytä "Animaatio"-välilehti`,
 'secf3d3a7c1693e2d': `Sininen`,
 'sf25d9576a8a29524': `Kohdesolmu`,
+'sf312d3743ff8d4b3': `Lisää solmuja ja reunoja yläreunan työkaluriviltä.`,
 'sf3659df71f61b3ec': `Poista vaihe`,
 'sfeb99afb5a2e03ca': `Muokkaa kaaviota`,
     };

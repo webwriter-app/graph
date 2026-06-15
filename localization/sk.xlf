@@ -301,6 +301,14 @@
         <source>Change subtext:</source>
         <target>Zmeniť podtext:</target>
       </trans-unit>
+      <trans-unit id="sf312d3743ff8d4b3">
+        <source>Add nodes and edges using the toolbar above.</source>
+        <target>Pridajte uzly a hrany pomocou panela nástrojov hore.</target>
+      </trans-unit>
+      <trans-unit id="s8b2ae093ad5cd15c">
+        <source>Add nodes and edges using the toolbar in edit mode.</source>
+        <target>V režime úprav pridávajte uzly a hrany pomocou panela nástrojov.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

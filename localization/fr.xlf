@@ -301,6 +301,14 @@
         <source>Change subtext:</source>
         <target>Modifier le sous-texte :</target>
       </trans-unit>
+      <trans-unit id="sf312d3743ff8d4b3">
+        <source>Add nodes and edges using the toolbar above.</source>
+        <target>Ajoutez des nœuds et des arêtes à l'aide de la barre d'outils située en haut.</target>
+      </trans-unit>
+      <trans-unit id="s8b2ae093ad5cd15c">
+        <source>Add nodes and edges using the toolbar in edit mode.</source>
+        <target>Ajoutez des nœuds et des arêtes à l'aide de la barre d'outils en mode édition.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

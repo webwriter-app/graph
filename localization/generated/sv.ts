@@ -52,6 +52,7 @@
 's7a3752d246cad654': `Välj algoritm`,
 's81446419d1cc2026': `Spela upp animationen`,
 's8b1360ffe490828f': `Klicka på två noder för att lägga till en kant mellan dem.`,
+'s8b2ae093ad5cd15c': `Lägg till noder och kanter med hjälp av verktygsfältet i redigeringsläget.`,
 's8f450dd0b7bdb8cb': `Orange`,
 's91bd3118111af6ef': `nodfärger`,
 's93e1d90707d925b1': `Lägg till noder`,
@@ -82,6 +83,7 @@
 'seb1e51fbf69345e1': `Visa fliken "Animation"`,
 'secf3d3a7c1693e2d': `Blå`,
 'sf25d9576a8a29524': `Målnod`,
+'sf312d3743ff8d4b3': `Lägg till noder och kanter med hjälp av verktygsfältet ovan.`,
 'sf3659df71f61b3ec': `Ta bort steg`,
 'sfeb99afb5a2e03ca': `Redigera diagrammet`,
     };

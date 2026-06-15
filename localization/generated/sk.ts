@@ -52,6 +52,7 @@
 's7a3752d246cad654': `Vyberte algoritmus`,
 's81446419d1cc2026': `Prehrať animáciu`,
 's8b1360ffe490828f': `Kliknite na dva uzly, aby ste medzi nimi vytvorili hranu.`,
+'s8b2ae093ad5cd15c': `V režime úprav pridávajte uzly a hrany pomocou panela nástrojov.`,
 's8f450dd0b7bdb8cb': `Oranžová`,
 's91bd3118111af6ef': `farby uzlov`,
 's93e1d90707d925b1': `Pridať uzly`,
@@ -82,6 +83,7 @@
 'seb1e51fbf69345e1': `Zobraziť kartu „Animácia“`,
 'secf3d3a7c1693e2d': `Modrá`,
 'sf25d9576a8a29524': `Cieľový uzol`,
+'sf312d3743ff8d4b3': `Pridajte uzly a hrany pomocou panela nástrojov hore.`,
 'sf3659df71f61b3ec': `Odstrániť krok`,
 'sfeb99afb5a2e03ca': `Uprav graf`,
     };

@@ -52,6 +52,7 @@
 's7a3752d246cad654': `Algorithmus auswählen`,
 's81446419d1cc2026': `Animation abspielen`,
 's8b1360ffe490828f': `Klicken Sie auf zwei Knoten, um eine Kante zwischen ihnen hinzuzufügen.`,
+'s8b2ae093ad5cd15c': `Fügen Sie im Bearbeitungsmodus über die Werkzeugleiste Knoten und Kanten hinzu.`,
 's8f450dd0b7bdb8cb': `Orange`,
 's91bd3118111af6ef': `Knotenfarben`,
 's93e1d90707d925b1': `Knoten hinzufügen`,
@@ -82,6 +83,7 @@
 'seb1e51fbf69345e1': `Tab „Animation“ anzeigen`,
 'secf3d3a7c1693e2d': `Blau`,
 'sf25d9576a8a29524': `Zielknoten`,
+'sf312d3743ff8d4b3': `Fügen Sie über die obige Werkzeugleiste Knoten und Kanten hinzu.`,
 'sf3659df71f61b3ec': `Schritt löschen`,
 'sfeb99afb5a2e03ca': `Graph bearbeiten`,
     };

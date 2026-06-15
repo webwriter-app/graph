@@ -52,6 +52,7 @@
 's7a3752d246cad654': `Sélectionner un algorithme`,
 's81446419d1cc2026': `Lancer l'animation`,
 's8b1360ffe490828f': `Cliquez sur deux nœuds pour ajouter une arête entre eux.`,
+'s8b2ae093ad5cd15c': `Ajoutez des nœuds et des arêtes à l'aide de la barre d'outils en mode édition.`,
 's8f450dd0b7bdb8cb': `Orange`,
 's91bd3118111af6ef': `couleurs des nœuds`,
 's93e1d90707d925b1': `Ajouter des nœuds`,
@@ -82,6 +83,7 @@
 'seb1e51fbf69345e1': `Afficher l'onglet « Animation »`,
 'secf3d3a7c1693e2d': `Bleu`,
 'sf25d9576a8a29524': `Nœud cible`,
+'sf312d3743ff8d4b3': `Ajoutez des nœuds et des arêtes à l'aide de la barre d'outils située en haut.`,
 'sf3659df71f61b3ec': `Supprimer l'étape`,
 'sfeb99afb5a2e03ca': `Modifier le graphique`,
     };

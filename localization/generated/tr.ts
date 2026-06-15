@@ -52,6 +52,7 @@
 's7a3752d246cad654': `Algoritma seçin`,
 's81446419d1cc2026': `Animasyonu oynat`,
 's8b1360ffe490828f': `Aralarında bir kenar eklemek için iki düğüme tıklayın.`,
+'s8b2ae093ad5cd15c': `Düzenleme modunda araç çubuğunu kullanarak düğümler ve kenarlar ekleyin.`,
 's8f450dd0b7bdb8cb': `Portakal`,
 's91bd3118111af6ef': `düğüm renkleri`,
 's93e1d90707d925b1': `Düğüm ekle`,
@@ -82,6 +83,7 @@
 'seb1e51fbf69345e1': `"Animasyon" sekmesini göster`,
 'secf3d3a7c1693e2d': `Mavi`,
 'sf25d9576a8a29524': `Hedef düğüm`,
+'sf312d3743ff8d4b3': `Yukarıdaki araç çubuğunu kullanarak düğümler ve kenarlar ekleyin.`,
 'sf3659df71f61b3ec': `Adımı sil`,
 'sfeb99afb5a2e03ca': `Grafiği düzenle`,
     };

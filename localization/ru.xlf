@@ -301,6 +301,14 @@
         <source>Change subtext:</source>
         <target>Изменить подтекст:</target>
       </trans-unit>
+      <trans-unit id="sf312d3743ff8d4b3">
+        <source>Add nodes and edges using the toolbar above.</source>
+        <target>Добавляйте узлы и ребра с помощью панели инструментов вверху.</target>
+      </trans-unit>
+      <trans-unit id="s8b2ae093ad5cd15c">
+        <source>Add nodes and edges using the toolbar in edit mode.</source>
+        <target>Добавляйте узлы и ребра с помощью панели инструментов в режиме редактирования.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

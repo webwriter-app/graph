@@ -52,6 +52,7 @@
 's7a3752d246cad654': `Vali algoritm`,
 's81446419d1cc2026': `Vaata animatsiooni`,
 's8b1360ffe490828f': `Klõpsake kahel sõlmel, et lisada nende vahele serv.`,
+'s8b2ae093ad5cd15c': `Lisa sõlmed ja servad redigeerimisrežiimis tööriistariba abil.`,
 's8f450dd0b7bdb8cb': `Oranž`,
 's91bd3118111af6ef': `sõlmede värvid`,
 's93e1d90707d925b1': `Lisa sõlmed`,
@@ -82,6 +83,7 @@
 'seb1e51fbf69345e1': `Näita vahekaarti „Animatsioon”`,
 'secf3d3a7c1693e2d': `Sinine`,
 'sf25d9576a8a29524': `Sihtsõlm`,
+'sf312d3743ff8d4b3': `Lisa sõlmed ja servad ülemise tööriistariba abil.`,
 'sf3659df71f61b3ec': `Kustuta samm`,
 'sfeb99afb5a2e03ca': `Muuda graafikut`,
     };

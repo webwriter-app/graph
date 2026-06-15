@@ -84,5 +84,7 @@
 's74e8052a415f4b28': `Edit animation steps`,
 's4ddda90d75c39e3f': `Delete animation steps`,
 'se8dca0132c66ae03': `Permissions`,
+'sf312d3743ff8d4b3': `Add nodes and edges using the toolbar above.`,
+'s8b2ae093ad5cd15c': `Add nodes and edges using the toolbar in edit mode.`,
     };
   

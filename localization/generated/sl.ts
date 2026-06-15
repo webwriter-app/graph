@@ -52,6 +52,7 @@
 's7a3752d246cad654': `Izberi algoritem`,
 's81446419d1cc2026': `Predvajaj animacijo`,
 's8b1360ffe490828f': `Kliknite na dve vozlišči, da med njima dodate povezavo.`,
+'s8b2ae093ad5cd15c': `V načinu urejanja dodajajte vozlišča in povezave s pomočjo orodne vrstice.`,
 's8f450dd0b7bdb8cb': `Oranžna`,
 's91bd3118111af6ef': `barve vozlišč`,
 's93e1d90707d925b1': `Dodaj vozlišča`,
@@ -82,6 +83,7 @@
 'seb1e51fbf69345e1': `Pokaži zavihek »Animacija«`,
 'secf3d3a7c1693e2d': `Modra`,
 'sf25d9576a8a29524': `Ciljno vozlišče`,
+'sf312d3743ff8d4b3': `Dodajte vozlišča in povezave z orodno vrstico zgoraj.`,
 'sf3659df71f61b3ec': `Izbriši korak`,
 'sfeb99afb5a2e03ca': `Uredi graf`,
     };

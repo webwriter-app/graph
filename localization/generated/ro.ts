@@ -52,6 +52,7 @@
 's7a3752d246cad654': `Selectați algoritmul`,
 's81446419d1cc2026': `Redă animația`,
 's8b1360ffe490828f': `Faceți clic pe două noduri pentru a adăuga o muchie între ele.`,
+'s8b2ae093ad5cd15c': `Adăugați noduri și muchii folosind bara de instrumente din modul de editare.`,
 's8f450dd0b7bdb8cb': `Portocaliu`,
 's91bd3118111af6ef': `culorile nodurilor`,
 's93e1d90707d925b1': `Adăugați noduri`,
@@ -82,6 +83,7 @@
 'seb1e51fbf69345e1': `Afișează fila „Animație”`,
 'secf3d3a7c1693e2d': `Albastru`,
 'sf25d9576a8a29524': `Nod țintă`,
+'sf312d3743ff8d4b3': `Adăugați noduri și muchii folosind bara de instrumente de mai sus.`,
 'sf3659df71f61b3ec': `Șterge pasul`,
 'sfeb99afb5a2e03ca': `Editează graficul`,
     };
