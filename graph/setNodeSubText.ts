@@ -9,17 +9,22 @@ export function setNodeSubTexts(
 ) {
 	let gnode = svg.selectAll("g");
 
-	const selections: Selection<BaseType, unknown, BaseType, unknown>[] = [];
+	const nodetextSelections: Selection<BaseType, unknown, BaseType, unknown>[] = [];
+	const subtextSelections: Selection<BaseType, unknown, BaseType, unknown>[] = [];
 	const originalDys: string[] = [];
+	const originalSubtexts: string[] = [];
 
 	for (let i = 0; i < ids.length; i++) {
 		let id = ids[i];
 		let text = texts[i];
 
-		gnode.selectAll(".nodesubtext.n" + id).text(text);
+		const subtext = gnode.selectAll(".nodesubtext.n" + id);
+		subtextSelections.push(subtext);
+		originalSubtexts.push(subtext.text());
+		subtext.text(text);
 
 		const nodetext = gnode.selectAll(".nodetext.n" + id);
-		selections.push(nodetext);
+		nodetextSelections.push(nodetext);
 		originalDys.push(nodetext.attr("dy"));
 
 		nodetext
@@ -28,8 +33,13 @@ export function setNodeSubTexts(
 			.attr("dy", text ? "-0.1em" : "0.3em");
 	}
 
-	const interrupt = () => selections.forEach((x, i) => {
-		x.interrupt().attr("dy", originalDys[i]);
-	});
+	const interrupt = () => {
+		nodetextSelections.forEach((x, i) => {
+			x.interrupt().attr("dy", originalDys[i]);
+		});
+		subtextSelections.forEach((x, i) => {
+			x.text(originalSubtexts[i]);
+		});
+	};
 	signal?.addEventListener("abort", interrupt, { once: true });
 }
