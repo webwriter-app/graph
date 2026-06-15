@@ -103,7 +103,6 @@ export default class WwGraph extends LitElementWw {
 
     @state() private accessor mode: 'edit' | 'animation' | 'algorithm' | null = null;
 
-    private _preventFocusClear = false;
     private _animationController: AbortController | null = null;
     private _stepStartTime: number | null = null;
     private readonly _stepDuration = 2000;
@@ -357,27 +356,23 @@ export default class WwGraph extends LitElementWw {
             this.selectedLink = null;
         });
 
-        this.addEventListener('mousedown', (e: MouseEvent) => {
-            this._preventFocusClear = e.composedPath().some(el => el instanceof AnimationEditBar);
-        }, true);
-
         this.addEventListener('focusout', (e: FocusEvent) => {
-            if (this._preventFocusClear) {
-                this._preventFocusClear = false;
-                return;
-            }
-            const newTarget = e.relatedTarget as Node;
-            const stillInside = newTarget && (
-                this.contains(newTarget) ||
-                this.shadowRoot?.contains(newTarget)
-            );
-            if (!stillInside) {
-                this.addingEdge = false;
-                this.edgeSource = null;
-                this.selectedNode = null;
-                this.selectedLink = null;
-            }
+            const newTarget = e.relatedTarget as Node | null;
+            if (!newTarget || this.containsDeep(newTarget)) return;
+            this.clearSelection();
         });
+    }
+
+    override connectedCallback() {
+        super.connectedCallback();
+        document.addEventListener('pointerdown', this._handleDocumentOutside, { capture: true });
+        document.addEventListener('touchstart', this._handleDocumentOutside, { capture: true, passive: true });
+    }
+
+    override disconnectedCallback() {
+        super.disconnectedCallback();
+        document.removeEventListener('pointerdown', this._handleDocumentOutside, { capture: true });
+        document.removeEventListener('touchstart', this._handleDocumentOutside, { capture: true });
     }
 
     protected firstUpdated(_changedProperties: PropertyValues): void {
@@ -574,11 +569,8 @@ export default class WwGraph extends LitElementWw {
     }
 
     private _handleModeChange(e: CustomEvent) {
-        this.selectedNode = null;
-        this.selectedLink = null;
+        this.clearSelection();
         this.selectedAnimationStep = null;
-        this.addingEdge = false;
-        this.edgeSource = null;
 
         const newMode = e.detail.mode;
 
@@ -751,6 +743,28 @@ export default class WwGraph extends LitElementWw {
             return step;
         });
     }
+
+    private clearSelection() {
+        this.addingEdge = false;
+        this.edgeSource = null;
+        this.selectedNode = null;
+        this.selectedLink = null;
+    }
+
+    private containsDeep(node: Node | null): boolean {
+        while (node) {
+            if (node === this) return true;
+            const root = node.getRootNode();
+            node = root instanceof ShadowRoot ? root.host : null;
+        }
+        return false;
+    }
+
+    private readonly _handleDocumentOutside = (e: Event) => {
+        if (!e.composedPath().includes(this)) {
+            this.clearSelection();
+        }
+    };
 
     /** Runs the currently selected algorithm on the graph and starts playing the resulting animation. */
     async executeAlgorithm() {
