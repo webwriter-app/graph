@@ -80,7 +80,7 @@ export default class WwColorPicker extends LitElementWw {
 
 	protected render(): TemplateResult<1> {
 		return html`
-			<sl-dropdown>
+			<sl-dropdown hoist>
 				<sl-button
 					slot="trigger"
 					outline
@@ -149,6 +149,10 @@ export default class WwColorPicker extends LitElementWw {
 	}
 
 	static styles = css`
+		sl-menu {
+			overflow-y: auto;
+		}
+
 		.color-swatches {
 			display: grid;
 			grid-template-columns: repeat(5, 1fr);

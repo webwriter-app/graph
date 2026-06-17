@@ -15,7 +15,6 @@ import SlIcon from "@shoelace-style/shoelace/dist/components/icon/icon.component
 import SlButton from "@shoelace-style/shoelace/dist/components/button/button.component.js";
 import SlButtonGroup from "@shoelace-style/shoelace/dist/components/button-group/button-group.component.js";
 import SlInput from "@shoelace-style/shoelace/dist/components/input/input.component.js";
-import SlColorPicker from "@shoelace-style/shoelace/dist/components/color-picker/color-picker.component.js";
 import SlDivider from "@shoelace-style/shoelace/dist/components/divider/divider.component.js";
 import SlCheckbox from "@shoelace-style/shoelace/dist/components/checkbox/checkbox.component.js";
 import { SlChangeEvent, SlInputEvent } from "@shoelace-style/shoelace";
@@ -30,7 +29,6 @@ export class AnimationEditBar extends LitElementWw {
 			"sl-button": SlButton,
 			"sl-button-group": SlButtonGroup,
 			"sl-input": SlInput,
-			"sl-color-picker": SlColorPicker,
 			"sl-divider": SlDivider,
 			"sl-checkbox": SlCheckbox,
 			"ww-color-picker": WwColorPicker,
