@@ -1,0 +1,58 @@
+<div>
+	<h1>Der Kruskal-Algorithmus</h1>
+
+	<p>
+		Der Kruskal-Algorithmus ist ein Algorithmus aus der Graphentheorie, der
+		dazu dient, den minimalen Spannbaum (MST) eines ungerichteten,
+		gewichteten Graphen zu finden. Ein Spannbaum eines Graphen ist ein
+		Teilgraph, der alle Knoten des Graphen enthält und keine Zyklen
+		aufweist. Ein gewichteter Graph ist ein Graph, bei dem jeder Kante ein
+		Gewicht (eine Kostenfunktion) zugeordnet ist.
+	</p>
+
+	<p>
+		Der Kruskal-Algorithmus arbeitet nach dem Greedy-Prinzip, d.h. er trifft
+		bei jeder Schleife die jeweils beste Entscheidung und hofft darauf, dass
+		diese Entscheidung in der Gesamtbetrachtung den bestmöglichen Spannbaum
+		liefert. Der Algorithmus läuft wie folgt ab:
+	</p>
+
+	<ol>
+		<li>Sortiere alle Kanten des Graphen nach Gewicht.</li>
+		<li>Erstelle einen leeren Teilgraphen als MST.</li>
+		<li>Gehe alle Kanten in der sortierten Reihenfolge durch.</li>
+		<li>Füge die Kante zum MST hinzu, wenn sie keinen Zyklus erzeugt.</li>
+	</ol>
+	<p>
+		Die Idee hinter dem Algorithmus ist, dass man immer die günstigste Kante
+		nimmt, die noch nicht zu einem Zyklus im MST führt. Wenn man so vorgeht,
+		wird man immer den günstigsten Spannbaum erhalten.
+	</p>
+
+	<ww-graph
+    permissions='{"general":{"play":false,"playbackRate":true},"edit":{"enabled":false,"addNode":true,"addEdge":true,"editNode":true,"editEdge":true,"delNode":true,"delEdge":true},"algorithm":{"enabled":false,"executable":["bfs","dfs","dijkstra","spanTree","cycle","coloring"]},"animation":{"enabled":false,"editStep":true,"delStep":true}}'
+		graph='{"nodes":[{"id":0,"name":"Ana"},{"id":2,"name":"Chen"},{"id":3,"name":"Ethan"},{"id":4,"name":"Frank"},{"id":6,"name":"Hanes"},{"id":7,"name":"Ina"}],"links":[{"source":0,"target":2,"weight":1},{"source":0,"target":4,"weight":1},{"source":2,"target":4,"weight":4},{"source":6,"target":4,"weight":4},{"source":0,"target":3,"weight":1},{"source":7,"target":6,"weight":1}]}'
+		style="margin: 8px 0"
+	></ww-graph>
+
+	<p>
+		Damit der Algorithmus keine Zyklen erzeugt, sind die Knoten in
+		zusammenhängende Komponenten eingeteilt, und zwar basierend auf den
+		bereits zum Spannbaum hinzugefügten Kanten. Am Anfang befinden sich alle
+		Knoten in verschieden Komponenten. Sobald eine Kante hinzugefügt wird,
+		werden die beiden verbundenen Komponenten zu einer einzigen Komponente.
+		Fügt man nun ausschließlich Kanten hinzu, die zwei Komponenten
+		verbinden, kann dabei kein Zyklus erzeugt werden.
+	</p>
+	<p>
+		In folgender Animation siehst du die zusammenhängenden Komponenten
+		jeweils in unterschiedlichen Farben.
+	</p>
+
+	<ww-graph
+		permissions='{"general":{"play":true,"playbackRate":true},"edit":{"enabled":false,"addNode":true,"addEdge":true,"editNode":true,"editEdge":true,"delNode":true,"delEdge":true},"algorithm":{"enabled":false,"executable":["bfs","dfs","dijkstra","spanTree","cycle","coloring"]},"animation":{"enabled":false,"editStep":true,"delStep":true}}'
+		animation='[{"type":"node","data":{"names":[3,2,4,6,7,0],"colors":["#4a90e2","#e26a4a","#e24ad5","#dfe24a","#50e3c2","#57e24a"]}},{"type":"link","data":{"links":[{"source":0,"target":2}],"colors":["#7ed321"]}},{"type":"node","data":{"names":[2],"colors":["#57e24a"]}},{"type":"link","data":{"links":[{"source":7,"target":6}],"colors":["#7ed321"]}},{"type":"node","data":{"names":[6],"colors":["#50e3c2"]}},{"type":"link","data":{"links":[{"source":0,"target":3}],"colors":["#7ed321"]}},{"type":"node","data":{"names":[3],"colors":["#57e24a"]}},{"type":"link","data":{"links":[{"source":0,"target":4}],"colors":["#7ed321"]}},{"type":"node","data":{"names":[4],"colors":["#57e24a"]}},{"type":"link","data":{"links":[{"source":6,"target":4}],"colors":["#7ed321"]}},{"type":"node","data":{"names":[6,7],"colors":["#57e24a","#57e24a"]}}]'
+		graph='{"nodes":[{"id":0,"name":"Ana"},{"id":2,"name":"Chen"},{"id":3,"name":"Ethan"},{"id":4,"name":"Frank"},{"id":6,"name":"Hanes"},{"id":7,"name":"Ina"}],"links":[{"source":0,"target":2,"weight":1},{"source":0,"target":4,"weight":1},{"source":2,"target":4,"weight":4},{"source":6,"target":4,"weight":4},{"source":0,"target":3,"weight":1},{"source":7,"target":6,"weight":1}]}'
+		style="margin-top: 8px"
+	></ww-graph>
+</div>

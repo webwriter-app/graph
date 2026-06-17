@@ -1,0 +1,47 @@
+<div>
+	<h1>Der Dijkstra-Algorithmus</h1>
+	<p>
+		Der Dijkstra-Algorithmus ist ein Algorithmus zur Bestimmung des
+		kürzesten Pfades von einem Startknoten zu allen anderen Knoten in einem
+		gewichteten Graphen. Er arbeitet dabei mit einer
+		Prioritätswarteschlange, in der die Knoten nach ihrer Entfernung zum
+		Startknoten sortiert sind. Der Algorithmus besucht jeden Knoten nur
+		einmal und aktualisiert dabei laufend die Entfernungen zu den
+		Nachbarknoten.
+	</p>
+	<p>Hier sind die Schritte des Dijkstra-Algorithmus:</p>
+	<ol>
+		<li>
+			Initialisierung: Setze die Entfernung zum Startknoten auf 0 und die
+			Entfernung zu allen anderen Knoten auf unendlich. Füge den
+			Startknoten zur Prioritätswarteschlange hinzu.
+		</li>
+		<li>
+			Solange die Prioritätswarteschlange nicht leer ist, nimm den Knoten
+			mit der kürzesten Entfernung aus der Prioritätswarteschlange.
+		</li>
+		<li>
+			Für jeden Nachbarknoten des aktuellen Knotens, berechne die
+			Entfernung zum Startknoten durch Addition der Entfernung vom
+			aktuellen Knoten zum Nachbarn und der Entfernung vom Startknoten zum
+			aktuellen Knoten. Falls diese Entfernung kürzer ist als die aktuelle
+			Entfernung zum Nachbarn, aktualisiere die Entfernung und füge den
+			Nachbarn zur Prioritätswarteschlange hinzu.
+		</li>
+		<li>Wiederhole Schritt 2 und 3, bis alle Knoten besucht wurden.</li>
+	</ol>
+	<p>
+		Am Ende des Algorithmus enthält jeder Knoten die Entfernung zum
+		Startknoten und der kürzeste Pfad kann durch Rückverfolgung dieser
+		Entfernungen ermittelt werden.
+	</p>
+	<ww-graph
+		animation='[{"type":"subtext","data":{"nodes":[0],"texts":["0"]}},{"type":"node","data":{"names":[0],"colors":["#22c55e"]}},{"type":"link","data":{"links":[{"source":0,"target":2}],"colors":["#22c55e"]}},{"type":"subtext","data":{"nodes":[2],"texts":["1"]}},{"type":"link","data":{"links":[{"source":0,"target":4}],"colors":["#22c55e"]}},{"type":"subtext","data":{"nodes":[4],"texts":["1"]}},{"type":"link","data":{"links":[{"source":0,"target":3}],"colors":["#22c55e"]}},{"type":"subtext","data":{"nodes":[3],"texts":["1"]}},{"type":"node","data":{"names":[2],"colors":["#22c55e"]}},{"type":"link","data":{"links":[{"source":2,"target":1}],"colors":["#22c55e"]}},{"type":"subtext","data":{"nodes":[1],"texts":["3"]}},{"type":"link","data":{"links":[{"source":2,"target":0}],"colors":["#22c55e"]}},{"type":"link","data":{"links":[{"source":2,"target":4}],"colors":["#22c55e"]}},{"type":"node","data":{"names":[3],"colors":["#22c55e"]}},{"type":"link","data":{"links":[{"source":3,"target":0}],"colors":["#22c55e"]}},{"type":"node","data":{"names":[4],"colors":["#22c55e"]}},{"type":"link","data":{"links":[{"source":4,"target":0}],"colors":["#22c55e"]}},{"type":"link","data":{"links":[{"source":4,"target":2}],"colors":["#22c55e"]}},{"type":"link","data":{"links":[{"source":4,"target":6}],"colors":["#22c55e"]}},{"type":"subtext","data":{"nodes":[6],"texts":["5"]}},{"type":"node","data":{"names":[1],"colors":["#22c55e"]}},{"type":"link","data":{"links":[{"source":1,"target":7}],"colors":["#22c55e"]}},{"type":"subtext","data":{"nodes":[7],"texts":["6"]}},{"type":"link","data":{"links":[{"source":1,"target":2}],"colors":["#22c55e"]}},{"type":"node","data":{"names":[6],"colors":["#22c55e"]}},{"type":"link","data":{"links":[{"source":6,"target":4}],"colors":["#22c55e"]}},{"type":"link","data":{"links":[{"source":6,"target":5}],"colors":["#22c55e"]}},{"type":"subtext","data":{"nodes":[5],"texts":["7"]}},{"type":"node","data":{"names":[7],"colors":["#22c55e"]}},{"type":"link","data":{"links":[{"source":7,"target":1}],"colors":["#22c55e"]}},{"type":"node","data":{"names":[5],"colors":["#22c55e"]}},{"type":"link","data":{"links":[{"source":5,"target":6}],"colors":["#22c55e"]}}]'
+		algorithm="dijkstra"
+		permissions='{"general":{"play":true,"playbackRate":true},"edit":{"enabled":false,"addNode":true,"addEdge":true,"editNode":true,"editEdge":true,"delNode":true,"delEdge":true},"algorithm":{"enabled":false,"executable":["bfs","dfs","dijkstra","spanTree","cycle","coloring"]},"animation":{"enabled":false,"editStep":true,"delStep":true}}'
+		graph='{"nodes":[{"id":0,"name":"Ana"},{"id":1,"name":"Bob"},{"id":2,"name":"Chen"},{"id":3,"name":"Ethan"},{"id":4,"name":"Frank"},{"id":5,"name":"George"},{"id":6,"name":"Hanes"},{"id":7,"name":"Ina"}],"links":[{"source":7,"target":1,"weight":3},{"source":2,"target":1,"weight":2},{"source":0,"target":2,"weight":1},{"source":0,"target":4,"weight":1},{"source":2,"target":4,"weight":4},{"source":6,"target":4,"weight":4},{"source":6,"target":5,"weight":2},{"source":0,"target":3,"weight":1}]}'
+		startnode="0"
+		targetnode="1"
+		style="margin-top: 8px;"
+	></ww-graph>
+</div>

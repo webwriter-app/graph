@@ -34,6 +34,8 @@
             "default": "./dist/widgets/ww-graph.*"
         },
         "./snippets/people.html": "./snippets/people.html",
+        "./snippets/dijkstra.html": "./snippets/dijkstra.html",
+        "./snippets/kruskal.html": "./snippets/kruskal.html",
         "./icon": "./icon.svg",
         "./custom-elements.json": "./custom-elements.json"
     }
