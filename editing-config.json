@@ -1,0 +1,37 @@
+{
+  ".": {
+    "description": {
+      "de": "Visualisieren Sie Graphen, simulieren Sie gängige Graphenalgorithmen (Kruskal, Dijkstra, BFS, DFS usw.) und nehmen Sie Ihre eigenen Graphenanimationen auf.",
+      "nl": "Visualiseer grafieken, simuleer veelgebruikte grafiekalgoritmen (Kruskal, Dijkstra, BFS, DFS, enz.) en neem je eigen grafiekanimaties op.",
+      "ar": "قم بعرض الرسوم البيانية، ومحاكاة خوارزميات الرسوم البيانية الشائعة (كروسكال، ديكسترا، BFS، DFS، إلخ)، وتسجيل الرسوم المتحركة الخاصة بك للرسوم البيانية.",
+      "fi": "Luo graafeja, simuloida yleisiä graafialgoritmeja (Kruskal, Dijkstra, BFS, DFS jne.) ja tallenna omia graafianimaatioitasi.",
+      "it": "Visualizza grafi, simula algoritmi comuni per i grafi (Kruskal, Dijkstra, BFS, DFS, ecc.) e registra le tue animazioni dei grafi.",
+      "bg": "Визуализирайте графики, симулирайте често използвани алгоритми за графики (Крускал, Дайкстра, BFS, DFS и др.) и записвайте свои собствени анимации на графики.",
+      "fr": "Visualisez des graphes, simulez des algorithmes courants sur les graphes (Kruskal, Dijkstra, BFS, DFS, etc.) et enregistrez vos propres animations de graphes.",
+      "el": "Απεικονίστε γράφους, προσομοιώστε συνηθισμένους αλγόριθμους γραφημάτων (Kruskal, Dijkstra, BFS, DFS κ.λπ.) και καταγράψτε τις δικές σας κινούμενες εικόνες γραφημάτων.",
+      "lt": "Vaizduokite grafus, imituokite įprastus grafų algoritmus (Kruskalio, Dijkstros, BFS, DFS ir kt.) bei įrašykite savo pačių sukurtas grafų animacijas.",
+      "hu": "Ábrázoljon gráfokat, szimuláljon általános gráfalgoritmusokat (Kruskal, Dijkstra, BFS, DFS stb.), és rögzítsen saját gráfanimációkat.",
+      "da": "Visualiser grafer, simuler almindelige grafalgoritmer (Kruskal, Dijkstra, BFS, DFS osv.), og optag dine egne grafanimationer.",
+      "lv": "Vizualizējiet grafus, simulējiet izplatītus grafu algoritmus (Kruskal, Dijkstra, BFS, DFS utt.) un ierakstiet savas grafu animācijas.",
+      "cs": "Zobrazujte grafy, simulujte běžné grafové algoritmy (Kruskal, Dijkstra, BFS, DFS atd.) a nahrávejte si vlastní animace grafů.",
+      "nb": "Visualiser grafer, simuler vanlige grafalgoritmer (Kruskal, Dijkstra, BFS, DFS osv.) og lag dine egne grafanimasjoner.",
+      "pt-PT": "Visualize grafos, simule algoritmos comuns para grafos (Kruskal, Dijkstra, BFS, DFS, etc.) e grave as suas próprias animações de grafos.",
+      "sk": "Zobrazujte grafy, simulujte bežné algoritmy pre grafy (Kruskal, Dijkstra, BFS, DFS atď.) a zaznamenávajte si vlastné animácie grafov.",
+      "ru": "Визуализируйте графы, моделируйте распространенные алгоритмы для графов (Крускала, Дейкстра, BFS, DFS и т. д.) и записывайте собственные анимации графов.",
+      "pl": "Wizualizuj grafy, symuluj popularne algorytmy grafowe (Kruskal, Dijkstra, BFS, DFS itp.) oraz nagrywaj własne animacje grafów.",
+      "et": "Visualiseerige graafe, simuleerige levinumaid graafialgoritme (Kruskal, Dijkstra, BFS, DFS jne) ning salvestage oma graafianimatsioone.",
+      "ro": "Vizualizați grafice, simulați algoritmi obișnuiți pentru grafice (Kruskal, Dijkstra, BFS, DFS etc.) și înregistrați propriile animații ale graficelor.",
+      "es": "Visualiza grafos, simula algoritmos habituales para grafos (Kruskal, Dijkstra, BFS, DFS, etc.) y graba tus propias animaciones de grafos.",
+      "uk": "Візуалізуйте графіки, моделюйте поширені алгоритми для графів (Крускала, Дейкстри, BFS, DFS тощо) та записуйте власні анімації графів.",
+      "tr": "Grafikleri görselleştirin, yaygın grafik algoritmalarını (Kruskal, Dijkstra, BFS, DFS vb.) simüle edin ve kendi grafik animasyonlarınızı kaydedin.",
+      "sv": "Visualisera grafer, simulera vanliga grafalgoritmer (Kruskal, Dijkstra, BFS, DFS m.fl.) och spela in dina egna grafanimationer.",
+      "pt-BR": "Visualize grafos, simule algoritmos comuns para grafos (Kruskal, Dijkstra, BFS, DFS etc.) e grave suas próprias animações de grafos.",
+      "sl": "Prikazujte grafe, simulirajte pogoste grafične algoritme (Kruskal, Dijkstra, BFS, DFS itd.) in snemajte lastne animacije grafov.",
+      "ko": "그래프를 시각화하고, 일반적인 그래프 알고리즘(크루스칼, 다이크스트라, BFS, DFS 등)을 시뮬레이션하며, 자신만의 그래프 애니메이션을 기록해 보세요.",
+      "ja": "グラフを可視化し、一般的なグラフアルゴリズム（クルスカル法、ダイクストラ法、BFS、DFSなど）をシミュレーションし、独自のグラフアニメーションを記録することができます。",
+      "zh-hans": "可视化图结构，模拟常见的图算法（克鲁斯卡尔算法、迪杰斯特拉算法、广度优先搜索、深度优先搜索等），并录制您自己的图动画。",
+      "id": "Visualisasikan grafik, lakukan simulasi algoritma grafik yang umum (Kruskal, Dijkstra, BFS, DFS, dll.), dan rekam animasi grafik buatan Anda sendiri.",
+      "zh-hant": "可視覺化圖形、模擬常見的圖演算法（克魯斯卡爾、戴克斯特拉、廣度優先搜尋、深度優先搜尋等），並錄製您自己的圖動畫。"
+    }
+  }
+}
