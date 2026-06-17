@@ -1,7 +1,10 @@
+import { delay } from "../utils/sleep";
 import { Selection, BaseType } from "d3-selection";
 import 'd3-transition';
 
-export function setNodeSubTexts(
+const transition_speed = 300;
+
+export async function setNodeSubTexts(
 	svg: Selection<Element, unknown, null, undefined>,
 	ids: number[],
 	texts: string[],
@@ -29,7 +32,7 @@ export function setNodeSubTexts(
 
 		nodetext
 			.transition()
-			.duration(300)
+			.duration(transition_speed)
 			.attr("dy", text ? "-0.1em" : "0.3em");
 	}
 
@@ -42,4 +45,6 @@ export function setNodeSubTexts(
 		});
 	};
 	signal?.addEventListener("abort", interrupt, { once: true });
+	await delay(transition_speed);
+	signal?.removeEventListener("abort", interrupt);
 }
