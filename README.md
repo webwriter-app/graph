@@ -1,9 +1,16 @@
-# Graph (`@webwriter/graph@1.0.1`)
-[License: MIT](LICENSE) | Version: 1.0.1
+# Graph (`@webwriter/graph@1.0.2`)
+[License: MIT](LICENSE) | Version: 1.0.2
 
 Visualize graphs, simulate common graph algorithms (Kruskal, Dijkstra, BFS, DFS, etc.), and record your own graph animations.
 
+## Snippets
+[Snippets](https://webwriter.app/docs/snippets/snippets/) are examples and templates using the package's widgets.
 
+| Name | Import Path |
+| :--: | :---------: |
+| People | `@webwriter/graph/snippets/people.html` |
+| Dijkstra | `@webwriter/graph/snippets/dijkstra.html` |
+| Kruskal | `@webwriter/graph/snippets/kruskal.html` |
 
 
 
@@ -62,4 +69,4 @@ npm install @webwriter/graph
 
 
 ---
-*Generated with @webwriter/build@1.9.0*
+*Generated with @webwriter/build@1.9.1*

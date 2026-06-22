@@ -1,83 +1,84 @@
 {
-    "name": "@webwriter/graph",
-    "version": "1.0.1",
-    "description": "Visualize graphs, simulate common graph algorithms (Kruskal, Dijkstra, BFS, DFS, etc.), and record your own graph animations.",
-    "keywords": [
-        "webwriter-widget",
-        "widget-conceptual",
-        "widget-simulational",
-        "isced2011-3",
-        "isced2011-6",
-        "iscedf2013-05",
-        "iscedf2013-06",
-        "widget-lang-en",
-        "widget-lang-de",
-        "widget-lang-ar",
-        "widget-lang-bg",
-        "widget-lang-cs",
-        "widget-lang-da",
-        "widget-lang-nl",
-        "widget-lang-et",
-        "widget-lang-fi",
-        "widget-lang-fr",
-        "widget-lang-el",
-        "widget-lang-hu",
-        "widget-lang-it",
-        "widget-lang-lv",
-        "widget-lang-lt",
-        "widget-lang-nb",
-        "widget-lang-pl",
-        "widget-lang-pt-PT",
-        "widget-lang-ro",
-        "widget-lang-ru",
-        "widget-lang-sk",
-        "widget-lang-sl",
-        "widget-lang-es",
-        "widget-lang-sv",
-        "widget-lang-tr",
-        "widget-lang-uk",
-        "widget-lang-pt-BR",
-        "widget-lang-ko",
-        "widget-lang-ja",
-        "widget-lang-id",
-        "widget-lang-zh-hans",
-        "widget-lang-zh-hant"
-    ],
-    "license": "MIT",
-    "author": "Ferdinand Baumgarten <ferdinand.baumgarten@rwth-aachen.de>",
-    "main": "ww-graph.ts",
-    "repository": "github:@webwriter-app/graph",
-    "scripts": {
-        "prepublishOnly": "npx @webwriter/build"
+  "name": "@webwriter/graph",
+  "version": "1.0.2",
+  "description": "Visualize graphs, simulate common graph algorithms (Kruskal, Dijkstra, BFS, DFS, etc.), and record your own graph animations.",
+  "keywords": [
+    "webwriter-widget",
+    "widget-conceptual",
+    "widget-simulational",
+    "isced2011-3",
+    "isced2011-6",
+    "iscedf2013-05",
+    "iscedf2013-06",
+    "widget-lang-en",
+    "widget-lang-de",
+    "widget-lang-ar",
+    "widget-lang-bg",
+    "widget-lang-cs",
+    "widget-lang-da",
+    "widget-lang-nl",
+    "widget-lang-et",
+    "widget-lang-fi",
+    "widget-lang-fr",
+    "widget-lang-el",
+    "widget-lang-hu",
+    "widget-lang-it",
+    "widget-lang-lv",
+    "widget-lang-lt",
+    "widget-lang-nb",
+    "widget-lang-pl",
+    "widget-lang-pt-PT",
+    "widget-lang-ro",
+    "widget-lang-ru",
+    "widget-lang-sk",
+    "widget-lang-sl",
+    "widget-lang-es",
+    "widget-lang-sv",
+    "widget-lang-tr",
+    "widget-lang-uk",
+    "widget-lang-pt-BR",
+    "widget-lang-ko",
+    "widget-lang-ja",
+    "widget-lang-id",
+    "widget-lang-zh-hans",
+    "widget-lang-zh-hant"
+  ],
+  "license": "MIT",
+  "author": "Ferdinand Baumgarten <ferdinand.baumgarten@rwth-aachen.de>",
+  "main": "ww-graph.ts",
+  "repository": "github:webwriter-app/graph",
+  "scripts": {
+    "prepublishOnly": "npx @webwriter/build"
+  },
+  "dependencies": {
+    "@lit/context": "^1.1.6",
+    "@lit/localize": "^0.12.2",
+    "@shoelace-style/shoelace": "^2.15.1",
+    "@tabler/icons": "^3.36.1",
+    "@webwriter/lit": "^2.0.0",
+    "d3": "^7.6.1",
+    "lit": "^3.1.4"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/d3-selection": "^3.0.11",
+    "@types/d3-transition": "^3.0.9",
+    "typescript": "^6.0.2"
+  },
+  "exports": {
+    "./widgets/ww-graph.*": {
+      "source": "./ww-graph.ts",
+      "default": "./dist/widgets/ww-graph.*"
     },
-    "dependencies": {
-        "@lit/context": "^1.1.6",
-        "@lit/localize": "^0.12.2",
-        "@shoelace-style/shoelace": "^2.15.1",
-        "@tabler/icons": "^3.36.1",
-        "@webwriter/lit": "^2.0.0",
-        "d3": "^7.6.1",
-        "lit": "^3.1.4"
-    },
-    "devDependencies": {
-        "@types/d3": "^7.4.3",
-        "@types/d3-selection": "^3.0.11",
-        "@types/d3-transition": "^3.0.9",
-        "typescript": "^6.0.2"
-    },
-    "exports": {
-        "./widgets/ww-graph.*": {
-            "source": "./ww-graph.ts",
-            "default": "./dist/widgets/ww-graph.*"
-        },
-        "./snippets/people.html": "./snippets/people.html",
-        "./snippets/dijkstra.html": "./snippets/dijkstra.html",
-        "./snippets/kruskal.html": "./snippets/kruskal.html",
-        "./icon": "./icon.svg",
-        "./custom-elements.json": "./custom-elements.json",
-        "./editing-config.json": "./editing-config.json"
-    },
-    "editingConfig": {
-        ".": {}
-    }
+    "./snippets/people.html": "./snippets/people.html",
+    "./snippets/dijkstra.html": "./snippets/dijkstra.html",
+    "./snippets/kruskal.html": "./snippets/kruskal.html",
+    "./icon": "./icon.svg",
+    "./custom-elements.json": "./custom-elements.json",
+    "./editing-config.json": "./editing-config.json"
+  },
+  "editingConfig": {
+    ".": {}
+  },
+  "customElements": "custom-elements.json"
 }
