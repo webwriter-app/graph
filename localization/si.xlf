@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+<file target-language="si" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="s405fdfa767fb6359">
+  <source>Breadth First Search</source>
+<target>පළල-පළමු සෙවීම</target></trans-unit>
+<trans-unit id="sb202f05c9211ece8">
+  <source>Depth First Search</source>
+<target>ගැඹුර-පළමු සෙවීම</target></trans-unit>
+<trans-unit id="s5ed298f51c2bbc54">
+  <source>Dijkstra's Algorithm</source>
+<target>ඩික්ස්ට්‍රා ඇල්ගොරිතමය</target></trans-unit>
+<trans-unit id="sa38c309ccd6a88f9">
+  <source>Spanning Tree (Borůvka's Algorithm)</source>
+<target>ව්‍යාප්ත වෘක්ෂය (Borůvka ඇල්ගොරිතමය)</target></trans-unit>
+<trans-unit id="s6a01e45e773c6162">
+  <source>Cycle Detection</source>
+<target>චක්‍ර හඳුනාගැනීම</target></trans-unit>
+<trans-unit id="s1eac2cbaf3e3603e">
+  <source>Graph Coloring (Brute Force)</source>
+<target>ප්‍රස්තාර වර්ණ ගැන්වීම (බෘට් ෆෝස්)</target></trans-unit>
+<trans-unit id="se8dca0132c66ae03">
+  <source>Permissions</source>
+<target>අවසර</target></trans-unit>
+<trans-unit id="s7a3752d246cad654">
+  <source>Select algorithm</source>
+<target>ඇල්ගොරිතමය තෝරන්න</target></trans-unit>
+<trans-unit id="se2dec838f45444f5">
+  <source>Start node</source>
+<target>ආරම්භක නෝඩය</target></trans-unit>
+<trans-unit id="sf25d9576a8a29524">
+  <source>Target node</source>
+<target>ඉලක්ක නෝඩය</target></trans-unit>
+<trans-unit id="s1567c07498a2213d">
+  <source>No animation steps yet. Execute an algorithm or click "Add step" to create one.</source>
+<target>තවම සජීවිකරණ පියවර නැත. ඇල්ගොරිතමයක් ක්‍රියාත්මක කරන්න, නැතහොත් පියවරක් සෑදීමට “පියවර එක් කරන්න” ක්ලික් කරන්න.</target></trans-unit>
+<trans-unit id="sbe40166a3c6f22ee">
+  <source>Add step</source>
+<target>පියවර එක් කරන්න</target></trans-unit>
+<trans-unit id="s5eb124d3e409dfe6">
+  <source>Add node animation</source>
+<target>නෝඩ සජීවිකරණය එක් කරන්න</target></trans-unit>
+<trans-unit id="s3becc96710a224ab">
+  <source>Add edge animation</source>
+<target>දාර සජීවිකරණය එක් කරන්න</target></trans-unit>
+<trans-unit id="s5222ccfc3ee461f9">
+  <source>Add reset animation</source>
+<target>යළි සැකසීමේ සජීවිකරණය එක් කරන්න</target></trans-unit>
+<trans-unit id="s08c6c27f5b8452b1">
+  <source>Add node subtext</source>
+<target>නෝඩ අනුපාඨය එක් කරන්න</target></trans-unit>
+<trans-unit id="s15ecca25bdb0ae6d">
+  <source>Select color to toggle:</source>
+<target>මාරු කිරීමට වර්ණය තෝරන්න:</target></trans-unit>
+<trans-unit id="s63b6897fba47590c">
+  <source>Select a node to edit its subtext.</source>
+<target>අනුපාඨය සංස්කරණය කිරීමට නෝඩයක් තෝරන්න.</target></trans-unit>
+<trans-unit id="s030235bae1983f32">
+  <source>Change subtext:</source>
+<target>අනුපාඨය වෙනස් කරන්න:</target></trans-unit>
+<trans-unit id="s0f136ff2c086b760">
+  <source>reset</source>
+<target>යළි සකසන්න</target></trans-unit>
+<trans-unit id="s91bd3118111af6ef">
+  <source>node colors</source>
+<target>නෝඩ වර්ණ</target></trans-unit>
+<trans-unit id="s597d652edb302c38">
+  <source>edge colors</source>
+<target>දාර වර්ණ</target></trans-unit>
+<trans-unit id="s42929dd473f85b2d">
+  <source>node subtexts</source>
+<target>නෝඩ අනුපාඨ</target></trans-unit>
+<trans-unit id="sf3659df71f61b3ec">
+  <source>Delete step</source>
+<target>පියවර මකන්න</target></trans-unit>
+<trans-unit id="s8b1360ffe490828f">
+  <source>Click on two nodes to add an edge between them.</source>
+<target>නෝඩ දෙකක් අතර දාරයක් එක් කිරීමට ඒවා මත ක්ලික් කරන්න.</target></trans-unit>
+<trans-unit id="sbb09e02e1b0afeef">
+  <source>Node label</source>
+<target>නෝඩ ලේබලය</target></trans-unit>
+<trans-unit id="sdc673e73b5c13aea">
+  <source>Delete</source>
+<target>මකන්න</target></trans-unit>
+<trans-unit id="s22a7cbddf50e8584">
+  <source>Edge weight</source>
+<target>දාර බර</target></trans-unit>
+<trans-unit id="s5a4633ffef40fc2b">
+  <source>Select a node or an edge to view details.</source>
+<target>විස්තර බැලීමට නෝඩයක් හෝ දාරයක් තෝරන්න.</target></trans-unit>
+<trans-unit id="sfeb99afb5a2e03ca">
+  <source>Edit the graph</source>
+<target>ප්‍රස්තාරය සංස්කරණය කරන්න</target></trans-unit>
+<trans-unit id="s479a2b6569da2fd0">
+  <source>Execute an algorithm on the graph</source>
+<target>ප්‍රස්තාරය මත ඇල්ගොරිතමයක් ක්‍රියාත්මක කරන්න</target></trans-unit>
+<trans-unit id="s3e97886fa614a7cd">
+  <source>Create or customize the algorithm animation</source>
+<target>ඇල්ගොරිතම සජීවිකරණය සාදන්න හෝ අභිරුචිකරණය කරන්න</target></trans-unit>
+<trans-unit id="se63c78875f5b2178">
+  <source>Add node</source>
+<target>නෝඩයක් එක් කරන්න</target></trans-unit>
+<trans-unit id="s02c6eb5adcf9b685">
+  <source>Add a node to the graph</source>
+<target>ප්‍රස්තාරයට නෝඩයක් එක් කරන්න</target></trans-unit>
+<trans-unit id="sceb35fbe10efb7a1">
+  <source>Add edge</source>
+<target>දාරයක් එක් කරන්න</target></trans-unit>
+<trans-unit id="sbe6971c94588088a">
+  <source>Add an edge to the graph</source>
+<target>ප්‍රස්තාරයට දාරයක් එක් කරන්න</target></trans-unit>
+<trans-unit id="sc4fdeccf14be5378">
+  <source>Execute</source>
+<target>ක්‍රියාත්මක කරන්න</target></trans-unit>
+<trans-unit id="scd105819b5a10243">
+  <source>Play</source>
+<target>ධාවනය කරන්න</target></trans-unit>
+<trans-unit id="s11337fae701e3905">
+  <source>Execute the selected algorithm</source>
+<target>තෝරාගත් ඇල්ගොරිතමය ක්‍රියාත්මක කරන්න</target></trans-unit>
+<trans-unit id="s81446419d1cc2026">
+  <source>Play the animation</source>
+<target>සජීවිකරණය ධාවනය කරන්න</target></trans-unit>
+<trans-unit id="s061cc20e3432dead">
+  <source>Pause</source>
+<target>විරාම කරන්න</target></trans-unit>
+<trans-unit id="s0868f4ad15f32174">
+  <source>Pause the animation</source>
+<target>සජීවිකරණය විරාම කරන්න</target></trans-unit>
+<trans-unit id="sd9ad53251f2330a5">
+  <source>Stop</source>
+<target>නවත්වන්න</target></trans-unit>
+<trans-unit id="s3aff6f35c46b2d1c">
+  <source>Stop the animation</source>
+<target>සජීවිකරණය නවත්වන්න</target></trans-unit>
+<trans-unit id="s64ef2a6c2dd1d3d1">
+  <source>Edit</source>
+<target>සංස්කරණය</target></trans-unit>
+<trans-unit id="s696c4e8dab058caa">
+  <source>Algorithm</source>
+<target>ඇල්ගොරිතමය</target></trans-unit>
+<trans-unit id="sa602e3fd3f2d98fd">
+  <source>Animation</source>
+<target>සජීවිකරණය</target></trans-unit>
+<trans-unit id="sd8f669bc8044fad5">
+  <source>Cycle playback speed</source>
+<target>ධාවන වේගය වෙනස් කරන්න</target></trans-unit>
+<trans-unit id="s5e3cb80d43a34044">
+  <source>Black</source>
+<target>කළු</target></trans-unit>
+<trans-unit id="s9ff1de19feac1b7c">
+  <source>Red</source>
+<target>රතු</target></trans-unit>
+<trans-unit id="s8f450dd0b7bdb8cb">
+  <source>Orange</source>
+<target>තැඹිලි</target></trans-unit>
+<trans-unit id="s6baf78886c99db89">
+  <source>Yellow</source>
+<target>කහ</target></trans-unit>
+<trans-unit id="s3d0296b47fe6323c">
+  <source>Lime</source>
+<target>දෙහි කොළ</target></trans-unit>
+<trans-unit id="scf00d78fd5953f1c">
+  <source>Green</source>
+<target>කොළ</target></trans-unit>
+<trans-unit id="s9b3c2f9cc32d565a">
+  <source>Cyan</source>
+<target>සයන්</target></trans-unit>
+<trans-unit id="secf3d3a7c1693e2d">
+  <source>Blue</source>
+<target>නිල්</target></trans-unit>
+<trans-unit id="s109991b0423f1512">
+  <source>Violet</source>
+<target>දම්</target></trans-unit>
+<trans-unit id="se9beed19c6a38fed">
+  <source>Pink</source>
+<target>රෝස</target></trans-unit>
+<trans-unit id="s965e11e1dbf9b906">
+  <source>Select Color</source>
+<target>වර්ණය තෝරන්න</target></trans-unit>
+<trans-unit id="s1995a948733ac7bd">
+  <source>Custom color</source>
+<target>අභිරුචි වර්ණය</target></trans-unit>
+<trans-unit id="sc3ac225273c8316b">
+  <source>General</source>
+<target>සාමාන්‍ය</target></trans-unit>
+<trans-unit id="se35b9d5e01a54031">
+  <source>Play animation</source>
+<target>සජීවිකරණය ධාවනය කරන්න</target></trans-unit>
+<trans-unit id="s7a0ef32e481ee934">
+  <source>Change playback rate</source>
+<target>ධාවන වේගය වෙනස් කරන්න</target></trans-unit>
+<trans-unit id="s429f70243017494b">
+  <source>Show "Edit" tab</source>
+<target>“සංස්කරණය” ටැබය පෙන්වන්න</target></trans-unit>
+<trans-unit id="s93e1d90707d925b1">
+  <source>Add nodes</source>
+<target>නෝඩ එක් කරන්න</target></trans-unit>
+<trans-unit id="s2a8381f6c75559d6">
+  <source>Add edges</source>
+<target>දාර එක් කරන්න</target></trans-unit>
+<trans-unit id="s1e6553efcf857c16">
+  <source>Edit node labels</source>
+<target>නෝඩ ලේබල් සංස්කරණය කරන්න</target></trans-unit>
+<trans-unit id="sc64dc04864a90f93">
+  <source>Edit edge weights</source>
+<target>දාර බර සංස්කරණය කරන්න</target></trans-unit>
+<trans-unit id="s1661e77a58ba4dfb">
+  <source>Delete nodes</source>
+<target>නෝඩ මකන්න</target></trans-unit>
+<trans-unit id="sa581031d1301788c">
+  <source>Delete edges</source>
+<target>දාර මකන්න</target></trans-unit>
+<trans-unit id="s42b445d0b8ef5e0c">
+  <source>Show "Algorithm" tab</source>
+<target>“ඇල්ගොරිතමය” ටැබය පෙන්වන්න</target></trans-unit>
+<trans-unit id="s07ada4fedbfa9525">
+  <source>Executable algorithms</source>
+<target>ක්‍රියාත්මක කළ හැකි ඇල්ගොරිතම</target></trans-unit>
+<trans-unit id="seb1e51fbf69345e1">
+  <source>Show "Animation" tab</source>
+<target>“සජීවිකරණය” ටැබය පෙන්වන්න</target></trans-unit>
+<trans-unit id="s74e8052a415f4b28">
+  <source>Edit animation steps</source>
+<target>සජීවිකරණ පියවර සංස්කරණය කරන්න</target></trans-unit>
+<trans-unit id="s4ddda90d75c39e3f">
+  <source>Delete animation steps</source>
+<target>සජීවිකරණ පියවර මකන්න</target></trans-unit>
+<trans-unit id="s4394e7c4d91760ef">
+  <source>Configure graph permissions</source>
+<target>ප්‍රස්තාර අවසර වින්‍යාස කරන්න</target></trans-unit>
+<trans-unit id="sf312d3743ff8d4b3">
+  <source>Add nodes and edges using the toolbar above.</source>
+<target>ඉහළ මෙවලම් තීරුව භාවිතයෙන් නෝඩ සහ දාර එක් කරන්න.</target></trans-unit>
+<trans-unit id="s8b2ae093ad5cd15c">
+  <source>Add nodes and edges using the toolbar in edit mode.</source>
+<target>සංස්කරණ මාදිලියේ මෙවලම් තීරුව භාවිතයෙන් නෝඩ සහ දාර එක් කරන්න.</target></trans-unit>
+<trans-unit id="s0d971b1f7aa807a3">
+  <source>Graph permissions</source>
+<target>ප්‍රස්තාර අවසර</target></trans-unit>
+</body>
+</file>
+</xliff>
