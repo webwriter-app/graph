@@ -1,8 +1,6 @@
+import { connectMessages, messageLocale } from "../localization/localizer";
 import { LitElementWw } from "@webwriter/lit";
 import { html, TemplateResult } from "lit";
-import { localized, msg } from "@lit/localize";
-// @ts-ignore
-import LOCALIZE from "localization/generated";
 
 import styles from "./options.styles";
 
@@ -20,8 +18,8 @@ import { property } from "lit/decorators.js";
 import { PermissionsType } from "types";
 import { SlChangeEvent } from "@shoelace-style/shoelace";
 
-@localized()
 export class OptionsComponent extends LitElementWw {
+  protected readonly msg = connectMessages(this);
 	public static get scopedElements() {
 		return {
 			"sl-icon": SlIcon,
@@ -73,7 +71,7 @@ export class OptionsComponent extends LitElementWw {
 						if (permission.type === "checkbox")
 							return html`
 								<sl-switch
-									lang=${LOCALIZE.getLocale()}
+									lang=${messageLocale(this)}
 									?checked=${groupPerms?.[permission.id]}
 									?disabled=${!groupPerms ||
 									(group.id !== "general" &&
@@ -140,9 +138,9 @@ export class OptionsComponent extends LitElementWw {
 	}
 
 	protected render(): TemplateResult {
-		return html`<h2>${msg("Permissions")}</h2>
+		return html`<h2>${this.msg("Permissions")}</h2>
 
-			${permissionGroups().map((group) =>
+			${permissionGroups(this.msg).map((group) =>
 				this.renderPermissionGroup(group),
 			)} `;
 	}

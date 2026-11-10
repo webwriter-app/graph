@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Algoritmos executáveis`,
 's0868f4ad15f32174': `Pausar a animação`,
 's08c6c27f5b8452b1': `Adicionar subtexto ao nó`,
+'s0d971b1f7aa807a3': `Permissões do grafo`,
 's0f136ff2c086b760': `reiniciar`,
 's109991b0423f1512': `Violeta`,
 's11337fae701e3905': `Executar o algoritmo selecionado`,
@@ -34,6 +35,7 @@
 's42929dd473f85b2d': `subtextos de nó`,
 's429f70243017494b': `Mostrar a guia "Editar"`,
 's42b445d0b8ef5e0c': `Mostrar a guia "Algoritmo"`,
+'s4394e7c4d91760ef': `Configurar permissões do grafo`,
 's479a2b6569da2fd0': `Executar um algoritmo no grafo`,
 's4ddda90d75c39e3f': `Excluir etapas da animação`,
 's5222ccfc3ee461f9': `Adicionar animação de reinicialização`,
@@ -87,4 +89,3 @@
 'sf3659df71f61b3ec': `Excluir etapa`,
 'sfeb99afb5a2e03ca': `Editar o gráfico`,
     };
-  

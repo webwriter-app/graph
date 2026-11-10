@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Algoritmer som kan kjøres`,
 's0868f4ad15f32174': `Stopp animasjonen`,
 's08c6c27f5b8452b1': `Legg til undertekst for noden`,
+'s0d971b1f7aa807a3': `Graftillatelser`,
 's0f136ff2c086b760': `tilbakestill`,
 's109991b0423f1512': `Fiolett`,
 's11337fae701e3905': `Kjør den valgte algoritmen`,
@@ -34,6 +35,7 @@
 's42929dd473f85b2d': `undertekst for noder`,
 's429f70243017494b': `Vis fanen «Rediger»`,
 's42b445d0b8ef5e0c': `Vis fanen «Algoritme»`,
+'s4394e7c4d91760ef': `Konfigurer graftillatelser`,
 's479a2b6569da2fd0': `Kjør en algoritme på grafen`,
 's4ddda90d75c39e3f': `Slett animasjonstrinn`,
 's5222ccfc3ee461f9': `Legg til tilbakestillingsanimasjon`,
@@ -87,4 +89,3 @@
 'sf3659df71f61b3ec': `Slett trinn`,
 'sfeb99afb5a2e03ca': `Rediger grafen`,
     };
-  

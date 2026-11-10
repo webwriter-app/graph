@@ -1,8 +1,8 @@
+import { connectMessages } from "../../localization/localizer";
 import { LitElementWw } from "@webwriter/lit";
 import { html, TemplateResult } from "lit";
 import { property, state } from "lit/decorators.js";
 import { consume } from "@lit/context";
-import { localized, msg } from "@lit/localize";
 import { permissionsContext } from "utils/context";
 import { PermissionsType } from "types";
 
@@ -22,8 +22,8 @@ import {
 	updateLink,
 } from "../../utils/updateGraph";
 
-@localized()
 export class EditBar extends LitElementWw {
+  protected readonly msg = connectMessages(this);
 	public static get scopedElements() {
 		return {
 			"sl-icon": SlIcon,
@@ -128,7 +128,7 @@ export class EditBar extends LitElementWw {
 	protected render(): TemplateResult<1> {
 		if (this.addingEdge) {
 			return html`<p>
-				${msg("Click on two nodes to add an edge between them.")}
+				${this.msg("Click on two nodes to add an edge between them.")}
 			</p>`;
 		}
 		if (this.selectedNode !== null && this.graph) {
@@ -137,7 +137,7 @@ export class EditBar extends LitElementWw {
 			)?.name;
 			return html`
 				${html`<sl-input
-					label=${msg("Node label")}
+					label=${this.msg("Node label")}
 					size="small"
 					?disabled=${this.permissions?.edit?.editNode === false}
 					.value=${selectedNodeName ?? ""}
@@ -150,7 +150,7 @@ export class EditBar extends LitElementWw {
 							@click=${this._handleNodeDelete}
 						>
 							<sl-icon .src=${trash} slot="prefix"></sl-icon>
-							${msg("Delete")}
+							${this.msg("Delete")}
 						</sl-button>`
 					: null}
 			`;
@@ -166,7 +166,7 @@ export class EditBar extends LitElementWw {
 			)?.weight;
 			return html`
 				${html`<sl-input
-					label=${msg("Edge weight")}
+					label=${this.msg("Edge weight")}
 					size="small"
 					type="number"
 					autocomplete="off"
@@ -182,12 +182,12 @@ export class EditBar extends LitElementWw {
 							@click=${this._handleLinkDelete}
 						>
 							<sl-icon .src=${trash} slot="prefix"></sl-icon>
-							${msg("Delete")}
+							${this.msg("Delete")}
 						</sl-button>`
 					: null}
 			`;
 		}
 
-		return html`<p>${msg("Select a node or an edge to view details.")}</p>`;
+		return html`<p>${this.msg("Select a node or an edge to view details.")}</p>`;
 	}
 }

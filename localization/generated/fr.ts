@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Algorithmes exécutables`,
 's0868f4ad15f32174': `Mettre l'animation en pause`,
 's08c6c27f5b8452b1': `Ajouter le sous-texte du nœud`,
+'s0d971b1f7aa807a3': `Autorisations du graphe`,
 's0f136ff2c086b760': `réinitialiser`,
 's109991b0423f1512': `Violette`,
 's11337fae701e3905': `Exécuter l'algorithme sélectionné`,
@@ -34,6 +35,7 @@
 's42929dd473f85b2d': `sous-textes des nœuds`,
 's429f70243017494b': `Afficher l'onglet « Modifier »`,
 's42b445d0b8ef5e0c': `Afficher l'onglet « Algorithme »`,
+'s4394e7c4d91760ef': `Configurer les autorisations du graphe`,
 's479a2b6569da2fd0': `Appliquer un algorithme au graphe`,
 's4ddda90d75c39e3f': `Supprimer les étapes d'animation`,
 's5222ccfc3ee461f9': `Ajouter une animation de réinitialisation`,
@@ -87,4 +89,3 @@
 'sf3659df71f61b3ec': `Supprimer l'étape`,
 'sfeb99afb5a2e03ca': `Modifier le graphique`,
     };
-  

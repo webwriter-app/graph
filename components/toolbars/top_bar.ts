@@ -1,8 +1,8 @@
+import { connectMessages } from "../../localization/localizer";
 import { LitElementWw } from "@webwriter/lit";
 import { html, TemplateResult } from "lit";
 import { property } from "lit/decorators.js";
 import { consume } from "@lit/context";
-import { localized, msg } from "@lit/localize";
 import { permissionsContext } from "utils/context";
 import WwKbd from "components/ui/ww-kbd";
 import { AnimationStatusType, PermissionsType } from "types";
@@ -23,8 +23,8 @@ import stop from "@tabler/icons/outline/player-stop.svg";
 import circlePlus from "@tabler/icons/outline/circle-plus-2.svg";
 import linkPlus from "@tabler/icons/outline/link-plus.svg";
 
-@localized()
 export class TopBar extends LitElementWw {
+  protected readonly msg = connectMessages(this);
 	public static get scopedElements() {
 		return {
 			"sl-button-group": SlButtonGroup,
@@ -59,21 +59,21 @@ export class TopBar extends LitElementWw {
 					? this.ModeButton(
 							"edit",
 							edit,
-							html`${msg("Edit the graph")}`,
+							html`${this.msg("Edit the graph")}`,
 						)
 					: null}
 				${this.permissions?.algorithm?.enabled !== false
 					? this.ModeButton(
 							"algorithm",
 							algorithm,
-							html`${msg("Execute an algorithm on the graph")}`,
+							html`${this.msg("Execute an algorithm on the graph")}`,
 						)
 					: null}
 				${this.permissions?.animation?.enabled !== false
 					? this.ModeButton(
 							"animation",
 							animation,
-							html`${msg(
+							html`${this.msg(
 								"Create or customize the algorithm animation",
 							)}`,
 						)
@@ -94,18 +94,18 @@ export class TopBar extends LitElementWw {
 			return [
 				this.permissions?.edit?.addNode !== false
 					? this.ActionButton(
-							msg("Add node"),
+							this.msg("Add node"),
 							"add-node",
 							circlePlus,
-							html`${msg("Add a node to the graph")}`,
+							html`${this.msg("Add a node to the graph")}`,
 						)
 					: null,
 				this.permissions?.edit?.addEdge !== false
 					? this.ActionButton(
-							msg("Add edge"),
+							this.msg("Add edge"),
 							"add-edge",
 							linkPlus,
-							html`${msg("Add an edge to the graph")}`,
+							html`${this.msg("Add an edge to the graph")}`,
 							false,
 							this.addingEdge ? "primary" : "default",
 						)
@@ -119,15 +119,15 @@ export class TopBar extends LitElementWw {
 				actionButtons.push(
 					this.ActionButton(
 						this.mode === "algorithm"
-							? msg("Execute")
-							: msg("Play"),
+							? this.msg("Execute")
+							: this.msg("Play"),
 						this.mode === "algorithm"
 							? "execute-algorithm"
 							: "start-animation",
 						play,
 						this.mode === "algorithm"
-							? html`${msg("Execute the selected algorithm")}`
-							: html`${msg("Play the animation")}`,
+							? html`${this.msg("Execute the selected algorithm")}`
+							: html`${this.msg("Play the animation")}`,
 						false,
 						"success",
 					),
@@ -135,10 +135,10 @@ export class TopBar extends LitElementWw {
 			} else {
 				actionButtons.push(
 					this.ActionButton(
-						msg("Pause"),
+						this.msg("Pause"),
 						"pause-animation",
 						pause,
-						html`${msg("Pause the animation")}`,
+						html`${this.msg("Pause the animation")}`,
 						false,
 					),
 				);
@@ -147,10 +147,10 @@ export class TopBar extends LitElementWw {
 		if (this.animationStatus !== "STOP") {
 			actionButtons.push(
 				this.ActionButton(
-					msg("Stop"),
+					this.msg("Stop"),
 					"stop-animation",
 					stop,
-					html`${msg("Stop the animation")}`,
+					html`${this.msg("Stop the animation")}`,
 					false,
 					"danger",
 				),
@@ -184,10 +184,10 @@ export class TopBar extends LitElementWw {
 				>
 					<sl-icon .src=${icon} slot="prefix"></sl-icon>
 					${mode === "edit"
-						? msg("Edit")
+						? this.msg("Edit")
 						: mode === "algorithm"
-							? msg("Algorithm")
-							: msg("Animation")}
+							? this.msg("Algorithm")
+							: this.msg("Animation")}
 				</sl-button>
 			</sl-tooltip>
 		`;
@@ -237,7 +237,7 @@ export class TopBar extends LitElementWw {
 		return html`
 			<sl-tooltip
 				placement="bottom"
-				content=${msg("Cycle playback speed")}
+				content=${this.msg("Cycle playback speed")}
 			>
 				<sl-button
 					size="small"

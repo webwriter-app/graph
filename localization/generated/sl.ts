@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Izvedljivi algoritmi`,
 's0868f4ad15f32174': `Zaustavi animacijo`,
 's08c6c27f5b8452b1': `Dodaj podnaslov vozlišča`,
+'s0d971b1f7aa807a3': `Dovoljenja grafa`,
 's0f136ff2c086b760': `ponastavi`,
 's109991b0423f1512': `Vijolična`,
 's11337fae701e3905': `Izvedi izbrani algoritem`,
@@ -34,6 +35,7 @@
 's42929dd473f85b2d': `podteksti vozlišča`,
 's429f70243017494b': `Prikaži zavihek »Uredi«`,
 's42b445d0b8ef5e0c': `Pokaži zavihek »Algoritem«`,
+'s4394e7c4d91760ef': `Nastavi dovoljenja grafa`,
 's479a2b6569da2fd0': `Izvedi algoritem na grafu`,
 's4ddda90d75c39e3f': `Izbriši korake animacije`,
 's5222ccfc3ee461f9': `Dodaj animacijo ponastavitve`,
@@ -87,4 +89,3 @@
 'sf3659df71f61b3ec': `Izbriši korak`,
 'sfeb99afb5a2e03ca': `Uredi graf`,
     };
-  

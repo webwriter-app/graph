@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Algoritmi executabili`,
 's0868f4ad15f32174': `Oprește animația`,
 's08c6c27f5b8452b1': `Adăugare subtext nod`,
+'s0d971b1f7aa807a3': `Permisiuni graf`,
 's0f136ff2c086b760': `resetare`,
 's109991b0423f1512': `Violet`,
 's11337fae701e3905': `Execută algoritmul selectat`,
@@ -34,6 +35,7 @@
 's42929dd473f85b2d': `subtextele nodurilor`,
 's429f70243017494b': `Afișează fila „Editare”`,
 's42b445d0b8ef5e0c': `Afișează fila „Algoritm”`,
+'s4394e7c4d91760ef': `Configurează permisiunile grafului`,
 's479a2b6569da2fd0': `Execută un algoritm pe graf`,
 's4ddda90d75c39e3f': `Șterge pașii animației`,
 's5222ccfc3ee461f9': `Adaugă animație de resetare`,
@@ -87,4 +89,3 @@
 'sf3659df71f61b3ec': `Șterge pasul`,
 'sfeb99afb5a2e03ca': `Editează graficul`,
     };
-  

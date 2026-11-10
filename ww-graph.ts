@@ -3,9 +3,9 @@ import { css, html, PropertyValueMap, PropertyValues } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { property } from 'lit/decorators/property.js';
 import { provide } from '@lit/context';
-import { localized, msg } from '@lit/localize';
 // @ts-ignore
-import LOCALIZE from 'localization/generated';
+import type { MsgFn } from "@lit/localize";
+import { createLocalizer, effectiveLanguage, sourceMsg } from "./localization/localizer";
 import { permissionsContext } from 'utils/context';
 import './components/graph_component.ts';
 import { animateLinks } from './graph/animateLinks.ts';
@@ -41,15 +41,25 @@ import SlSelect from '@shoelace-style/shoelace/dist/components/select/select.com
 import SlIcon from '@shoelace-style/shoelace/dist/components/icon/icon.component.js';
 import SlDialog from '@shoelace-style/shoelace/dist/components/dialog/dialog.component.js';
 
-@localized()
 @customElement('ww-graph')
 export default class WwGraph extends LitElementWw {
-    protected localize = LOCALIZE;
+    // Inherited language must not be reflected as an authored attribute.
+    static override properties = { lang: { attribute: false, noAccessor: true } };
+    override get lang(): string { return effectiveLanguage(this); }
+    override set lang(value: string) { this.setAttribute("lang", value); }
 
-    static actions = {
-        configurePermissions: { label: { _: 'Configure graph permissions' } },
-    };
-    readonly actions = WwGraph.actions;
+    protected localize = createLocalizer(this, () => {
+        Object.assign(this.actions, WwGraph.makeActions(this.msg));
+    });
+    readonly msg = this.localize.msg;
+
+    private static makeActions(msg: MsgFn) {
+        return {
+            configurePermissions: { label: { _: msg('Configure graph permissions') } },
+        };
+    }
+    static actions = WwGraph.makeActions(sourceMsg);
+    readonly actions = WwGraph.makeActions(sourceMsg);
 
     @state() private accessor permissionsDialogOpen = false;
 
@@ -529,8 +539,8 @@ export default class WwGraph extends LitElementWw {
                 ${this.graph.nodes.length === 0 ? html`
                     <div class="graph-empty-overlay">
                         <span>${this.mode === 'edit'
-                            ? msg("Add nodes and edges using the toolbar above.")
-                            : msg("Add nodes and edges using the toolbar in edit mode.")
+                            ? this.msg("Add nodes and edges using the toolbar above.")
+                            : this.msg("Add nodes and edges using the toolbar in edit mode.")
                         }</span>
                     </div>
                 ` : null}
@@ -566,7 +576,7 @@ export default class WwGraph extends LitElementWw {
         </div>
         
         ${this.isContentEditable ? html`
-            <sl-dialog label=${msg('Graph permissions')} ?open=${this.permissionsDialogOpen} @sl-after-hide=${() => this.permissionsDialogOpen = false}>
+            <sl-dialog label=${this.msg('Graph permissions')} ?open=${this.permissionsDialogOpen} @sl-after-hide=${() => this.permissionsDialogOpen = false}>
             <options-component
                 .permissions=${this.permissions}
 

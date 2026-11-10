@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `실행 가능한 알고리즘`,
 's0868f4ad15f32174': `애니메이션 일시 정지`,
 's08c6c27f5b8452b1': `노드 서브텍스트 추가`,
+'s0d971b1f7aa807a3': `그래프 권한`,
 's0f136ff2c086b760': `초기화`,
 's109991b0423f1512': `바이올렛`,
 's11337fae701e3905': `선택한 알고리즘을 실행합니다`,
@@ -34,6 +35,7 @@
 's42929dd473f85b2d': `노드 서브텍스트`,
 's429f70243017494b': `“편집” 탭 표시`,
 's42b445d0b8ef5e0c': `“알고리즘” 탭 표시`,
+'s4394e7c4d91760ef': `그래프 권한 설정`,
 's479a2b6569da2fd0': `그래프에서 알고리즘을 실행한다`,
 's4ddda90d75c39e3f': `애니메이션 단계 삭제`,
 's5222ccfc3ee461f9': `리셋 애니메이션 추가`,
@@ -87,4 +89,3 @@
 'sf3659df71f61b3ec': `단계 삭제`,
 'sfeb99afb5a2e03ca': `그래프 편집`,
     };
-  

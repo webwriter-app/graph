@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Çalıştırılabilir algoritmalar`,
 's0868f4ad15f32174': `Animasyonu duraklat`,
 's08c6c27f5b8452b1': `Düğüm alt metni ekle`,
+'s0d971b1f7aa807a3': `Çizge izinleri`,
 's0f136ff2c086b760': `sıfırla`,
 's109991b0423f1512': `Menekşe`,
 's11337fae701e3905': `Seçilen algoritmayı çalıştır`,
@@ -34,6 +35,7 @@
 's42929dd473f85b2d': `düğüm alt metinleri`,
 's429f70243017494b': `"Düzenle" sekmesini göster`,
 's42b445d0b8ef5e0c': `"Algoritma" sekmesini göster`,
+'s4394e7c4d91760ef': `Çizge izinlerini yapılandır`,
 's479a2b6569da2fd0': `Grafik üzerinde bir algoritma çalıştır`,
 's4ddda90d75c39e3f': `Animasyon adımlarını sil`,
 's5222ccfc3ee461f9': `Sıfırlama animasyonu ekle`,
@@ -87,4 +89,3 @@
 'sf3659df71f61b3ec': `Adımı sil`,
 'sfeb99afb5a2e03ca': `Grafiği düzenle`,
     };
-  

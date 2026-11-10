@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Körbara algoritmer`,
 's0868f4ad15f32174': `Pausa animationen`,
 's08c6c27f5b8452b1': `Lägg till undertext för nod`,
+'s0d971b1f7aa807a3': `Grafbehörigheter`,
 's0f136ff2c086b760': `återställ`,
 's109991b0423f1512': `Violett`,
 's11337fae701e3905': `Kör den valda algoritmen`,
@@ -34,6 +35,7 @@
 's42929dd473f85b2d': `nodundertexter`,
 's429f70243017494b': `Visa fliken "Redigera"`,
 's42b445d0b8ef5e0c': `Visa fliken ”Algoritm”`,
+'s4394e7c4d91760ef': `Konfigurera grafbehörigheter`,
 's479a2b6569da2fd0': `Kör en algoritm på grafen`,
 's4ddda90d75c39e3f': `Ta bort animationssteg`,
 's5222ccfc3ee461f9': `Lägg till återställningsanimation`,
@@ -87,4 +89,3 @@
 'sf3659df71f61b3ec': `Ta bort steg`,
 'sfeb99afb5a2e03ca': `Redigera diagrammet`,
     };
-  

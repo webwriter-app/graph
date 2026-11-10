@@ -1,4 +1,4 @@
-import { localized, msg } from "@lit/localize";
+import { connectMessages } from "../../localization/localizer";
 import { LitElementWw } from "@webwriter/lit";
 import { html, css, TemplateResult } from "lit";
 import { property } from "lit/decorators.js";
@@ -17,8 +17,9 @@ import { SlInputEvent } from "@shoelace-style/shoelace";
  * A simple color picker component that displays a grid of color options.
  * Emits an `input` event with the selected color when a color is clicked.
  */
-@localized()
+
 export default class WwColorPicker extends LitElementWw {
+  protected readonly msg = connectMessages(this);
 	public static get scopedElements() {
 		return {
 			"sl-dropdown": SlDropdown,
@@ -30,46 +31,46 @@ export default class WwColorPicker extends LitElementWw {
 		};
 	}
 
-	public static get COLORS() {
+	public get COLORS() {
 		return [
 			{
-				label: msg("Black"),
+				label: this.msg("Black"),
 				color: SHOELACE.color.gray[950],
 			},
 			{
-				label: msg("Red"),
+				label: this.msg("Red"),
 				color: SHOELACE.color.red[500],
 			},
 			{
-				label: msg("Orange"),
+				label: this.msg("Orange"),
 				color: SHOELACE.color.orange[500],
 			},
 			{
-				label: msg("Yellow"),
+				label: this.msg("Yellow"),
 				color: SHOELACE.color.yellow[500],
 			},
 			{
-				label: msg("Lime"),
+				label: this.msg("Lime"),
 				color: SHOELACE.color.lime[500],
 			},
 			{
-				label: msg("Green"),
+				label: this.msg("Green"),
 				color: SHOELACE.color.green[500],
 			},
 			{
-				label: msg("Cyan"),
+				label: this.msg("Cyan"),
 				color: SHOELACE.color.cyan[500],
 			},
 			{
-				label: msg("Blue"),
+				label: this.msg("Blue"),
 				color: SHOELACE.color.blue[500],
 			},
 			{
-				label: msg("Violet"),
+				label: this.msg("Violet"),
 				color: SHOELACE.color.violet[500],
 			},
 			{
-				label: msg("Pink"),
+				label: this.msg("Pink"),
 				color: SHOELACE.color.pink[500],
 			},
 		] as const;
@@ -87,7 +88,7 @@ export default class WwColorPicker extends LitElementWw {
 					caret
 					size="small"
 					class="color-picker-button"
-					aria-label=${msg("Select Color")}
+					aria-label=${this.msg("Select Color")}
 				>
 					<div
 						class="color-swatch"
@@ -99,7 +100,7 @@ export default class WwColorPicker extends LitElementWw {
 						${this.renderColorSwatches()}
 					</div>
 					<sl-divider></sl-divider>
-					<sl-details summary=${msg("Custom color")}>
+					<sl-details summary=${this.msg("Custom color")}>
 						<sl-color-picker
 							.value=${this.value}
 							@sl-input=${(e: SlInputEvent) => {
@@ -124,7 +125,7 @@ export default class WwColorPicker extends LitElementWw {
 	}
 
 	renderColorSwatches() {
-		const colors = WwColorPicker.COLORS;
+		const colors = this.COLORS;
 
 		return html`${colors.map(({ label, color }) => {
 			return html`<button

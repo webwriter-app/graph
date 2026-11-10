@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Vykdomieji algoritmai`,
 's0868f4ad15f32174': `Sustabdyti animaciją`,
 's08c6c27f5b8452b1': `Pridėti mazgo paaiškinimą`,
+'s0d971b1f7aa807a3': `Grafo leidimai`,
 's0f136ff2c086b760': `atstatyti`,
 's109991b0423f1512': `Violetinė`,
 's11337fae701e3905': `Vykdyti pasirinktą algoritmą`,
@@ -34,6 +35,7 @@
 's42929dd473f85b2d': `mazgo kontekstai`,
 's429f70243017494b': `Rodyti skirtuką „Redaguoti“`,
 's42b445d0b8ef5e0c': `Rodyti skirtuką „Algoritmas“`,
+'s4394e7c4d91760ef': `Konfigūruoti grafo leidimus`,
 's479a2b6569da2fd0': `Vykdyti algoritmą grafike`,
 's4ddda90d75c39e3f': `Ištrinti animacijos etapus`,
 's5222ccfc3ee461f9': `Pridėti atstatymo animaciją`,
@@ -87,4 +89,3 @@
 'sf3659df71f61b3ec': `Ištrinti veiksmą`,
 'sfeb99afb5a2e03ca': `Redaguoti diagramą`,
     };
-  
