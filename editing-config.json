@@ -105,7 +105,16 @@
       "so": "Muuji garaafyo, tijaabi algoriidamyada garaafka ee caanka ah (Kruskal, Dijkstra, BFS, DFS iyo kuwo kale), oo duub dhaqdhaqaaqyada garaafka ee aad samaysato.",
       "ti": "ግራፋት ኣርኢ፣ ልሙዳት ኣልጎሪዝማት ግራፍ (Kruskal፣ Dijkstra፣ BFS፣ DFS ወዘተ) ፈትን፣ ናይ ገዛእ ግራፍካ ምንቅስቓስ ድማ ቅረጽ።",
       "sw": "Onyesha grafu, iga algoriti za kawaida za grafu (Kruskal, Dijkstra, BFS, DFS, n.k.), na rekodi uhuishaji wako wa grafu.",
-      "ha": "Nuna giraf, kwaikwayi sanannun algoritiman giraf (Kruskal, Dijkstra, BFS, DFS da sauransu), ka kuma yi rikodin motsin giraf ɗinka."
+      "ha": "Nuna giraf, kwaikwayi sanannun algoritiman giraf (Kruskal, Dijkstra, BFS, DFS da sauransu), ka kuma yi rikodin motsin giraf ɗinka.",
+      "yue-Hans": "将图表视觉化、模拟常见图表演算法（Kruskal、Dijkstra、BFS、DFS 等），并记录自己嘅图表动画。",
+      "yue-Hant": "將圖表視覺化、模擬常見圖表演算法（Kruskal、Dijkstra、BFS、DFS 等），並記錄自己嘅圖表動畫。",
+      "kmr": "Grafan dîtbar bike, algorîtmayên gelemperî yên grafan simulasyon bike (Kruskal, Dijkstra, BFS, DFS û hwd.), û anîmasyonên grafên xwe tomar bike.",
+      "kmr-Latn": "Grafan dîtbar bike, algorîtmayên gelemperî yên grafan simulasyon bike (Kruskal, Dijkstra, BFS, DFS û hwd.), û anîmasyonên grafên xwe tomar bike.",
+      "kmr-Arab": "گرافان دیتبار bike, ئالگۆریتمایێن گەلەمپەری یێن گرافان سمولاسیۆن bike (کروسکال, دژکسترا, BFS, DFS ئوو هود.), ئوو ئانیماسیۆنێن گرافێن خوە تۆمار bike.",
+      "ckb": "گرافەکان وێنە بکە، ئەلگۆریتمە باوەکانی گراف شبیه‌سازی بکە (Kruskal، Dijkstra، BFS، DFS، هتد) و ئەنیمەیشنی گرافی خۆت تۆمار بکە.",
+      "ckb-Arab": "گرافەکان وێنە بکە، ئەلگۆریتمە باوەکانی گراف شبیه‌سازی بکە (Kruskal، Dijkstra، BFS، DFS، هتد) و ئەنیمەیشنی گرافی خۆت تۆمار بکە.",
+      "af-ZA": "Visualiseer grafte, simuleer algemene graafalgoritmes (Kruskal, Dijkstra, BFS, DFS, ens.) en neem jou eie graafanimasies op.",
+      "af-NA": "Visualiseer grafte, simuleer algemene graafalgoritmes (Kruskal, Dijkstra, BFS, DFS, ens.) en neem jou eie graafanimasies op."
     },
     "label": {
       "_": "Graph",
@@ -210,7 +219,16 @@
       "so": "Garaaf",
       "ti": "ግራፍ",
       "sw": "Grafu",
-      "ha": "Giraf"
+      "ha": "Giraf",
+      "yue-Hans": "图表",
+      "yue-Hant": "圖表",
+      "kmr": "Graf",
+      "kmr-Latn": "Graf",
+      "kmr-Arab": "گراف",
+      "ckb": "گراف",
+      "ckb-Arab": "گراف",
+      "af-ZA": "Graaf",
+      "af-NA": "Graaf"
     }
   },
   "./widgets/ww-graph": {
@@ -317,7 +335,16 @@
       "so": "Garaafka WebWriter",
       "ti": "ግራፍ WebWriter",
       "sw": "Grafu ya WebWriter",
-      "ha": "Giraf na WebWriter"
+      "ha": "Giraf na WebWriter",
+      "yue-Hans": "Ww Graph",
+      "yue-Hant": "Ww Graph",
+      "kmr": "Grafika WW",
+      "kmr-Latn": "Grafika WW",
+      "kmr-Arab": "گرافکا WW",
+      "ckb": "گرافی Ww",
+      "ckb-Arab": "گرافی Ww",
+      "af-ZA": "WebWriter-graaf",
+      "af-NA": "WebWriter-graaf"
     }
   },
   "./snippets/people": {
@@ -424,7 +451,16 @@
       "so": "Dad",
       "ti": "ሰባት",
       "sw": "Watu",
-      "ha": "Mutane"
+      "ha": "Mutane",
+      "yue-Hans": "人物",
+      "yue-Hant": "人物",
+      "kmr": "Mirov",
+      "kmr-Latn": "Mirov",
+      "kmr-Arab": "مرۆڤ",
+      "ckb": "خەڵک",
+      "ckb-Arab": "خەڵک",
+      "af-ZA": "Mense",
+      "af-NA": "Mense"
     }
   },
   "./snippets/dijkstra": {
@@ -531,7 +567,16 @@
       "so": "Dijkstra",
       "ti": "Dijkstra",
       "sw": "Dijkstra",
-      "ha": "Dijkstra"
+      "ha": "Dijkstra",
+      "yue-Hans": "Dijkstra",
+      "yue-Hant": "Dijkstra",
+      "kmr": "Dijkstra",
+      "kmr-Latn": "Dijkstra",
+      "kmr-Arab": "دژکسترا",
+      "ckb": "Dijkstra",
+      "ckb-Arab": "Dijkstra",
+      "af-ZA": "Dijkstra",
+      "af-NA": "Dijkstra"
     }
   },
   "./snippets/kruskal": {
@@ -638,7 +683,16 @@
       "so": "Kruskal",
       "ti": "Kruskal",
       "sw": "Kruskal",
-      "ha": "Kruskal"
+      "ha": "Kruskal",
+      "yue-Hans": "Kruskal",
+      "yue-Hant": "Kruskal",
+      "kmr": "Kruskal",
+      "kmr-Latn": "Kruskal",
+      "kmr-Arab": "کروسکال",
+      "ckb": "Kruskal",
+      "ckb-Arab": "Kruskal",
+      "af-ZA": "Kruskal",
+      "af-NA": "Kruskal"
     }
   }
 }
