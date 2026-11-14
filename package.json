@@ -133,16 +133,17 @@
     "@lit/context": "^1.1.6",
     "@lit/localize": "^0.12.2",
     "@shoelace-style/shoelace": "^2.15.1",
-    "@tabler/icons": "^3.36.1",
-    "@webwriter/lit": "^2.0.0",
-    "d3": "^7.6.1",
+    "@tabler/icons": "^3.52.0",
+    "@webwriter/lit": "^3.0.0",
+    "d3": "^7.9.2",
     "lit": "^3.1.4"
   },
   "devDependencies": {
+    "@webwriter/build": "^1.13.1",
     "@types/d3": "^7.4.3",
-    "@types/d3-selection": "^3.0.11",
+    "@types/d3-selection": "^3.0.12",
     "@types/d3-transition": "^3.0.9",
-    "typescript": "^6.0.2"
+    "typescript": "^7.0.2"
   },
   "exports": {
     "./widgets/ww-graph.*": {
