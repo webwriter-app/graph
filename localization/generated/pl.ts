@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Algorytmy wykonalne`,
 's0868f4ad15f32174': `Zatrzymaj animację`,
 's08c6c27f5b8452b1': `Dodaj podtekst węzła`,
+'s0d971b1f7aa807a3': `Uprawnienia grafu`,
 's0f136ff2c086b760': `zresetuj`,
 's109991b0423f1512': `Fioletowy`,
 's11337fae701e3905': `Uruchom wybrany algorytm`,
@@ -34,6 +35,7 @@
 's42929dd473f85b2d': `podteksty węzłów`,
 's429f70243017494b': `Pokaż kartę „Edytuj”`,
 's42b445d0b8ef5e0c': `Pokaż zakładkę „Algorytm”`,
+'s4394e7c4d91760ef': `Skonfiguruj uprawnienia grafu`,
 's479a2b6569da2fd0': `Wykonaj algorytm na grafie`,
 's4ddda90d75c39e3f': `Usuń etapy animacji`,
 's5222ccfc3ee461f9': `Dodaj animację resetowania`,
@@ -87,4 +89,3 @@
 'sf3659df71f61b3ec': `Usuń krok`,
 'sfeb99afb5a2e03ca': `Edytuj wykres`,
     };
-  

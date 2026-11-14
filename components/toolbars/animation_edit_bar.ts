@@ -1,8 +1,8 @@
+import { connectMessages } from "../../localization/localizer";
 import { LitElementWw } from "@webwriter/lit";
 import { html, PropertyValues, TemplateResult } from "lit";
 import { property } from "lit/decorators.js";
 import { consume } from "@lit/context";
-import { localized, msg } from "@lit/localize";
 import { permissionsContext } from "utils/context";
 import { PermissionsType, AnimationStep, iGraph } from "types";
 import { deleteAnimationStep, setAnimation } from "utils/events";
@@ -21,8 +21,8 @@ import { SlChangeEvent, SlInputEvent } from "@shoelace-style/shoelace";
 
 import trash from "@tabler/icons/outline/trash.svg";
 
-@localized()
 export class AnimationEditBar extends LitElementWw {
+  protected readonly msg = connectMessages(this);
 	public static get scopedElements() {
 		return {
 			"sl-icon": SlIcon,
@@ -137,7 +137,7 @@ export class AnimationEditBar extends LitElementWw {
 		) {
 			output.push(html`
 				<div>
-					<span>${msg("Select color to toggle:")}</span>
+					<span>${this.msg("Select color to toggle:")}</span>
 					<ww-color-picker
 						.value=${animationStep.type === "node"
 							? this.nodeColor
@@ -169,7 +169,7 @@ export class AnimationEditBar extends LitElementWw {
 				output.push(html`
 					<div>
 						<span>
-							${msg("Select a node to edit its subtext.")}
+							${this.msg("Select a node to edit its subtext.")}
 						</span>
 					</div>
 				`);
@@ -213,7 +213,7 @@ export class AnimationEditBar extends LitElementWw {
 									});
 								}
 							}}
-							>${msg("Change subtext:")}</sl-checkbox
+							>${this.msg("Change subtext:")}</sl-checkbox
 						>
 						<sl-input
 							size="small"
@@ -248,7 +248,7 @@ export class AnimationEditBar extends LitElementWw {
 		} else if (animationStep.type === "reset") {
 			output.push(html`
 				<div>
-					<span>${msg("reset")} &hellip;</span>
+					<span>${this.msg("reset")} &hellip;</span>
 					<sl-checkbox
 						size="small"
 						?disabled=${this.permissions?.animation?.editStep ===
@@ -260,7 +260,7 @@ export class AnimationEditBar extends LitElementWw {
 							}
 							this.updateStepData({ nodes: e.target.checked });
 						}}
-						>${msg("node colors")}</sl-checkbox
+						>${this.msg("node colors")}</sl-checkbox
 					>
 					<sl-checkbox
 						size="small"
@@ -273,7 +273,7 @@ export class AnimationEditBar extends LitElementWw {
 							}
 							this.updateStepData({ links: e.target.checked });
 						}}
-						>${msg("edge colors")}</sl-checkbox
+						>${this.msg("edge colors")}</sl-checkbox
 					>
 					<sl-checkbox
 						size="small"
@@ -286,7 +286,7 @@ export class AnimationEditBar extends LitElementWw {
 							}
 							this.updateStepData({ subtexts: e.target.checked });
 						}}
-						>${msg("node subtexts")}</sl-checkbox
+						>${this.msg("node subtexts")}</sl-checkbox
 					>
 				</div>
 			`);
@@ -309,7 +309,7 @@ export class AnimationEditBar extends LitElementWw {
 					@click=${() => this.deleteStep(this.selectedStep)}
 				>
 					<sl-icon .src=${trash} slot="prefix"></sl-icon>
-					${msg("Delete step")}
+					${this.msg("Delete step")}
 				</sl-button>
 			`);
 		}

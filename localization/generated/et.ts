@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Täidetavad algoritmid`,
 's0868f4ad15f32174': `Peata animatsioon`,
 's08c6c27f5b8452b1': `Lisa sõlme alatekst`,
+'s0d971b1f7aa807a3': `Graafi õigused`,
 's0f136ff2c086b760': `taastamine`,
 's109991b0423f1512': `Violett`,
 's11337fae701e3905': `Käivita valitud algoritm`,
@@ -34,6 +35,7 @@
 's42929dd473f85b2d': `sõlme alatekstid`,
 's429f70243017494b': `Näita vahekaarti „Muuda”`,
 's42b445d0b8ef5e0c': `Näita vahekaarti „Algoritm“`,
+'s4394e7c4d91760ef': `Seadista graafi õigused`,
 's479a2b6569da2fd0': `Käivita algoritm graafil`,
 's4ddda90d75c39e3f': `Kustuta animatsiooni etapid`,
 's5222ccfc3ee461f9': `Lisa taastamisanimatsioon`,
@@ -87,4 +89,3 @@
 'sf3659df71f61b3ec': `Kustuta samm`,
 'sfeb99afb5a2e03ca': `Muuda graafikut`,
     };
-  

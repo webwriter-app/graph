@@ -1,10 +1,10 @@
+import { connectMessages } from "../../localization/localizer";
 import { LitElementWw } from "@webwriter/lit";
 import { html, TemplateResult } from "lit";
 import { property, state } from "lit/decorators.js";
 import { consume } from "@lit/context";
 import { permissionsContext } from "utils/context";
 import { PermissionsType } from "types";
-import { localized, msg } from "@lit/localize";
 
 import styles from "./animation_bar.styles";
 
@@ -29,8 +29,8 @@ import {
 } from "../../types";
 import { setAnimation } from "utils/events";
 
-@localized()
 export class AnimationBar extends LitElementWw {
+  protected readonly msg = connectMessages(this);
 	public static get scopedElements() {
 		return {
 			"sl-icon": SlIcon,
@@ -97,7 +97,7 @@ export class AnimationBar extends LitElementWw {
 					</div>`
 				: html`<div class="no-steps" @click=${this._handleStepsClick}>
 						<p>
-							${msg(
+							${this.msg(
 								'No animation steps yet. Execute an algorithm or click "Add step" to create one.',
 							)}
 						</p>
@@ -125,7 +125,7 @@ export class AnimationBar extends LitElementWw {
 										.src=${plus}
 										slot="prefix"
 									></sl-icon>
-									${msg("Add step")}
+									${this.msg("Add step")}
 								</sl-button>
 								<sl-menu
 									@sl-select=${(e: CustomEvent) =>
@@ -136,28 +136,28 @@ export class AnimationBar extends LitElementWw {
 											.src=${circle}
 											slot="prefix"
 										></sl-icon>
-										${msg("Add node animation")}
+										${this.msg("Add node animation")}
 									</sl-menu-item>
 									<sl-menu-item value="link">
 										<sl-icon
 											.src=${link}
 											slot="prefix"
 										></sl-icon>
-										${msg("Add edge animation")}
+										${this.msg("Add edge animation")}
 									</sl-menu-item>
 									<sl-menu-item value="reset">
 										<sl-icon
 											.src=${reset}
 											slot="prefix"
 										></sl-icon>
-										${msg("Add reset animation")}
+										${this.msg("Add reset animation")}
 									</sl-menu-item>
 									<sl-menu-item value="subtext">
 										<sl-icon
 											.src=${subtext}
 											slot="prefix"
 										></sl-icon>
-										${msg("Add node subtext")}
+										${this.msg("Add node subtext")}
 									</sl-menu-item>
 								</sl-menu>
 							</sl-dropdown>

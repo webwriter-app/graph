@@ -1,4 +1,5 @@
-import { msg } from "@lit/localize";
+import type { MsgFn } from "@lit/localize";
+import { sourceMsg } from "../localization/localizer";
 import { AlgorithmType } from "types";
 import bfs from "./bfs";
 import dfs from "./dfs";
@@ -16,7 +17,7 @@ export default [
 	coloring,
 ] as AlgorithmType[];
 
-export function getAlgorithmName(id: string): string {
+export function getAlgorithmName(id: string, msg: MsgFn = sourceMsg): string {
 	const names: Record<string, string> = {
 		bfs: msg("Breadth First Search"),
 		dfs: msg("Depth First Search"),

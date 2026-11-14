@@ -1,9 +1,9 @@
+import { connectMessages } from "../../localization/localizer";
 import { LitElementWw } from "@webwriter/lit";
 import { html, PropertyValues, TemplateResult } from "lit";
 import { consume } from "@lit/context";
 import { permissionsContext } from "utils/context";
 import { PermissionsType } from "types";
-import { localized, msg } from "@lit/localize";
 
 import algorithms, { getAlgorithmName } from "algorithms";
 
@@ -18,8 +18,8 @@ import { property, state } from "lit/decorators.js";
 import { AlgorithmConfigEventDetail, AlgorithmType, iGraph } from "types";
 import { SlChangeEvent } from "@shoelace-style/shoelace";
 
-@localized()
 export class AlgorithmBar extends LitElementWw {
+  protected readonly msg = connectMessages(this);
 	public static get scopedElements() {
 		return {
 			"sl-icon": SlIcon,
@@ -70,7 +70,7 @@ export class AlgorithmBar extends LitElementWw {
 
 		return html`<div class="left">
 				<sl-select
-					label=${msg("Select algorithm")}
+					label=${this.msg("Select algorithm")}
 					size="small"
 					hoist
 					?disabled=${visibleAlgorithms.length <= 1}
@@ -90,7 +90,7 @@ export class AlgorithmBar extends LitElementWw {
 				>
 					${visibleAlgorithms.map(
 						(algo) => html`
-							<sl-option value=${algo.id}>${getAlgorithmName(algo.id)}</sl-option>
+							<sl-option value=${algo.id}>${getAlgorithmName(algo.id, this.msg)}</sl-option>
 						`,
 					)}
 				</sl-select>
@@ -101,7 +101,7 @@ export class AlgorithmBar extends LitElementWw {
 			<div class="right">
 				<sl-select
 					id="start-select"
-					label=${msg("Start node")}
+					label=${this.msg("Start node")}
 					size="small"
 					hoist
 					?disabled=${!this.selectedAlgorithm ||
@@ -121,7 +121,7 @@ export class AlgorithmBar extends LitElementWw {
 
 				<sl-select
 					id="target-select"
-					label=${msg("Target node")}
+					label=${this.msg("Target node")}
 					size="small"
 					hoist
 					?disabled=${!this.selectedAlgorithm ||

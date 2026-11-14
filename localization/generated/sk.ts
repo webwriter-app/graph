@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Algoritmy, ktoré je možné spustiť`,
 's0868f4ad15f32174': `Pozastaviť animáciu`,
 's08c6c27f5b8452b1': `Pridať podtext uzla`,
+'s0d971b1f7aa807a3': `Oprávnenia grafu`,
 's0f136ff2c086b760': `vynulovať`,
 's109991b0423f1512': `Fialová`,
 's11337fae701e3905': `Spustiť vybraný algoritmus`,
@@ -34,6 +35,7 @@
 's42929dd473f85b2d': `podtexty uzlov`,
 's429f70243017494b': `Zobraziť kartu „Upraviť“`,
 's42b445d0b8ef5e0c': `Zobraziť kartu „Algoritmus“`,
+'s4394e7c4d91760ef': `Nastaviť oprávnenia grafu`,
 's479a2b6569da2fd0': `Vykonajte algoritmus na grafe`,
 's4ddda90d75c39e3f': `Odstrániť kroky animácie`,
 's5222ccfc3ee461f9': `Pridať animáciu obnovenia`,
@@ -87,4 +89,3 @@
 'sf3659df71f61b3ec': `Odstrániť krok`,
 'sfeb99afb5a2e03ca': `Uprav graf`,
     };
-  

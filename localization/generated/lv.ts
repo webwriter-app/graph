@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Īstenojami algoritmi`,
 's0868f4ad15f32174': `Pauzēt animāciju`,
 's08c6c27f5b8452b1': `Pievienot mezgla aprakstu`,
+'s0d971b1f7aa807a3': `Grafa atļaujas`,
 's0f136ff2c086b760': `atjaunot`,
 's109991b0423f1512': `Violeta`,
 's11337fae701e3905': `Izpildīt izvēlēto algoritmu`,
@@ -34,6 +35,7 @@
 's42929dd473f85b2d': `mezgla apakšteksti`,
 's429f70243017494b': `Rādīt cilni „Rediģēt“`,
 's42b445d0b8ef5e0c': `Rādīt cilni „Algoritms“`,
+'s4394e7c4d91760ef': `Konfigurēt grafa atļaujas`,
 's479a2b6569da2fd0': `Izpildīt algoritmu uz grafika`,
 's4ddda90d75c39e3f': `Dzēst animācijas posmus`,
 's5222ccfc3ee461f9': `Pievienot atjaunošanas animāciju`,
@@ -87,4 +89,3 @@
 'sf3659df71f61b3ec': `Dzēst soli`,
 'sfeb99afb5a2e03ca': `Rediģēt grafiku`,
     };
-  

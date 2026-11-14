@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Algoritma yang dapat dijalankan`,
 's0868f4ad15f32174': `Jeda animasi`,
 's08c6c27f5b8452b1': `Tambahkan teks tambahan pada node`,
+'s0d971b1f7aa807a3': `Izin graf`,
 's0f136ff2c086b760': `atur ulang`,
 's109991b0423f1512': `Ungu`,
 's11337fae701e3905': `Jalankan algoritma yang dipilih`,
@@ -34,6 +35,7 @@
 's42929dd473f85b2d': `subteks node`,
 's429f70243017494b': `Tampilkan tab "Edit"`,
 's42b445d0b8ef5e0c': `Tampilkan tab "Algoritma"`,
+'s4394e7c4d91760ef': `Konfigurasikan izin graf`,
 's479a2b6569da2fd0': `Jalankan algoritma pada graf`,
 's4ddda90d75c39e3f': `Hapus langkah animasi`,
 's5222ccfc3ee461f9': `Tambahkan animasi reset`,
@@ -87,4 +89,3 @@
 'sf3659df71f61b3ec': `Hapus langkah`,
 'sfeb99afb5a2e03ca': `Edit grafik`,
     };
-  

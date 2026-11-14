@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+<file target-language="tpi" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="s405fdfa767fb6359">
+  <source>Breadth First Search</source>
+<target>Painim long sait pastaim</target></trans-unit>
+<trans-unit id="sb202f05c9211ece8">
+  <source>Depth First Search</source>
+<target>Painim i go daun pastaim</target></trans-unit>
+<trans-unit id="s5ed298f51c2bbc54">
+  <source>Dijkstra's Algorithm</source>
+<target>Algoritam bilong Dijkstra</target></trans-unit>
+<trans-unit id="sa38c309ccd6a88f9">
+  <source>Spanning Tree (Borůvka's Algorithm)</source>
+<target>Diwai bilong olgeta nod (algoritam bilong Borůvka)</target></trans-unit>
+<trans-unit id="s6a01e45e773c6162">
+  <source>Cycle Detection</source>
+<target>Painim ol raun</target></trans-unit>
+<trans-unit id="s1eac2cbaf3e3603e">
+  <source>Graph Coloring (Brute Force)</source>
+<target>Putim kala long graf (traim olgeta rot)</target></trans-unit>
+<trans-unit id="se8dca0132c66ae03">
+  <source>Permissions</source>
+<target>Tok orait</target></trans-unit>
+<trans-unit id="s7a3752d246cad654">
+  <source>Select algorithm</source>
+<target>Makim algoritam</target></trans-unit>
+<trans-unit id="se2dec838f45444f5">
+  <source>Start node</source>
+<target>Stat nod</target></trans-unit>
+<trans-unit id="sf25d9576a8a29524">
+  <source>Target node</source>
+<target>Nod bilong kamap long en</target></trans-unit>
+<trans-unit id="s1567c07498a2213d">
+  <source>No animation steps yet. Execute an algorithm or click "Add step" to create one.</source>
+<target>I no gat step bilong piksa i muv yet. Ronim algoritam o klikim «Putim step».</target></trans-unit>
+<trans-unit id="sbe40166a3c6f22ee">
+  <source>Add step</source>
+<target>Putim step</target></trans-unit>
+<trans-unit id="s5eb124d3e409dfe6">
+  <source>Add node animation</source>
+<target>Putim muv bilong nod</target></trans-unit>
+<trans-unit id="s3becc96710a224ab">
+  <source>Add edge animation</source>
+<target>Putim muv bilong koneksen</target></trans-unit>
+<trans-unit id="s5222ccfc3ee461f9">
+  <source>Add reset animation</source>
+<target>Putim muv bilong stat gen</target></trans-unit>
+<trans-unit id="s08c6c27f5b8452b1">
+  <source>Add node subtext</source>
+<target>Putim tok aninit long nod</target></trans-unit>
+<trans-unit id="s15ecca25bdb0ae6d">
+  <source>Select color to toggle:</source>
+<target>Makim kala bilong senisim:</target></trans-unit>
+<trans-unit id="s63b6897fba47590c">
+  <source>Select a node to edit its subtext.</source>
+<target>Makim nod bilong senisim tok aninit.</target></trans-unit>
+<trans-unit id="s030235bae1983f32">
+  <source>Change subtext:</source>
+<target>Senisim tok aninit:</target></trans-unit>
+<trans-unit id="s0f136ff2c086b760">
+  <source>reset</source>
+<target>stat gen</target></trans-unit>
+<trans-unit id="s91bd3118111af6ef">
+  <source>node colors</source>
+<target>kala bilong ol nod</target></trans-unit>
+<trans-unit id="s597d652edb302c38">
+  <source>edge colors</source>
+<target>kala bilong ol koneksen</target></trans-unit>
+<trans-unit id="s42929dd473f85b2d">
+  <source>node subtexts</source>
+<target>tok aninit long ol nod</target></trans-unit>
+<trans-unit id="sf3659df71f61b3ec">
+  <source>Delete step</source>
+<target>Rausim step</target></trans-unit>
+<trans-unit id="s8b1360ffe490828f">
+  <source>Click on two nodes to add an edge between them.</source>
+<target>Klikim tupela nod bilong konektim tupela.</target></trans-unit>
+<trans-unit id="sbb09e02e1b0afeef">
+  <source>Node label</source>
+<target>Nem bilong nod</target></trans-unit>
+<trans-unit id="sdc673e73b5c13aea">
+  <source>Delete</source>
+<target>Rausim</target></trans-unit>
+<trans-unit id="s22a7cbddf50e8584">
+  <source>Edge weight</source>
+<target>Hevi bilong koneksen</target></trans-unit>
+<trans-unit id="s5a4633ffef40fc2b">
+  <source>Select a node or an edge to view details.</source>
+<target>Makim nod o koneksen bilong lukim moa.</target></trans-unit>
+<trans-unit id="sfeb99afb5a2e03ca">
+  <source>Edit the graph</source>
+<target>Senisim graf</target></trans-unit>
+<trans-unit id="s479a2b6569da2fd0">
+  <source>Execute an algorithm on the graph</source>
+<target>Ronim algoritam long graf</target></trans-unit>
+<trans-unit id="s3e97886fa614a7cd">
+  <source>Create or customize the algorithm animation</source>
+<target>Mekim o senisim ol piksa i muv bilong algoritam</target></trans-unit>
+<trans-unit id="se63c78875f5b2178">
+  <source>Add node</source>
+<target>Putim nod</target></trans-unit>
+<trans-unit id="s02c6eb5adcf9b685">
+  <source>Add a node to the graph</source>
+<target>Putim nod long graf</target></trans-unit>
+<trans-unit id="sceb35fbe10efb7a1">
+  <source>Add edge</source>
+<target>Putim koneksen</target></trans-unit>
+<trans-unit id="sbe6971c94588088a">
+  <source>Add an edge to the graph</source>
+<target>Putim koneksen long graf</target></trans-unit>
+<trans-unit id="sc4fdeccf14be5378">
+  <source>Execute</source>
+<target>Ronim</target></trans-unit>
+<trans-unit id="scd105819b5a10243">
+  <source>Play</source>
+<target>Pilim</target></trans-unit>
+<trans-unit id="s11337fae701e3905">
+  <source>Execute the selected algorithm</source>
+<target>Ronim algoritam yu makim</target></trans-unit>
+<trans-unit id="s81446419d1cc2026">
+  <source>Play the animation</source>
+<target>Pilim ol piksa i muv</target></trans-unit>
+<trans-unit id="s061cc20e3432dead">
+  <source>Pause</source>
+<target>Wet liklik</target></trans-unit>
+<trans-unit id="s0868f4ad15f32174">
+  <source>Pause the animation</source>
+<target>Mekim ol piksa i muv i wet liklik</target></trans-unit>
+<trans-unit id="sd9ad53251f2330a5">
+  <source>Stop</source>
+<target>Stopim</target></trans-unit>
+<trans-unit id="s3aff6f35c46b2d1c">
+  <source>Stop the animation</source>
+<target>Stopim ol piksa i muv</target></trans-unit>
+<trans-unit id="s64ef2a6c2dd1d3d1">
+  <source>Edit</source>
+<target>Senisim</target></trans-unit>
+<trans-unit id="s696c4e8dab058caa">
+  <source>Algorithm</source>
+<target>Algoritam</target></trans-unit>
+<trans-unit id="sa602e3fd3f2d98fd">
+  <source>Animation</source>
+<target>Piksa i muv</target></trans-unit>
+<trans-unit id="sd8f669bc8044fad5">
+  <source>Cycle playback speed</source>
+<target>Senisim spid bilong pilim</target></trans-unit>
+<trans-unit id="s5e3cb80d43a34044">
+  <source>Black</source>
+<target>Blak</target></trans-unit>
+<trans-unit id="s9ff1de19feac1b7c">
+  <source>Red</source>
+<target>Ret</target></trans-unit>
+<trans-unit id="s8f450dd0b7bdb8cb">
+  <source>Orange</source>
+<target>Orens</target></trans-unit>
+<trans-unit id="s6baf78886c99db89">
+  <source>Yellow</source>
+<target>Yelo</target></trans-unit>
+<trans-unit id="s3d0296b47fe6323c">
+  <source>Lime</source>
+<target>Lait grin</target></trans-unit>
+<trans-unit id="scf00d78fd5953f1c">
+  <source>Green</source>
+<target>Grin</target></trans-unit>
+<trans-unit id="s9b3c2f9cc32d565a">
+  <source>Cyan</source>
+<target>Blu grin</target></trans-unit>
+<trans-unit id="secf3d3a7c1693e2d">
+  <source>Blue</source>
+<target>Blu</target></trans-unit>
+<trans-unit id="s109991b0423f1512">
+  <source>Violet</source>
+<target>Pepol</target></trans-unit>
+<trans-unit id="se9beed19c6a38fed">
+  <source>Pink</source>
+<target>Pink</target></trans-unit>
+<trans-unit id="s965e11e1dbf9b906">
+  <source>Select Color</source>
+<target>Makim kala</target></trans-unit>
+<trans-unit id="s1995a948733ac7bd">
+  <source>Custom color</source>
+<target>Kala yu makim yet</target></trans-unit>
+<trans-unit id="sc3ac225273c8316b">
+  <source>General</source>
+<target>Ol samting bilong olgeta</target></trans-unit>
+<trans-unit id="se35b9d5e01a54031">
+  <source>Play animation</source>
+<target>Pilim ol piksa i muv</target></trans-unit>
+<trans-unit id="s7a0ef32e481ee934">
+  <source>Change playback rate</source>
+<target>Senisim spid bilong pilim</target></trans-unit>
+<trans-unit id="s429f70243017494b">
+  <source>Show "Edit" tab</source>
+<target>Soim tab «Senisim»</target></trans-unit>
+<trans-unit id="s93e1d90707d925b1">
+  <source>Add nodes</source>
+<target>Putim ol nod</target></trans-unit>
+<trans-unit id="s2a8381f6c75559d6">
+  <source>Add edges</source>
+<target>Putim ol koneksen</target></trans-unit>
+<trans-unit id="s1e6553efcf857c16">
+  <source>Edit node labels</source>
+<target>Senisim nem bilong ol nod</target></trans-unit>
+<trans-unit id="sc64dc04864a90f93">
+  <source>Edit edge weights</source>
+<target>Senisim hevi bilong ol koneksen</target></trans-unit>
+<trans-unit id="s1661e77a58ba4dfb">
+  <source>Delete nodes</source>
+<target>Rausim ol nod</target></trans-unit>
+<trans-unit id="sa581031d1301788c">
+  <source>Delete edges</source>
+<target>Rausim ol koneksen</target></trans-unit>
+<trans-unit id="s42b445d0b8ef5e0c">
+  <source>Show "Algorithm" tab</source>
+<target>Soim tab «Algoritam»</target></trans-unit>
+<trans-unit id="s07ada4fedbfa9525">
+  <source>Executable algorithms</source>
+<target>Ol algoritam yu ken ronim</target></trans-unit>
+<trans-unit id="seb1e51fbf69345e1">
+  <source>Show "Animation" tab</source>
+<target>Soim tab «Piksa i muv»</target></trans-unit>
+<trans-unit id="s74e8052a415f4b28">
+  <source>Edit animation steps</source>
+<target>Senisim ol step bilong piksa i muv</target></trans-unit>
+<trans-unit id="s4ddda90d75c39e3f">
+  <source>Delete animation steps</source>
+<target>Rausim ol step bilong piksa i muv</target></trans-unit>
+<trans-unit id="s4394e7c4d91760ef">
+  <source>Configure graph permissions</source>
+<target>Makim tok orait bilong graf</target></trans-unit>
+<trans-unit id="sf312d3743ff8d4b3">
+  <source>Add nodes and edges using the toolbar above.</source>
+<target>Putim ol nod na koneksen long tulba antap.</target></trans-unit>
+<trans-unit id="s8b2ae093ad5cd15c">
+  <source>Add nodes and edges using the toolbar in edit mode.</source>
+<target>Putim ol nod na koneksen long tulba taim yu senisim graf.</target></trans-unit>
+<trans-unit id="s0d971b1f7aa807a3">
+  <source>Graph permissions</source>
+<target>Tok orait bilong graf</target></trans-unit>
+</body>
+</file>
+</xliff>

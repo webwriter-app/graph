@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+<file target-language="te" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="s405fdfa767fb6359">
+  <source>Breadth First Search</source>
+<target>వెడల్పు-మొదటి శోధన</target></trans-unit>
+<trans-unit id="sb202f05c9211ece8">
+  <source>Depth First Search</source>
+<target>లోతు-మొదటి శోధన</target></trans-unit>
+<trans-unit id="s5ed298f51c2bbc54">
+  <source>Dijkstra's Algorithm</source>
+<target>డైక్స్ట్రా అల్గారిథమ్</target></trans-unit>
+<trans-unit id="sa38c309ccd6a88f9">
+  <source>Spanning Tree (Borůvka's Algorithm)</source>
+<target>స్పానింగ్ ట్రీ (Borůvka అల్గారిథమ్)</target></trans-unit>
+<trans-unit id="s6a01e45e773c6162">
+  <source>Cycle Detection</source>
+<target>చక్రాన్ని గుర్తించడం</target></trans-unit>
+<trans-unit id="s1eac2cbaf3e3603e">
+  <source>Graph Coloring (Brute Force)</source>
+<target>గ్రాఫ్ రంగులు (బ్రూట్ ఫోర్స్)</target></trans-unit>
+<trans-unit id="se8dca0132c66ae03">
+  <source>Permissions</source>
+<target>అనుమతులు</target></trans-unit>
+<trans-unit id="s7a3752d246cad654">
+  <source>Select algorithm</source>
+<target>అల్గారిథమ్‌ను ఎంచుకోండి</target></trans-unit>
+<trans-unit id="se2dec838f45444f5">
+  <source>Start node</source>
+<target>ప్రారంభ నోడ్</target></trans-unit>
+<trans-unit id="sf25d9576a8a29524">
+  <source>Target node</source>
+<target>లక్ష్య నోడ్</target></trans-unit>
+<trans-unit id="s1567c07498a2213d">
+  <source>No animation steps yet. Execute an algorithm or click "Add step" to create one.</source>
+<target>ఇంకా యానిమేషన్ దశలు లేవు. అల్గారిథమ్‌ను అమలు చేయండి లేదా దశను సృష్టించడానికి “దశను జోడించండి” క్లిక్ చేయండి.</target></trans-unit>
+<trans-unit id="sbe40166a3c6f22ee">
+  <source>Add step</source>
+<target>దశను జోడించండి</target></trans-unit>
+<trans-unit id="s5eb124d3e409dfe6">
+  <source>Add node animation</source>
+<target>నోడ్ యానిమేషన్‌ను జోడించండి</target></trans-unit>
+<trans-unit id="s3becc96710a224ab">
+  <source>Add edge animation</source>
+<target>ఎడ్జ్ యానిమేషన్‌ను జోడించండి</target></trans-unit>
+<trans-unit id="s5222ccfc3ee461f9">
+  <source>Add reset animation</source>
+<target>రీసెట్ యానిమేషన్‌ను జోడించండి</target></trans-unit>
+<trans-unit id="s08c6c27f5b8452b1">
+  <source>Add node subtext</source>
+<target>నోడ్ ఉపవచనాన్ని జోడించండి</target></trans-unit>
+<trans-unit id="s15ecca25bdb0ae6d">
+  <source>Select color to toggle:</source>
+<target>టోగుల్ చేయడానికి రంగును ఎంచుకోండి:</target></trans-unit>
+<trans-unit id="s63b6897fba47590c">
+  <source>Select a node to edit its subtext.</source>
+<target>ఉపవచనాన్ని సవరించడానికి నోడ్‌ను ఎంచుకోండి.</target></trans-unit>
+<trans-unit id="s030235bae1983f32">
+  <source>Change subtext:</source>
+<target>ఉపవచనాన్ని మార్చండి:</target></trans-unit>
+<trans-unit id="s0f136ff2c086b760">
+  <source>reset</source>
+<target>రీసెట్</target></trans-unit>
+<trans-unit id="s91bd3118111af6ef">
+  <source>node colors</source>
+<target>నోడ్ రంగులు</target></trans-unit>
+<trans-unit id="s597d652edb302c38">
+  <source>edge colors</source>
+<target>ఎడ్జ్ రంగులు</target></trans-unit>
+<trans-unit id="s42929dd473f85b2d">
+  <source>node subtexts</source>
+<target>నోడ్ ఉపవచనాలు</target></trans-unit>
+<trans-unit id="sf3659df71f61b3ec">
+  <source>Delete step</source>
+<target>దశను తొలగించండి</target></trans-unit>
+<trans-unit id="s8b1360ffe490828f">
+  <source>Click on two nodes to add an edge between them.</source>
+<target>రెండు నోడ్‌ల మధ్య ఎడ్జ్‌ను జోడించడానికి వాటిపై క్లిక్ చేయండి.</target></trans-unit>
+<trans-unit id="sbb09e02e1b0afeef">
+  <source>Node label</source>
+<target>నోడ్ లేబుల్</target></trans-unit>
+<trans-unit id="sdc673e73b5c13aea">
+  <source>Delete</source>
+<target>తొలగించు</target></trans-unit>
+<trans-unit id="s22a7cbddf50e8584">
+  <source>Edge weight</source>
+<target>ఎడ్జ్ బరువు</target></trans-unit>
+<trans-unit id="s5a4633ffef40fc2b">
+  <source>Select a node or an edge to view details.</source>
+<target>వివరాలను చూడడానికి నోడ్ లేదా ఎడ్జ్‌ను ఎంచుకోండి.</target></trans-unit>
+<trans-unit id="sfeb99afb5a2e03ca">
+  <source>Edit the graph</source>
+<target>గ్రాఫ్‌ను సవరించండి</target></trans-unit>
+<trans-unit id="s479a2b6569da2fd0">
+  <source>Execute an algorithm on the graph</source>
+<target>గ్రాఫ్‌పై అల్గారిథమ్‌ను అమలు చేయండి</target></trans-unit>
+<trans-unit id="s3e97886fa614a7cd">
+  <source>Create or customize the algorithm animation</source>
+<target>అల్గారిథమ్ యానిమేషన్‌ను సృష్టించండి లేదా అనుకూలీకరించండి</target></trans-unit>
+<trans-unit id="se63c78875f5b2178">
+  <source>Add node</source>
+<target>నోడ్‌ను జోడించండి</target></trans-unit>
+<trans-unit id="s02c6eb5adcf9b685">
+  <source>Add a node to the graph</source>
+<target>గ్రాఫ్‌కు నోడ్‌ను జోడించండి</target></trans-unit>
+<trans-unit id="sceb35fbe10efb7a1">
+  <source>Add edge</source>
+<target>ఎడ్జ్‌ను జోడించండి</target></trans-unit>
+<trans-unit id="sbe6971c94588088a">
+  <source>Add an edge to the graph</source>
+<target>గ్రాఫ్‌కు ఎడ్జ్‌ను జోడించండి</target></trans-unit>
+<trans-unit id="sc4fdeccf14be5378">
+  <source>Execute</source>
+<target>అమలు చేయండి</target></trans-unit>
+<trans-unit id="scd105819b5a10243">
+  <source>Play</source>
+<target>ప్లే చేయండి</target></trans-unit>
+<trans-unit id="s11337fae701e3905">
+  <source>Execute the selected algorithm</source>
+<target>ఎంచుకున్న అల్గారిథమ్‌ను అమలు చేయండి</target></trans-unit>
+<trans-unit id="s81446419d1cc2026">
+  <source>Play the animation</source>
+<target>యానిమేషన్‌ను ప్లే చేయండి</target></trans-unit>
+<trans-unit id="s061cc20e3432dead">
+  <source>Pause</source>
+<target>విరామం</target></trans-unit>
+<trans-unit id="s0868f4ad15f32174">
+  <source>Pause the animation</source>
+<target>యానిమేషన్‌ను నిలిపివేయండి</target></trans-unit>
+<trans-unit id="sd9ad53251f2330a5">
+  <source>Stop</source>
+<target>ఆపండి</target></trans-unit>
+<trans-unit id="s3aff6f35c46b2d1c">
+  <source>Stop the animation</source>
+<target>యానిమేషన్‌ను ఆపండి</target></trans-unit>
+<trans-unit id="s64ef2a6c2dd1d3d1">
+  <source>Edit</source>
+<target>సవరించండి</target></trans-unit>
+<trans-unit id="s696c4e8dab058caa">
+  <source>Algorithm</source>
+<target>అల్గారిథమ్</target></trans-unit>
+<trans-unit id="sa602e3fd3f2d98fd">
+  <source>Animation</source>
+<target>యానిమేషన్</target></trans-unit>
+<trans-unit id="sd8f669bc8044fad5">
+  <source>Cycle playback speed</source>
+<target>ప్లేబ్యాక్ వేగాన్ని మార్చండి</target></trans-unit>
+<trans-unit id="s5e3cb80d43a34044">
+  <source>Black</source>
+<target>నలుపు</target></trans-unit>
+<trans-unit id="s9ff1de19feac1b7c">
+  <source>Red</source>
+<target>ఎరుపు</target></trans-unit>
+<trans-unit id="s8f450dd0b7bdb8cb">
+  <source>Orange</source>
+<target>నారింజ</target></trans-unit>
+<trans-unit id="s6baf78886c99db89">
+  <source>Yellow</source>
+<target>పసుపు</target></trans-unit>
+<trans-unit id="s3d0296b47fe6323c">
+  <source>Lime</source>
+<target>నిమ్మ ఆకుపచ్చ</target></trans-unit>
+<trans-unit id="scf00d78fd5953f1c">
+  <source>Green</source>
+<target>ఆకుపచ్చ</target></trans-unit>
+<trans-unit id="s9b3c2f9cc32d565a">
+  <source>Cyan</source>
+<target>సయాన్</target></trans-unit>
+<trans-unit id="secf3d3a7c1693e2d">
+  <source>Blue</source>
+<target>నీలం</target></trans-unit>
+<trans-unit id="s109991b0423f1512">
+  <source>Violet</source>
+<target>ఊదా</target></trans-unit>
+<trans-unit id="se9beed19c6a38fed">
+  <source>Pink</source>
+<target>గులాబీ</target></trans-unit>
+<trans-unit id="s965e11e1dbf9b906">
+  <source>Select Color</source>
+<target>రంగును ఎంచుకోండి</target></trans-unit>
+<trans-unit id="s1995a948733ac7bd">
+  <source>Custom color</source>
+<target>అనుకూల రంగు</target></trans-unit>
+<trans-unit id="sc3ac225273c8316b">
+  <source>General</source>
+<target>సాధారణం</target></trans-unit>
+<trans-unit id="se35b9d5e01a54031">
+  <source>Play animation</source>
+<target>యానిమేషన్‌ను ప్లే చేయండి</target></trans-unit>
+<trans-unit id="s7a0ef32e481ee934">
+  <source>Change playback rate</source>
+<target>ప్లేబ్యాక్ వేగాన్ని మార్చండి</target></trans-unit>
+<trans-unit id="s429f70243017494b">
+  <source>Show "Edit" tab</source>
+<target>“సవరించండి” ట్యాబ్‌ను చూపండి</target></trans-unit>
+<trans-unit id="s93e1d90707d925b1">
+  <source>Add nodes</source>
+<target>నోడ్‌లను జోడించండి</target></trans-unit>
+<trans-unit id="s2a8381f6c75559d6">
+  <source>Add edges</source>
+<target>ఎడ్జ్‌లను జోడించండి</target></trans-unit>
+<trans-unit id="s1e6553efcf857c16">
+  <source>Edit node labels</source>
+<target>నోడ్ లేబుల్‌లను సవరించండి</target></trans-unit>
+<trans-unit id="sc64dc04864a90f93">
+  <source>Edit edge weights</source>
+<target>ఎడ్జ్ బరువులను సవరించండి</target></trans-unit>
+<trans-unit id="s1661e77a58ba4dfb">
+  <source>Delete nodes</source>
+<target>నోడ్‌లను తొలగించండి</target></trans-unit>
+<trans-unit id="sa581031d1301788c">
+  <source>Delete edges</source>
+<target>ఎడ్జ్‌లను తొలగించండి</target></trans-unit>
+<trans-unit id="s42b445d0b8ef5e0c">
+  <source>Show "Algorithm" tab</source>
+<target>“అల్గారిథమ్” ట్యాబ్‌ను చూపండి</target></trans-unit>
+<trans-unit id="s07ada4fedbfa9525">
+  <source>Executable algorithms</source>
+<target>అమలు చేయగల అల్గారిథమ్‌లు</target></trans-unit>
+<trans-unit id="seb1e51fbf69345e1">
+  <source>Show "Animation" tab</source>
+<target>“యానిమేషన్” ట్యాబ్‌ను చూపండి</target></trans-unit>
+<trans-unit id="s74e8052a415f4b28">
+  <source>Edit animation steps</source>
+<target>యానిమేషన్ దశలను సవరించండి</target></trans-unit>
+<trans-unit id="s4ddda90d75c39e3f">
+  <source>Delete animation steps</source>
+<target>యానిమేషన్ దశలను తొలగించండి</target></trans-unit>
+<trans-unit id="s4394e7c4d91760ef">
+  <source>Configure graph permissions</source>
+<target>గ్రాఫ్ అనుమతులను కాన్ఫిగర్ చేయండి</target></trans-unit>
+<trans-unit id="sf312d3743ff8d4b3">
+  <source>Add nodes and edges using the toolbar above.</source>
+<target>పైన ఉన్న టూల్‌బార్‌ను ఉపయోగించి నోడ్‌లు, ఎడ్జ్‌లను జోడించండి.</target></trans-unit>
+<trans-unit id="s8b2ae093ad5cd15c">
+  <source>Add nodes and edges using the toolbar in edit mode.</source>
+<target>సవరణ మోడ్‌లో టూల్‌బార్‌ను ఉపయోగించి నోడ్‌లు, ఎడ్జ్‌లను జోడించండి.</target></trans-unit>
+<trans-unit id="s0d971b1f7aa807a3">
+  <source>Graph permissions</source>
+<target>గ్రాఫ్ అనుమతులు</target></trans-unit>
+</body>
+</file>
+</xliff>

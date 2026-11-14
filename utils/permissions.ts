@@ -1,4 +1,5 @@
-import { msg } from "@lit/localize";
+import type { MsgFn } from "@lit/localize";
+import { sourceMsg } from "../localization/localizer";
 import algorithms, { getAlgorithmName } from "algorithms";
 
 import edit from "@tabler/icons/outline/edit.svg";
@@ -6,7 +7,7 @@ import algorithm from "@tabler/icons/outline/code-asterisk.svg";
 import animation from "@tabler/icons/outline/keyframes.svg";
 import play from "@tabler/icons/outline/player-play.svg";
 
-export function permissionGroups(): {
+export function permissionGroups(msg: MsgFn = sourceMsg): {
 	id: "general" | "edit" | "algorithm" | "animation";
 	name: string;
 	icon: string;
@@ -98,7 +99,7 @@ export function permissionGroups(): {
 					type: "multiselect",
 					options: algorithms.map((a) => ({
 						id: a.id,
-						name: getAlgorithmName(a.id),
+						name: getAlgorithmName(a.id, msg),
 					})),
 				},
 			],

@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Algoritmer, der kan køres`,
 's0868f4ad15f32174': `Sæt animationen på pause`,
 's08c6c27f5b8452b1': `Tilføj undertekst til node`,
+'s0d971b1f7aa807a3': `Graftilladelser`,
 's0f136ff2c086b760': `nulstil`,
 's109991b0423f1512': `Violet`,
 's11337fae701e3905': `Udfør den valgte algoritme`,
@@ -34,6 +35,7 @@
 's42929dd473f85b2d': `node-undertekster`,
 's429f70243017494b': `Vis fanen "Rediger"`,
 's42b445d0b8ef5e0c': `Vis fanen »Algoritme«`,
+'s4394e7c4d91760ef': `Konfigurer graftilladelser`,
 's479a2b6569da2fd0': `Udfør en algoritme på grafen`,
 's4ddda90d75c39e3f': `Slet animationstrin`,
 's5222ccfc3ee461f9': `Tilføj nulstillingsanimation`,
@@ -87,4 +89,3 @@
 'sf3659df71f61b3ec': `Slet trin`,
 'sfeb99afb5a2e03ca': `Rediger grafen`,
     };
-  

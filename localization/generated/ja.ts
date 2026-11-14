@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `実行可能なアルゴリズム`,
 's0868f4ad15f32174': `アニメーションを一時停止する`,
 's08c6c27f5b8452b1': `ノードのサブテキストを追加`,
+'s0d971b1f7aa807a3': `グラフの権限`,
 's0f136ff2c086b760': `リセット`,
 's109991b0423f1512': `バイオレット`,
 's11337fae701e3905': `選択したアルゴリズムを実行する`,
@@ -34,6 +35,7 @@
 's42929dd473f85b2d': `ノードのサブテキスト`,
 's429f70243017494b': `「編集」タブを表示する`,
 's42b445d0b8ef5e0c': `「アルゴリズム」タブを表示`,
+'s4394e7c4d91760ef': `グラフの権限を設定`,
 's479a2b6569da2fd0': `グラフ上でアルゴリズムを実行する`,
 's4ddda90d75c39e3f': `アニメーションのステップを削除する`,
 's5222ccfc3ee461f9': `リセットアニメーションを追加する`,
@@ -87,4 +89,3 @@
 'sf3659df71f61b3ec': `ステップを削除`,
 'sfeb99afb5a2e03ca': `グラフを編集する`,
     };
-  

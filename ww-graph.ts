@@ -3,9 +3,9 @@ import { css, html, PropertyValueMap, PropertyValues } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { property } from 'lit/decorators/property.js';
 import { provide } from '@lit/context';
-import { localized, msg } from '@lit/localize';
 // @ts-ignore
-import LOCALIZE from 'localization/generated';
+import type { MsgFn } from "@lit/localize";
+import { createLocalizer, effectiveLanguage, sourceMsg } from "./localization/localizer";
 import { permissionsContext } from 'utils/context';
 import './components/graph_component.ts';
 import { animateLinks } from './graph/animateLinks.ts';
@@ -39,13 +39,35 @@ import SlTabPanel from '@shoelace-style/shoelace/dist/components/tab-panel/tab-p
 import SlOption from '@shoelace-style/shoelace/dist/components/option/option.component.js';
 import SlSelect from '@shoelace-style/shoelace/dist/components/select/select.component.js';
 import SlIcon from '@shoelace-style/shoelace/dist/components/icon/icon.component.js';
+import SlDialog from '@shoelace-style/shoelace/dist/components/dialog/dialog.component.js';
 
-@localized()
 @customElement('ww-graph')
 export default class WwGraph extends LitElementWw {
-    protected localize = LOCALIZE;
+    // Inherited language must not be reflected as an authored attribute.
+    static override properties = { lang: { attribute: false, noAccessor: true } };
+    override get lang(): string { return effectiveLanguage(this); }
+    override set lang(value: string) { this.setAttribute("lang", value); }
 
-    private _graph: iGraph = {
+    protected localize = createLocalizer(this, () => {
+        Object.assign(this.actions, WwGraph.makeActions(this.msg));
+    });
+    readonly msg = this.localize.msg;
+
+    private static makeActions(msg: MsgFn) {
+        return {
+            configurePermissions: { label: { _: msg('Configure graph permissions') } },
+        };
+    }
+    static actions = WwGraph.makeActions(sourceMsg);
+    readonly actions = WwGraph.makeActions(sourceMsg);
+
+    @state() private accessor permissionsDialogOpen = false;
+
+    configurePermissions() {
+        this.permissionsDialogOpen = true;
+    }
+
+    @state() private accessor _graph: iGraph = {
         nodes: [],
         links: [],
     };
@@ -54,7 +76,6 @@ export default class WwGraph extends LitElementWw {
         return this._graph;
     }
     /** The graph data, containing labeled nodes and weighted links. */
-    @property({ type: Object, attribute: true, reflect: true })
     public set graph(value: iGraph) {
         if (!value) {
             this._graph = {
@@ -76,7 +97,7 @@ export default class WwGraph extends LitElementWw {
     }
 
     /** Array of animation steps. Each step can color nodes/links, set node subtexts, or reset previous steps. */
-    @property({ type: Array, attribute: true, reflect: true })
+    @state()
     accessor animation: AnimationStep[] = [];
 
     @state() private accessor svg: Selection<Element, unknown, null, undefined> | null = null;
@@ -114,7 +135,7 @@ export default class WwGraph extends LitElementWw {
 
     /** Controls which features are available to the user (editing, algorithm execution, animation playback). */
     @provide({ context: permissionsContext })
-    @property({ type: Object, attribute: true, reflect: true })
+    @property({ attribute: false })
     accessor permissions: PermissionsType = {
         general: {
             play: true,
@@ -158,6 +179,7 @@ export default class WwGraph extends LitElementWw {
             'animation-bar': AnimationBar,
             'animation-edit-bar': AnimationEditBar,
             'options-component': OptionsComponent,
+            'sl-dialog': SlDialog,
         };
     }
 
@@ -345,18 +367,6 @@ export default class WwGraph extends LitElementWw {
         });
     }
 
-    override connectedCallback() {
-        super.connectedCallback();
-        document.addEventListener('pointerdown', this._handleDocumentOutside, { capture: true });
-        document.addEventListener('touchstart', this._handleDocumentOutside, { capture: true, passive: true });
-    }
-
-    override disconnectedCallback() {
-        super.disconnectedCallback();
-        document.removeEventListener('pointerdown', this._handleDocumentOutside, { capture: true });
-        document.removeEventListener('touchstart', this._handleDocumentOutside, { capture: true });
-    }
-
     protected firstUpdated(_changedProperties: PropertyValues): void {
         this.mode = this.permissions.edit.enabled ? 'edit' : this.permissions.algorithm.enabled ? 'algorithm' : this.permissions.animation.enabled ? 'animation' : null;
 
@@ -369,6 +379,9 @@ export default class WwGraph extends LitElementWw {
     }
 
     protected updated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
+        if (_changedProperties.has('_graph') || _changedProperties.has('animation') || _changedProperties.has('permissions')) {
+            this.persistAuthoredData();
+        }
         if (_changedProperties.has('animation') && this.selectedAnimationStep !== null && this.animation[this.selectedAnimationStep]) {
             const step = this.animation[this.selectedAnimationStep];
             if (step.type === 'subtext' && this.svg) {
@@ -526,8 +539,8 @@ export default class WwGraph extends LitElementWw {
                 ${this.graph.nodes.length === 0 ? html`
                     <div class="graph-empty-overlay">
                         <span>${this.mode === 'edit'
-                            ? msg("Add nodes and edges using the toolbar above.")
-                            : msg("Add nodes and edges using the toolbar in edit mode.")
+                            ? this.msg("Add nodes and edges using the toolbar above.")
+                            : this.msg("Add nodes and edges using the toolbar in edit mode.")
                         }</span>
                     </div>
                 ` : null}
@@ -563,12 +576,13 @@ export default class WwGraph extends LitElementWw {
         </div>
         
         ${this.isContentEditable ? html`
+            <sl-dialog label=${this.msg('Graph permissions')} ?open=${this.permissionsDialogOpen} @sl-after-hide=${() => this.permissionsDialogOpen = false}>
             <options-component
-                part="options"
                 .permissions=${this.permissions}
 
                 @permission-change=${this._handlePermissionChange}
             ></options-component>
+            </sl-dialog>
         ` : null}`;
     }
 
@@ -769,6 +783,76 @@ export default class WwGraph extends LitElementWw {
             this.clearSelection();
         }
     };
+
+    private savedDataSnapshot: string | null = null;
+    private readingData = false;
+    private dataObserver?: MutationObserver;
+
+    override connectedCallback() {
+        super.connectedCallback();
+        this.dataObserver = new MutationObserver(() => this.readAuthoredData());
+        this.dataObserver.observe(this, { childList: true, characterData: true, subtree: true, attributes: true, attributeFilter: ['slot', 'type'] });
+        if (this.dataBlock()) this.readAuthoredData();
+        document.addEventListener('pointerdown', this._handleDocumentOutside, { capture: true });
+        document.addEventListener('touchstart', this._handleDocumentOutside, { capture: true, passive: true });
+    }
+
+    override disconnectedCallback() {
+        this.dataObserver?.disconnect();
+        this.dataObserver = undefined;
+        super.disconnectedCallback();
+        document.removeEventListener('pointerdown', this._handleDocumentOutside, { capture: true });
+        document.removeEventListener('touchstart', this._handleDocumentOutside, { capture: true });
+    }
+
+    private dataBlock(): HTMLScriptElement | null {
+        return this.querySelector(':scope > script[type="application/json"][slot="data"]');
+    }
+
+    private readAuthoredData() {
+        const block = this.dataBlock();
+        if (!block || this.readingData) return;
+        const text = block.textContent ?? '';
+        this.readingData = true;
+        try {
+            const value = JSON.parse(text);
+            if (!value || typeof value !== 'object') return;
+            if (value.graph) this.graph = value.graph;
+            if (Array.isArray(value.animation)) this.animation = value.animation;
+            if (value.permissions) this.permissions = value.permissions;
+            this.savedDataSnapshot = this.serializeAuthoredData();
+        } catch (error) {
+            console.error('Unable to read graph data block', error);
+        } finally {
+            this.readingData = false;
+        }
+    }
+
+    private serializeAuthoredData() {
+        return JSON.stringify({ graph: this.graph, animation: this.animation, permissions: this.permissions });
+    }
+
+    private persistAuthoredData() {
+        if (!this.isConnected || this.readingData) return;
+        const snapshot = this.serializeAuthoredData();
+        if (snapshot === this.savedDataSnapshot) return;
+        try {
+            let block = this.dataBlock();
+            if (!block) {
+                block = this.ownerDocument.createElement('script');
+                block.type = 'application/json';
+                block.slot = 'data';
+                this.append(block);
+            }
+            this.readingData = true;
+            block.textContent = snapshot.replace(/</g, '\\u003c');
+            this.savedDataSnapshot = snapshot;
+        } catch (error) {
+            console.error('Unable to save graph data block', error);
+        } finally {
+            this.readingData = false;
+        }
+    }
 
     /** Runs the currently selected algorithm on the graph and starts playing the resulting animation. */
     async executeAlgorithm() {
