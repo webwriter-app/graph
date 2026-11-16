@@ -1,5 +1,5 @@
-# Graph (`@webwriter/graph@1.0.2`)
-[License: MIT](LICENSE) | Version: 1.0.2
+# Graph (`@webwriter/graph@2.0.0`)
+[License: MIT](LICENSE) | Version: 2.0.0
 
 Visualize graphs, simulate common graph algorithms (Kruskal, Dijkstra, BFS, DFS, etc.), and record your own graph animations.
 
@@ -15,7 +15,8 @@ Visualize graphs, simulate common graph algorithms (Kruskal, Dijkstra, BFS, DFS,
 
 
 ## `WwGraph` (`<ww-graph>`)
-
+Visualize graphs, run graph algorithms step by step (BFS, DFS, Dijkstra, spanning tree, cycle detection, coloring) and record graph animations.
+The graph, the recorded animation and the permissions are stored in the widget's data blocks. Permissions limit what readers may edit, run and replay.
 
 ### Usage
 
@@ -41,15 +42,19 @@ npm install @webwriter/graph
 ## Fields
 | Name (Attribute Name) | Type | Description | Default | Reflects |
 | :-------------------: | :--: | :---------: | :-----: | :------: |
-| `graph` (`graph`) | `iGraph` | The graph data, containing labeled nodes and weighted links. | - | ✓ |
-| `animation` (`animation`) | `AnimationStep[]` | Array of animation steps. Each step can color nodes/links, set node subtexts, or reset previous steps. | `[]` | ✓ |
-| `permissions` (`permissions`) | `PermissionsType` | Controls which features are available to the user (editing, algorithm execution, animation playback). | `{ general: { play: true, playbackRate: true, }, edit: { enabled: true, addNode: true, addEdge: true, editNode: true, editEdge: true, delNode: true, delEdge: true, }, algorithm: { enabled: true, executable: algorithms.map((a) => a.id), }, animation: { enabled: true, editStep: true, delStep: true, }, }` | ✓ |
+| `WwGraph.actions` | `object` | - | `{ configurePermissions: { label: (widget: { msg: MsgFn }) => widget.msg('Configure graph permissions') }, }` | ✗ |
+| `localize` | - | - | - | ✗ |
+| `msg` | - | - | - | ✗ |
+| `access` | `PermissionsType` | Controls which features are available to the user (editing, algorithm execution, animation playback). | - | ✗ |
+| `animation` | `AnimationStep[]` | Array of animation steps. Each step can color nodes/links, set node subtexts, or reset previous steps. | `[]` | ✗ |
+| `graph` | `iGraph` | The graph data, containing labeled nodes and weighted links. | - | ✗ |
 
 *Fields including [properties](https://developer.mozilla.org/en-US/docs/Glossary/Property/JavaScript) and [attributes](https://developer.mozilla.org/en-US/docs/Glossary/Attribute) define the current state of the widget and offer customization options.*
 
 ## Methods
 | Name | Description | Parameters |
 | :--: | :---------: | :-------: |
+| `configurePermissions` | - | -
 | `animateStep` | Applies a single animation step to the graph immediately. | `step: AnimationStep`, `signal: AbortSignal`
 | `previewStep` | Shows the final state of a single animation step without playing the transition animation. Used when editing steps. | `step: AnimationStep`
 | `resetGraph` | Resets the graph SVG layout by briefly clearing and restoring the graph data, triggering a re-render. | -
