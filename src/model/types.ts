@@ -3,7 +3,7 @@ export type iGraph = {
 	links: iLink[];
 };
 
-export type iNode = {
+type iNode = {
 	id: number;
 	name: string;
 	x?: number;
@@ -16,7 +16,7 @@ export type iLink = {
 	weight: number;
 };
 
-export type Point = { x: number; y: number };
+type Point = { x: number; y: number };
 
 /** Where each node of the graph sits, by node id. Not stored in the document. */
 export type Positions = Map<number, Point>;

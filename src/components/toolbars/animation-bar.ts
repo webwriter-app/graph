@@ -1,7 +1,7 @@
 import { widgetMsg } from "@webwriter/lit/localize";
 import { LitElementWw } from "@webwriter/lit";
 import { html, TemplateResult } from "lit";
-import { property, state } from "lit/decorators.js";
+import { property } from "lit/decorators.js";
 import { consume } from "@lit/context";
 import { permissionsContext } from "../context";
 import { PermissionsType } from "../../model/types";
@@ -25,7 +25,6 @@ import {
 	AnimationStatusType,
 	AnimationStep,
 	AnimationStepType,
-	iGraph,
 } from "../../model/types";
 import { setAnimation } from "../events";
 

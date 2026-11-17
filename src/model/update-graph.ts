@@ -1,23 +1,5 @@
 import { iGraph } from "./types";
 
-type LinkNode = {
-  index: number;
-  name: string;
-  vx: number;
-  vy: number;
-  x: number;
-  y: number;
-};
-
-export type iGraphAfterRender = {
-  nodes: { name: string }[];
-  links: {
-    source: LinkNode;
-    target: LinkNode;
-    weight: number;
-  }[];
-};
-
 export function deleteLink(graph: iGraph, source: number, target: number) {
   return {
     nodes: [...graph.nodes],

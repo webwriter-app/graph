@@ -25,7 +25,7 @@ function spanTree(graph: iGraph): AnimationStep[] {
   }
 
   while (!done) {
-    let cheapestEdges: (iLink | null)[] = connectedComponents.map((x) => null);
+    let cheapestEdges: (iLink | null)[] = connectedComponents.map(() => null);
     for (let edge of graph.links) {
       if (
         connectedComponents.some(

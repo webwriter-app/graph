@@ -15,8 +15,8 @@ import SlTooltip from "@shoelace-style/shoelace/dist/components/tooltip/tooltip.
 import SlSelect from "@shoelace-style/shoelace/dist/components/select/select.component.js";
 import SlOption from "@shoelace-style/shoelace/dist/components/option/option.component.js";
 import SlDivider from "@shoelace-style/shoelace/dist/components/divider/divider.component.js";
-import { property, state } from "lit/decorators.js";
-import { AlgorithmConfigEventDetail, AlgorithmType, iGraph } from "../../model/types";
+import { property } from "lit/decorators.js";
+import { AlgorithmConfigEventDetail, iGraph } from "../../model/types";
 import { SlChangeEvent } from "@shoelace-style/shoelace";
 
 export class AlgorithmBar extends LitElementWw {

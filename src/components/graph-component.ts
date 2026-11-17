@@ -126,8 +126,10 @@ export class Graph extends LitElementWw {
 	protected override willUpdate(changed: Map<PropertyKey, unknown>) {
 		if (!this.width) return;
 		// Positions follow the structure of the graph and the size of the scene; a rename or a new weight keeps them.
+		const resized = changed.has("width") || changed.has("height");
+		if (!resized && !changed.has("graph")) return;
 		const structure = `${this.graph.nodes.map((node) => node.id)}|${this.graph.links.map(linkKey)}`;
-		if (changed.has("width") || changed.has("height") || structure !== this.#structure) {
+		if (resized || structure !== this.#structure) {
 			this.#structure = structure;
 			this.positions = layoutGraph(this.graph, this.width, this.height, this.positions);
 		}

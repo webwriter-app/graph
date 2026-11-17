@@ -32,7 +32,7 @@ function cycle(graph: iGraph): AnimationStep[] {
       if (current === start) {
         animation.push({
           type: "node",
-          data: { names: path, colors: path.map((x) => PALETTE.green) },
+          data: { names: path, colors: path.map(() => PALETTE.green) },
         });
       }
       return;
