@@ -1,4 +1,4 @@
-import { LitElementWw } from '@webwriter/lit';
+import { LitElementWw, computed, signal } from '@webwriter/lit';
 import { html, PropertyValues } from 'lit';
 import { customElement, query, state } from 'lit/decorators.js';
 import { property } from 'lit/decorators/property.js';
@@ -19,6 +19,9 @@ import { EditBar } from '../components/toolbars/edit-bar';
 import { addNode, addLink, containsLink, normalizeGraph } from '../model/update-graph';
 import { emptyVisual, firstNodeId, partsOutsideStep, playStep, previewStep, resetVisual, secondNodeId, sameLink, toggleStepLink, toggleStepNode, withoutLink, withoutNode, type Visual } from '../model/animation';
 import { PALETTE } from '../model/palette';
+import { edgeTable } from '../model/formats';
+import { containsDeep } from '../components/composed-tree';
+import { convertFrom, convertTo } from '../components/graph-formats';
 import { AnimationBar } from '../components/toolbars/animation-bar';
 import { AnimationEditBar } from '../components/toolbars/animation-edit-bar';
 import { OptionsComponent } from '../components/options';
@@ -40,6 +43,14 @@ import SlDialog from '@shoelace-style/shoelace/dist/components/dialog/dialog.com
 /**
  * Visualize graphs, run graph algorithms step by step (BFS, DFS, Dijkstra, spanning tree, cycle detection, coloring) and record graph animations.
  * The graph, the recorded animation and the permissions are stored in the widget's data blocks. Permissions limit what readers may edit, run and replay.
+ *
+ * Conversions: a `table` (edge list or square adjacency matrix) becomes a graph, and the graph becomes an adjacency matrix `table`.
+ * Files: DOT (`.gv`, `.dot`) and an edge list as CSV (`.csv`), both ways. The graph is undirected, so a `digraph` is read without directions.
+ * Formats carry names, links and weights, not the layout or the animation; an import replaces the graph and clears the animation.
+ * Signals: `nodeCount` (number) and `edges` (table with columns source, target, weight).
+ *
+ * @part graph - The area that holds the graph.
+ * @part node - A node of the graph.
  */
 @customElement('ww-graph')
 export class WwGraph extends LitElementWw {
@@ -70,6 +81,9 @@ export class WwGraph extends LitElementWw {
         configurePermissions: { label: (widget: { msg: MsgFn }) => widget.msg('Configure graph permissions') },
     };
 
+    static convertFrom = convertFrom;
+    static convertTo = convertTo;
+
     localize = localizer(this, {
         sourceLocale,
         targetLocales,
@@ -79,6 +93,8 @@ export class WwGraph extends LitElementWw {
     readonly msg = this.localize.msg;
     // Marks author-only UI with data-ww-can="edit".
     #permissions = new Permissions(this);
+    #graphValue = signal<iGraph>({ nodes: [], links: [] });
+    readonly signals = { nodeCount: computed(() => this.#graphValue.get().nodes.length), edges: computed(() => edgeTable(this.#graphValue.get())) };
     /** The authored JSON data block: graph, animation and permissions. */
     #data = jsonData(this, {
         defaults: {
@@ -118,6 +134,7 @@ export class WwGraph extends LitElementWw {
     /** The graph data, containing labeled nodes and weighted links. */
     public set graph(value: iGraph) {
         this._graph = normalizeGraph(value);
+        this.#graphValue.set(this._graph);
     }
 
     @state() private accessor permissionsDialogOpen = false;
@@ -164,7 +181,7 @@ export class WwGraph extends LitElementWw {
 
         this.addEventListener('focusout', (e: FocusEvent) => {
             const newTarget = e.relatedTarget as Node | null;
-            if (!newTarget || this.containsDeep(newTarget) || newTarget.contains(this)) return;
+            if (!newTarget || containsDeep(this, newTarget) || newTarget.contains(this)) return;
             this.clearSelection();
         });
     }
@@ -237,6 +254,16 @@ export class WwGraph extends LitElementWw {
         if (next) this.animation = [...this.animation.slice(0, index), next, ...this.animation.slice(index + 1)];
     }
 
+    /** @internal Used by the conversions: replaces the graph; the animation refers to the old nodes and goes with them. */
+    replaceGraph(graph: iGraph) {
+        this.stopAlgorithm();
+        this.clearSelection();
+        this.selectedAnimationStep = null;
+        this.graph = graph;
+        this.animation = [];
+        [this.startNode, this.targetNode] = [firstNodeId(this.graph), secondNodeId(this.graph)];
+    }
+
     configurePermissions() {
         this.permissionsDialogOpen = true;
     }
@@ -282,15 +309,6 @@ export class WwGraph extends LitElementWw {
         this.selectedLink = null;
     }
 
-    private containsDeep(node: Node | null): boolean {
-        while (node) {
-            if (node === this) return true;
-            const root = node.getRootNode();
-            node = root instanceof ShadowRoot ? root.host : null;
-        }
-        return false;
-    }
-
     /** Runs the currently selected algorithm on the graph and starts playing the resulting animation. */
     async executeAlgorithm() {
         if (this.animationStatus !== 'STOP') {
@@ -301,8 +319,7 @@ export class WwGraph extends LitElementWw {
         const algorithm = algorithms.find((a) => a.id === this.algorithm);
         if (!algorithm) return;
 
-        const startNode = this.startNode ?? firstNodeId(this.graph);
-        const targetNode = this.targetNode ?? secondNodeId(this.graph);
+        const startNode = this.startNode ?? firstNodeId(this.graph), targetNode = this.targetNode ?? secondNodeId(this.graph);
         if (startNode === null || targetNode === null) return;
         this.animation = algorithm.function(this.graph, startNode, targetNode);
 
@@ -430,9 +447,7 @@ export class WwGraph extends LitElementWw {
 
     private _handlePermissionChange(e: CustomEvent) {
         const { group, id, value } = e.detail;
-
         this.access = withPermission(this.access, group, id, value);
-
         // If the currently active mode is disabled, switch to the first available mode
         if (id === 'enabled' && value === false && group === this.mode) {
             const modes: ('edit' | 'algorithm' | 'animation')[] = ['edit', 'algorithm', 'animation'];
@@ -462,29 +477,24 @@ export class WwGraph extends LitElementWw {
 
     private _handleDeleteNodeCleanup(e: CustomEvent) {
         const { nodeId } = e.detail;
-
         // If the deleted node is currently selected, deselect it
         if (this.selectedNode === nodeId) this.selectedNode = null;
-
         // If deleted node is current start / target node for algorithm, reset them
         if (this.startNode === nodeId) this.startNode = firstNodeId(this.graph);
         if (this.targetNode === nodeId) this.targetNode = secondNodeId(this.graph);
-
         this.animation = withoutNode(this.animation, nodeId);
     }
 
     private _handleDeleteLinkCleanup(e: CustomEvent) {
         const { source, target } = e.detail;
-
         // If the deleted link is currently selected, deselect it
         if (this.selectedLink && sameLink(this.selectedLink, { source, target })) this.selectedLink = null;
-
         this.animation = withoutLink(this.animation, { source, target });
     }
 
     render() {
         return html`
-        <div>
+        <div class="root ${this.graph.nodes.length === 0 ? 'empty' : ''}">
             ${this.access.edit.enabled || this.access.algorithm.enabled || this.access.animation.enabled || this.access.general.play ? html`
                 <top-bar 
                     .mode=${this.mode} 
@@ -519,7 +529,6 @@ export class WwGraph extends LitElementWw {
                             .selectedNode=${this.selectedNode}
                             .selectedLink=${this.selectedLink}
                             ?addingEdge=${this.addingEdge}
-
                             @node-deleted-cleanup=${this._handleDeleteNodeCleanup}
                             @link-deleted-cleanup=${this._handleDeleteLinkCleanup}
                         ></edit-bar>
@@ -538,7 +547,8 @@ export class WwGraph extends LitElementWw {
                 ` : null}
             </sl-tab-group>
 
-            <div class="graph">
+            <p class="print-note">${this.msg("This graph is empty.")}</p>
+            <div class="graph" part="graph">
                 ${this.graph.nodes.length === 0 ? html`
                     <div class="graph-empty-overlay">
                         <span>${this.mode === 'edit'
@@ -554,7 +564,6 @@ export class WwGraph extends LitElementWw {
                     .selectedNode=${this.selectedNode}
                     .nodeColor=${this.nodeAnimationColor}
                     .linkColor=${this.linkAnimationColor}
-
                     @delete-animation-step=${this._handleDeleteStep}
                     @node-animation-color-change=${(e: CustomEvent) => {
                         this.nodeAnimationColor = e.detail.color;
@@ -564,6 +573,7 @@ export class WwGraph extends LitElementWw {
                     }}
                 ></animation-edit-bar>
                 <display-graph 
+                    exportparts="node"
                     .graph=${this.graph}
                     .visual=${this.visual}
                     .highlightedNode=${
@@ -572,7 +582,6 @@ export class WwGraph extends LitElementWw {
                             : null}
                     .highlightedLink=${this.mode === 'edit' ? this.selectedLink : null}
                     ?addingEdge=${this.addingEdge}
-
                     .nodeCursorMode=${(this.mode === 'edit' || (this.selectedAnimationStep !== null && ['node', 'subtext'].includes(this.animation[this.selectedAnimationStep].type) && this.access.animation.editStep)) ? 'crosshair' : 'default'}
                     .linkCursorMode=${((this.mode === 'edit' && !this.addingEdge) || (this.selectedAnimationStep !== null && this.animation[this.selectedAnimationStep]?.type === 'link' && this.access.animation.editStep)) ? 'crosshair' : 'default'}
                 ></display-graph>
@@ -582,7 +591,6 @@ export class WwGraph extends LitElementWw {
         <sl-dialog data-ww-can="edit" label=${this.msg('Graph permissions')} ?open=${this.permissionsDialogOpen} @sl-after-hide=${() => this.permissionsDialogOpen = false}>
             <options-component
                 .access=${this.access}
-
                 @permission-change=${this._handlePermissionChange}
             ></options-component>
         </sl-dialog>`;

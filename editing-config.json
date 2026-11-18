@@ -345,7 +345,16 @@
       "ckb-Arab": "گرافی Ww",
       "af-ZA": "WebWriter-graaf",
       "af-NA": "WebWriter-graaf"
-    }
+    },
+    "importFormats": [
+      ".gv",
+      ".dot",
+      ".csv"
+    ],
+    "exportFormats": [
+      ".gv",
+      ".csv"
+    ]
   },
   "./snippets/people": {
     "label": {

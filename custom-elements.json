@@ -8,8 +8,18 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "Visualize graphs, run graph algorithms step by step (BFS, DFS, Dijkstra, spanning tree, cycle detection, coloring) and record graph animations.\nThe graph, the recorded animation and the permissions are stored in the widget's data blocks. Permissions limit what readers may edit, run and replay.",
+          "description": "Visualize graphs, run graph algorithms step by step (BFS, DFS, Dijkstra, spanning tree, cycle detection, coloring) and record graph animations.\nThe graph, the recorded animation and the permissions are stored in the widget's data blocks. Permissions limit what readers may edit, run and replay.\n\nConversions: a `table` (edge list or square adjacency matrix) becomes a graph, and the graph becomes an adjacency matrix `table`.\nFiles: DOT (`.gv`, `.dot`) and an edge list as CSV (`.csv`), both ways. The graph is undirected, so a `digraph` is read without directions.\nFormats carry names, links and weights, not the layout or the animation; an import replaces the graph and clears the animation.\nSignals: `nodeCount` (number) and `edges` (table with columns source, target, weight).",
           "name": "WwGraph",
+          "cssParts": [
+            {
+              "description": "The area that holds the graph.",
+              "name": "graph"
+            },
+            {
+              "description": "A node of the graph.",
+              "name": "node"
+            }
+          ],
           "members": [
             {
               "kind": "field",
@@ -19,6 +29,18 @@
               },
               "static": true,
               "default": "{ configurePermissions: { label: (widget: { msg: MsgFn }) => widget.msg('Configure graph permissions') }, }"
+            },
+            {
+              "kind": "field",
+              "name": "convertFrom",
+              "static": true,
+              "default": "convertFrom"
+            },
+            {
+              "kind": "field",
+              "name": "convertTo",
+              "static": true,
+              "default": "convertTo"
             },
             {
               "kind": "field",
@@ -34,6 +56,20 @@
               "name": "#permissions",
               "privacy": "private",
               "default": "new Permissions(this)"
+            },
+            {
+              "kind": "field",
+              "name": "#graphValue",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "signals",
+              "type": {
+                "text": "object"
+              },
+              "readonly": true,
+              "default": "{ nodeCount: computed(() => this.#graphValue.get().nodes.length), edges: computed(() => edgeTable(this.#graphValue.get())) }"
             },
             {
               "kind": "field",
@@ -116,16 +152,23 @@
                 "text": "iGraph"
               },
               "privacy": "private",
-              "default": "{ nodes: [], links: [], }"
+              "default": "{ nodes: [], links: [] }"
             },
             {
               "kind": "field",
-              "name": "svg",
+              "name": "visual",
               "type": {
-                "text": "Selection<Element, unknown, null, undefined> | null"
+                "text": "Visual"
               },
-              "privacy": "private",
-              "default": "null"
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "graphView",
+              "type": {
+                "text": "Graph | null"
+              },
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -192,21 +235,11 @@
             },
             {
               "kind": "field",
-              "name": "edgeSource",
-              "type": {
-                "text": "number | null"
-              },
-              "privacy": "private",
-              "default": "null"
-            },
-            {
-              "kind": "field",
               "name": "nodeAnimationColor",
               "type": {
                 "text": "string"
               },
-              "privacy": "private",
-              "default": "SHOELACE.color.green[500]"
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -214,8 +247,7 @@
               "type": {
                 "text": "string"
               },
-              "privacy": "private",
-              "default": "SHOELACE.color.green[500]"
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -246,6 +278,14 @@
             },
             {
               "kind": "field",
+              "name": "_visualBeforeStep",
+              "type": {
+                "text": "Visual"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
               "name": "_stepDuration",
               "type": {
                 "text": "number"
@@ -265,6 +305,53 @@
             },
             {
               "kind": "method",
+              "name": "pick",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "pick",
+                  "type": {
+                    "text": "{ type: 'NODE'; id: number } | { type: 'LINK'; source: number; target: number } | { type: 'NONE' }"
+                  }
+                }
+              ],
+              "description": "Applies a click on the graph: select, add an edge, or toggle the node or link in the step being edited."
+            },
+            {
+              "kind": "method",
+              "name": "connect",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "source",
+                  "type": {
+                    "text": "number"
+                  }
+                },
+                {
+                  "name": "target",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ],
+              "description": "Adds the link that the reader drew and selects it; the mode ends with it."
+            },
+            {
+              "kind": "method",
+              "name": "editStep",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "edit",
+                  "type": {
+                    "text": "(step: AnimationStep) => AnimationStep | null"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
               "name": "configurePermissions"
             },
             {
@@ -281,55 +368,23 @@
                   "type": {
                     "text": "AnimationStep"
                   }
-                },
-                {
-                  "name": "signal",
-                  "optional": true,
-                  "type": {
-                    "text": "AbortSignal"
-                  }
                 }
               ],
               "description": "Applies a single animation step to the graph immediately."
             },
             {
               "kind": "method",
-              "name": "previewStep",
-              "parameters": [
-                {
-                  "name": "step",
-                  "type": {
-                    "text": "AnimationStep"
-                  }
-                }
-              ],
-              "description": "Shows the final state of a single animation step without playing the transition animation. Used when editing steps."
-            },
-            {
-              "kind": "method",
               "name": "resetGraph",
-              "description": "Resets the graph SVG layout by briefly clearing and restoring the graph data, triggering a re-render."
+              "description": "Lays the nodes out again from scratch."
             },
             {
               "kind": "method",
               "name": "clearSelection",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "containsDeep",
               "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "boolean"
-                }
-              },
               "parameters": [
                 {
-                  "name": "node",
-                  "type": {
-                    "text": "Node | null"
-                  }
+                  "name": "endEdge",
+                  "default": "true"
                 }
               ]
             },
@@ -355,26 +410,6 @@
               "name": "stopAlgorithm",
               "privacy": "private",
               "description": "Stops the animation, resets the position to the start, and clears all visual highlights."
-            },
-            {
-              "kind": "method",
-              "name": "getDefaultNode",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "number | null"
-                }
-              }
-            },
-            {
-              "kind": "method",
-              "name": "getDefaultTargetNode",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "number | null"
-                }
-              }
             },
             {
               "kind": "method",

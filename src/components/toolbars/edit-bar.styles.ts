@@ -3,12 +3,15 @@ import { css } from "lit";
 export default css`
 	:host {
 		display: flex;
+		flex-wrap: wrap;
 		padding: var(--sl-spacing-x-small);
 		gap: var(--sl-spacing-x-small);
 		align-items: end;
 	}
 
 	sl-input {
+		flex: 1 1 8rem;
+		min-width: 0;
 		width: 100%;
 		line-height: 1;
 	}

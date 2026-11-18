@@ -42,7 +42,7 @@ export class Graph extends LitElementWw {
 			stroke-width: 8px;
 		}
 		ww-path[selected] {
-			stroke: var(--sl-color-primary-300);
+			stroke: var(--ww-theme-accent-1, var(--sl-color-primary-300));
 		}
 		ww-scene::part(link) {
 			stroke: lightgreen;
@@ -79,7 +79,7 @@ export class Graph extends LitElementWw {
 			transform: scale(1.0625);
 		}
 		ww-node[selected] .disc {
-			background: var(--sl-color-primary-300);
+			background: var(--ww-theme-accent-1, var(--sl-color-primary-300));
 			border-width: 2px;
 		}
 		ww-node:focus-visible .disc {
@@ -104,6 +104,7 @@ export class Graph extends LitElementWw {
 
 	#structure = "";
 	#resizeObserver: ResizeObserver | null = null;
+	#resizeFrame = 0;
 	#pulses = new Set<Animation>();
 	#beforeMove: Positions | null = null;
 
@@ -111,7 +112,14 @@ export class Graph extends LitElementWw {
 		super.connectedCallback();
 		this.#resizeObserver = new ResizeObserver((entries) => {
 			const width = Math.floor(entries[0].contentRect.width);
-			if (width > 0 && width !== this.width) this.width = width;
+			if (width <= 0 || width === this.width) return;
+			// The height follows the width, so the change waits for the next frame, outside of the observer's delivery.
+			cancelAnimationFrame(this.#resizeFrame);
+			this.#resizeFrame = requestAnimationFrame(() => {
+				this.width = width;
+				// A narrow container gets a shorter scene; from 622 px on it keeps the full height.
+				this.height = Math.min(600, Math.max(560, Math.round(width * 0.9)));
+			});
 		});
 		this.#resizeObserver.observe(this);
 	}
@@ -120,6 +128,7 @@ export class Graph extends LitElementWw {
 		super.disconnectedCallback();
 		this.#resizeObserver?.disconnect();
 		this.#resizeObserver = null;
+		cancelAnimationFrame(this.#resizeFrame);
 		this.cancelPulses();
 	}
 
@@ -240,7 +249,7 @@ export class Graph extends LitElementWw {
 							data-ww-accept=${this.addingEdge ? "link" : nothing}
 							?selected=${this.highlightedNode === node.id}
 						>
-							<div class="disc" style=${visual.nodes[node.id] ? `--fill: ${visual.nodes[node.id]}` : nothing}>
+							<div class="disc" part="node" style=${visual.nodes[node.id] ? `--fill: ${visual.nodes[node.id]}` : nothing}>
 								<span>${node.name}</span>
 								${visual.subtexts[node.id] ? html`<span>${visual.subtexts[node.id]}</span>` : nothing}
 							</div>

@@ -6,8 +6,13 @@ export default css`
         display: block;
 
         width: 100%;
+        min-width: 300px;
+        max-width: 2100px;
+        min-height: 20rem;
+        margin-inline: auto;
 
-        color: var(--sl-color-neutral-900);
+        color: var(--ww-text-color, var(--sl-color-neutral-900));
+        font-family: var(--ww-font-family, inherit);
         background-color: var(--sl-color-neutral-0);
 
         border: solid 1px var(--sl-color-neutral-300);
@@ -19,8 +24,14 @@ export default css`
 
         outline: none;
     }
+    .root {
+        container-type: inline-size;
+    }
+    .print-note {
+        display: none;
+    }
     algorithm-bar, edit-bar, animation-bar {
-        height: 72px;
+        min-height: 72px;
         align-items: end;
     }
     top-bar, algorithm-bar, edit-bar, animation-bar {
@@ -62,12 +73,32 @@ export default css`
         --padding: 0;
         position: relative;
     }
-    #subcontainer {
-        width: 50%;
+    @container (max-width: 480px) {
+        animation-edit-bar {
+            max-width: calc(100% - 2 * var(--sl-spacing-x-small));
+            overflow-x: auto;
+        }
     }
-    #container {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
+    @media print {
+        :host {
+            min-height: 0;
+            border-color: currentColor;
+            break-inside: avoid;
+        }
+        top-bar, sl-tab-group, animation-edit-bar, sl-dialog, .graph-empty-overlay {
+            display: none;
+        }
+        .root.empty .graph {
+            display: none;
+        }
+        .root.empty .print-note {
+            display: block;
+            padding: 1rem;
+        }
+        .graph {
+            break-inside: avoid;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
     }
 `;

@@ -7,9 +7,33 @@
     "widget-conceptual",
     "widget-simulational",
     "isced2011-3",
+    "isced2011-5",
     "isced2011-6",
-    "iscedf2013-05",
-    "iscedf2013-06",
+    "isced2011-7",
+    "iscedf2013-054",
+    "iscedf2013-061",
+    "widget-editable",
+    "widget-allows-pointer-input",
+    "widget-allows-keyboard-input",
+    "widget-allows-touch-input",
+    "widget-convertible-to-table",
+    "widget-convertible-from-table",
+    "widget-convertible-to-text/vnd.graphviz",
+    "widget-convertible-from-text/vnd.graphviz",
+    "widget-convertible-to-text/csv",
+    "widget-convertible-from-text/csv",
+    "widget-responsive",
+    "widget-themeable",
+    "widget-printable",
+    "widget-stateful",
+    "widget-configurable",
+    "widget-reactive",
+    "widget-testable",
+    "widget-supports-shared-dependencies",
+    "graph",
+    "algorithm",
+    "dijkstra",
+    "spanning tree",
     "widget-lang-en",
     "widget-lang-en-US",
     "widget-lang-en-GB",
@@ -167,6 +191,14 @@
     "./tests/scene.*": {
       "source": "./tests/scene.test.ts",
       "default": "./dist/tests/scene.*"
+    },
+    "./tests/input.*": {
+      "source": "./tests/input.test.ts",
+      "default": "./dist/tests/input.*"
+    },
+    "./tests/formats.*": {
+      "source": "./tests/formats.test.ts",
+      "default": "./dist/tests/formats.*"
     }
   },
   "editingConfig": {
