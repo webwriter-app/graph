@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Algorytmy wykonalne`,
 's0868f4ad15f32174': `Zatrzymaj animację`,
 's08c6c27f5b8452b1': `Dodaj podtekst węzła`,
+'s0d971b1f7aa807a3': `Uprawnienia grafu`,
 's0f136ff2c086b760': `zresetuj`,
 's109991b0423f1512': `Fioletowy`,
 's11337fae701e3905': `Uruchom wybrany algorytm`,
@@ -34,8 +35,10 @@
 's42929dd473f85b2d': `podteksty węzłów`,
 's429f70243017494b': `Pokaż kartę „Edytuj”`,
 's42b445d0b8ef5e0c': `Pokaż zakładkę „Algorytm”`,
+'s4394e7c4d91760ef': `Skonfiguruj uprawnienia grafu`,
 's479a2b6569da2fd0': `Wykonaj algorytm na grafie`,
 's4ddda90d75c39e3f': `Usuń etapy animacji`,
+'s4f238e9a505d8b67': `Wagi muszą być liczbami nieujemnymi.`,
 's5222ccfc3ee461f9': `Dodaj animację resetowania`,
 's597d652edb302c38': `kolory krawędzi`,
 's5a4633ffef40fc2b': `Wybierz węzeł lub krawędź, aby wyświetlić szczegóły.`,
@@ -53,10 +56,12 @@
 's81446419d1cc2026': `Odtwórz animację`,
 's8b1360ffe490828f': `Kliknij dwa węzły, aby dodać między nimi krawędź.`,
 's8b2ae093ad5cd15c': `Dodaj węzły i krawędzie za pomocą paska narzędzi w trybie edycji.`,
+'s8eaedca5792cc640': `Ten graf jest pusty.`,
 's8f450dd0b7bdb8cb': `Pomarańczowy`,
 's91bd3118111af6ef': `kolory węzłów`,
 's93e1d90707d925b1': `Dodaj węzły`,
 's965e11e1dbf9b906': `Wybierz kolor`,
+'s9b08fb82d7ba2cbf': `Tabela musi być listą krawędzi (źródło, cel, waga) lub kwadratową macierzą sąsiedztwa.`,
 's9b3c2f9cc32d565a': `Cyjan`,
 's9ff1de19feac1b7c': `Czerwony`,
 'sa38c309ccd6a88f9': `Algorytm drzewa rozpinającego (algorytm Borůvki)`,
@@ -82,9 +87,10 @@
 'se9beed19c6a38fed': `Różowy`,
 'seb1e51fbf69345e1': `Pokaż zakładkę „Animacja”`,
 'secf3d3a7c1693e2d': `Niebieski`,
+'sed9b451f9d66eaa7': `Plik jest pusty.`,
 'sf25d9576a8a29524': `Węzeł docelowy`,
 'sf312d3743ff8d4b3': `Dodaj węzły i krawędzie za pomocą paska narzędzi powyżej.`,
 'sf3659df71f61b3ec': `Usuń krok`,
+'sf686293760e78931': `Plik nie jest prawidłowym grafem DOT.`,
 'sfeb99afb5a2e03ca': `Edytuj wykres`,
     };
-  

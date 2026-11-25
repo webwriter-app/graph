@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Täidetavad algoritmid`,
 's0868f4ad15f32174': `Peata animatsioon`,
 's08c6c27f5b8452b1': `Lisa sõlme alatekst`,
+'s0d971b1f7aa807a3': `Graafi õigused`,
 's0f136ff2c086b760': `taastamine`,
 's109991b0423f1512': `Violett`,
 's11337fae701e3905': `Käivita valitud algoritm`,
@@ -34,8 +35,10 @@
 's42929dd473f85b2d': `sõlme alatekstid`,
 's429f70243017494b': `Näita vahekaarti „Muuda”`,
 's42b445d0b8ef5e0c': `Näita vahekaarti „Algoritm“`,
+'s4394e7c4d91760ef': `Seadista graafi õigused`,
 's479a2b6569da2fd0': `Käivita algoritm graafil`,
 's4ddda90d75c39e3f': `Kustuta animatsiooni etapid`,
+'s4f238e9a505d8b67': `Kaalud peavad olema mittenegatiivsed arvud.`,
 's5222ccfc3ee461f9': `Lisa taastamisanimatsioon`,
 's597d652edb302c38': `ääre värvid`,
 's5a4633ffef40fc2b': `Valige sõlm või serv, et vaadata üksikasju.`,
@@ -53,10 +56,12 @@
 's81446419d1cc2026': `Vaata animatsiooni`,
 's8b1360ffe490828f': `Klõpsake kahel sõlmel, et lisada nende vahele serv.`,
 's8b2ae093ad5cd15c': `Lisa sõlmed ja servad redigeerimisrežiimis tööriistariba abil.`,
+'s8eaedca5792cc640': `See graaf on tühi.`,
 's8f450dd0b7bdb8cb': `Oranž`,
 's91bd3118111af6ef': `sõlmede värvid`,
 's93e1d90707d925b1': `Lisa sõlmed`,
 's965e11e1dbf9b906': `Vali värv`,
+'s9b08fb82d7ba2cbf': `Tabel peab olema servade loend (lähtepunkt, sihtpunkt, kaal) või ruutkujuline naabrusmaatriks.`,
 's9b3c2f9cc32d565a': `Tsüaan`,
 's9ff1de19feac1b7c': `Punane`,
 'sa38c309ccd6a88f9': `Hõlmav puu (Borůvka algoritm)`,
@@ -82,9 +87,10 @@
 'se9beed19c6a38fed': `Roosa`,
 'seb1e51fbf69345e1': `Näita vahekaarti „Animatsioon”`,
 'secf3d3a7c1693e2d': `Sinine`,
+'sed9b451f9d66eaa7': `Fail on tühi.`,
 'sf25d9576a8a29524': `Sihtsõlm`,
 'sf312d3743ff8d4b3': `Lisa sõlmed ja servad ülemise tööriistariba abil.`,
 'sf3659df71f61b3ec': `Kustuta samm`,
+'sf686293760e78931': `Fail ei ole kehtiv DOT-graaf.`,
 'sfeb99afb5a2e03ca': `Muuda graafikut`,
     };
-  

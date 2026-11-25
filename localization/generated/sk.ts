@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Algoritmy, ktoré je možné spustiť`,
 's0868f4ad15f32174': `Pozastaviť animáciu`,
 's08c6c27f5b8452b1': `Pridať podtext uzla`,
+'s0d971b1f7aa807a3': `Oprávnenia grafu`,
 's0f136ff2c086b760': `vynulovať`,
 's109991b0423f1512': `Fialová`,
 's11337fae701e3905': `Spustiť vybraný algoritmus`,
@@ -34,8 +35,10 @@
 's42929dd473f85b2d': `podtexty uzlov`,
 's429f70243017494b': `Zobraziť kartu „Upraviť“`,
 's42b445d0b8ef5e0c': `Zobraziť kartu „Algoritmus“`,
+'s4394e7c4d91760ef': `Nastaviť oprávnenia grafu`,
 's479a2b6569da2fd0': `Vykonajte algoritmus na grafe`,
 's4ddda90d75c39e3f': `Odstrániť kroky animácie`,
+'s4f238e9a505d8b67': `Váhy musia byť nezáporné čísla.`,
 's5222ccfc3ee461f9': `Pridať animáciu obnovenia`,
 's597d652edb302c38': `farby okrajov`,
 's5a4633ffef40fc2b': `Vyberte uzol alebo hránu, aby ste si zobrazili podrobnosti.`,
@@ -53,10 +56,12 @@
 's81446419d1cc2026': `Prehrať animáciu`,
 's8b1360ffe490828f': `Kliknite na dva uzly, aby ste medzi nimi vytvorili hranu.`,
 's8b2ae093ad5cd15c': `V režime úprav pridávajte uzly a hrany pomocou panela nástrojov.`,
+'s8eaedca5792cc640': `Tento graf je prázdny.`,
 's8f450dd0b7bdb8cb': `Oranžová`,
 's91bd3118111af6ef': `farby uzlov`,
 's93e1d90707d925b1': `Pridať uzly`,
 's965e11e1dbf9b906': `Vyber farbu`,
+'s9b08fb82d7ba2cbf': `Tabuľka musí byť zoznam hrán (zdroj, cieľ, váha) alebo štvorcová matica susednosti.`,
 's9b3c2f9cc32d565a': `Cyan`,
 's9ff1de19feac1b7c': `Červená`,
 'sa38c309ccd6a88f9': `Spanning Tree (Borůvkov algoritmus)`,
@@ -82,9 +87,10 @@
 'se9beed19c6a38fed': `Ružová`,
 'seb1e51fbf69345e1': `Zobraziť kartu „Animácia“`,
 'secf3d3a7c1693e2d': `Modrá`,
+'sed9b451f9d66eaa7': `Súbor je prázdny.`,
 'sf25d9576a8a29524': `Cieľový uzol`,
 'sf312d3743ff8d4b3': `Pridajte uzly a hrany pomocou panela nástrojov hore.`,
 'sf3659df71f61b3ec': `Odstrániť krok`,
+'sf686293760e78931': `Súbor nie je platný graf DOT.`,
 'sfeb99afb5a2e03ca': `Uprav graf`,
     };
-  

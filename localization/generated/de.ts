@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Ausführbare Algorithmen`,
 's0868f4ad15f32174': `Animation anhalten`,
 's08c6c27f5b8452b1': `Knoten-Untertext hinzufügen`,
+'s0d971b1f7aa807a3': `Graphberechtigungen`,
 's0f136ff2c086b760': `Zurücksetzen`,
 's109991b0423f1512': `Violett`,
 's11337fae701e3905': `Den ausgewählten Algorithmus ausführen`,
@@ -34,8 +35,10 @@
 's42929dd473f85b2d': `Knoten-Untertexte`,
 's429f70243017494b': `Tab „Bearbeiten“ anzeigen`,
 's42b445d0b8ef5e0c': `Tab „Algorithmus“ anzeigen`,
+'s4394e7c4d91760ef': `Graphberechtigungen konfigurieren`,
 's479a2b6569da2fd0': `Einen Algorithmus auf dem Graphen ausführen`,
 's4ddda90d75c39e3f': `Animationsschritte löschen`,
+'s4f238e9a505d8b67': `Gewichte müssen nichtnegative Zahlen sein.`,
 's5222ccfc3ee461f9': `Reset-Schritt hinzufügen`,
 's597d652edb302c38': `Kantenfarben`,
 's5a4633ffef40fc2b': `Wählen Sie einen Knoten oder eine Kante aus, um Details anzuzeigen.`,
@@ -53,10 +56,12 @@
 's81446419d1cc2026': `Animation abspielen`,
 's8b1360ffe490828f': `Klicken Sie auf zwei Knoten, um eine Kante zwischen ihnen hinzuzufügen.`,
 's8b2ae093ad5cd15c': `Fügen Sie im Bearbeitungsmodus über die Werkzeugleiste Knoten und Kanten hinzu.`,
+'s8eaedca5792cc640': `Dieser Graph ist leer.`,
 's8f450dd0b7bdb8cb': `Orange`,
 's91bd3118111af6ef': `Knotenfarben`,
 's93e1d90707d925b1': `Knoten hinzufügen`,
 's965e11e1dbf9b906': `Farbe auswählen`,
+'s9b08fb82d7ba2cbf': `Die Tabelle muss eine Kantenliste (Quelle, Ziel, Gewicht) oder eine quadratische Adjazenzmatrix sein.`,
 's9b3c2f9cc32d565a': `Cyan`,
 's9ff1de19feac1b7c': `Rot`,
 'sa38c309ccd6a88f9': `Spannbaum (Algorithmus von Borůvka)`,
@@ -82,9 +87,10 @@
 'se9beed19c6a38fed': `Rosa`,
 'seb1e51fbf69345e1': `Tab „Animation“ anzeigen`,
 'secf3d3a7c1693e2d': `Blau`,
+'sed9b451f9d66eaa7': `Die Datei ist leer.`,
 'sf25d9576a8a29524': `Zielknoten`,
 'sf312d3743ff8d4b3': `Fügen Sie über die obige Werkzeugleiste Knoten und Kanten hinzu.`,
 'sf3659df71f61b3ec': `Schritt löschen`,
+'sf686293760e78931': `Die Datei ist kein gültiger DOT-Graph.`,
 'sfeb99afb5a2e03ca': `Graph bearbeiten`,
     };
-  

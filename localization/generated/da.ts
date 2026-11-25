@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Algoritmer, der kan køres`,
 's0868f4ad15f32174': `Sæt animationen på pause`,
 's08c6c27f5b8452b1': `Tilføj undertekst til node`,
+'s0d971b1f7aa807a3': `Graftilladelser`,
 's0f136ff2c086b760': `nulstil`,
 's109991b0423f1512': `Violet`,
 's11337fae701e3905': `Udfør den valgte algoritme`,
@@ -34,8 +35,10 @@
 's42929dd473f85b2d': `node-undertekster`,
 's429f70243017494b': `Vis fanen "Rediger"`,
 's42b445d0b8ef5e0c': `Vis fanen »Algoritme«`,
+'s4394e7c4d91760ef': `Konfigurer graftilladelser`,
 's479a2b6569da2fd0': `Udfør en algoritme på grafen`,
 's4ddda90d75c39e3f': `Slet animationstrin`,
+'s4f238e9a505d8b67': `Vægtene skal være ikke-negative tal.`,
 's5222ccfc3ee461f9': `Tilføj nulstillingsanimation`,
 's597d652edb302c38': `kantfarver`,
 's5a4633ffef40fc2b': `Vælg en node eller en kant for at se detaljer.`,
@@ -53,10 +56,12 @@
 's81446419d1cc2026': `Afspil animationen`,
 's8b1360ffe490828f': `Klik på to noder for at tilføje en kant mellem dem.`,
 's8b2ae093ad5cd15c': `Tilføj noder og kanter ved hjælp af værktøjslinjen i redigeringsfunktionen.`,
+'s8eaedca5792cc640': `Denne graf er tom.`,
 's8f450dd0b7bdb8cb': `Orange`,
 's91bd3118111af6ef': `nodefarver`,
 's93e1d90707d925b1': `Tilføj noder`,
 's965e11e1dbf9b906': `Vælg farve`,
+'s9b08fb82d7ba2cbf': `Tabellen skal være en kantliste (kilde, mål, vægt) eller en kvadratisk nabomatrix.`,
 's9b3c2f9cc32d565a': `Cyan`,
 's9ff1de19feac1b7c': `Rød`,
 'sa38c309ccd6a88f9': `Spanning Tree (Borůvkas algoritme)`,
@@ -82,9 +87,10 @@
 'se9beed19c6a38fed': `Lyserød`,
 'seb1e51fbf69345e1': `Vis fanen "Animation"`,
 'secf3d3a7c1693e2d': `Blå`,
+'sed9b451f9d66eaa7': `Filen er tom.`,
 'sf25d9576a8a29524': `Målnode`,
 'sf312d3743ff8d4b3': `Tilføj noder og kanter ved hjælp af værktøjslinjen ovenfor.`,
 'sf3659df71f61b3ec': `Slet trin`,
+'sf686293760e78931': `Filen er ikke en gyldig DOT-graf.`,
 'sfeb99afb5a2e03ca': `Rediger grafen`,
     };
-  

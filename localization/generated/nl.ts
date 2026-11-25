@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Uitvoerbare algoritmen`,
 's0868f4ad15f32174': `De animatie pauzeren`,
 's08c6c27f5b8452b1': `Knooppunt-subtekst toevoegen`,
+'s0d971b1f7aa807a3': `Graafmachtigingen`,
 's0f136ff2c086b760': `opnieuw instellen`,
 's109991b0423f1512': `Violet`,
 's11337fae701e3905': `Voer het geselecteerde algoritme uit`,
@@ -34,8 +35,10 @@
 's42929dd473f85b2d': `subteksten van knooppunten`,
 's429f70243017494b': `Het tabblad "Bewerken" weergeven`,
 's42b445d0b8ef5e0c': `Toon het tabblad "Algoritme"`,
+'s4394e7c4d91760ef': `Graafmachtigingen instellen`,
 's479a2b6569da2fd0': `Voer een algoritme uit op de grafiek`,
 's4ddda90d75c39e3f': `Animatietappen verwijderen`,
+'s4f238e9a505d8b67': `Gewichten moeten niet-negatieve getallen zijn.`,
 's5222ccfc3ee461f9': `Reset-animatie toevoegen`,
 's597d652edb302c38': `randkleuren`,
 's5a4633ffef40fc2b': `Selecteer een knooppunt of een rand om de details te bekijken.`,
@@ -53,10 +56,12 @@
 's81446419d1cc2026': `Speel de animatie af`,
 's8b1360ffe490828f': `Klik op twee knooppunten om een verbinding tussen beide toe te voegen.`,
 's8b2ae093ad5cd15c': `Voeg knooppunten en verbindingen toe via de werkbalk in de bewerkingsmodus.`,
+'s8eaedca5792cc640': `Deze graaf is leeg.`,
 's8f450dd0b7bdb8cb': `Oranje`,
 's91bd3118111af6ef': `knooppuntkleuren`,
 's93e1d90707d925b1': `Knooppunten toevoegen`,
 's965e11e1dbf9b906': `Kies een kleur`,
+'s9b08fb82d7ba2cbf': `De tabel moet een kantenlijst (bron, doel, gewicht) of een vierkante adjacentiematrix zijn.`,
 's9b3c2f9cc32d565a': `Cyaan`,
 's9ff1de19feac1b7c': `Rood`,
 'sa38c309ccd6a88f9': `Spanning Tree (het algoritme van Borůvka)`,
@@ -82,9 +87,10 @@
 'se9beed19c6a38fed': `Roze`,
 'seb1e51fbf69345e1': `Toon het tabblad "Animatie"`,
 'secf3d3a7c1693e2d': `Blauw`,
+'sed9b451f9d66eaa7': `Het bestand is leeg.`,
 'sf25d9576a8a29524': `Doelknooppunt`,
 'sf312d3743ff8d4b3': `Voeg knooppunten en verbindingen toe via de werkbalk hierboven.`,
 'sf3659df71f61b3ec': `Stap verwijderen`,
+'sf686293760e78931': `Het bestand is geen geldige DOT-graaf.`,
 'sfeb99afb5a2e03ca': `De grafiek bewerken`,
     };
-  

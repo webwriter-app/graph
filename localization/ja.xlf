@@ -1,4 +1,5 @@
-<xliff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd" xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+<?xml version='1.0' encoding='UTF-8'?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd" version="1.2">
   <file original="lit-localize-inputs" datatype="plaintext" source-language="en" target-language="ja">
     <body>
       <trans-unit id="se8dca0132c66ae03">
@@ -308,6 +309,34 @@
       <trans-unit id="s8b2ae093ad5cd15c">
         <source>Add nodes and edges using the toolbar in edit mode.</source>
         <target>編集モードでツールバーを使用して、ノードとエッジを追加します。</target>
+      </trans-unit>
+      <trans-unit id="s4394e7c4d91760ef">
+        <source>Configure graph permissions</source>
+        <target>グラフの権限を設定</target>
+      </trans-unit>
+      <trans-unit id="s0d971b1f7aa807a3">
+        <source>Graph permissions</source>
+        <target>グラフの権限</target>
+      </trans-unit>
+      <trans-unit id="sed9b451f9d66eaa7">
+        <source>The file is empty.</source>
+        <target>ファイルは空です。</target>
+      </trans-unit>
+      <trans-unit id="sf686293760e78931">
+        <source>The file is not a valid DOT graph.</source>
+        <target>ファイルは有効な DOT グラフではありません。</target>
+      </trans-unit>
+      <trans-unit id="s9b08fb82d7ba2cbf">
+        <source>The table must be an edge list (source, target, weight) or a square adjacency matrix.</source>
+        <target>表はエッジリスト（始点、終点、重み）または正方形の隣接行列である必要があります。</target>
+      </trans-unit>
+      <trans-unit id="s4f238e9a505d8b67">
+        <source>Weights must be numbers that are not negative.</source>
+        <target>重みは負でない数値である必要があります。</target>
+      </trans-unit>
+      <trans-unit id="s8eaedca5792cc640">
+        <source>This graph is empty.</source>
+        <target>このグラフは空です。</target>
       </trans-unit>
     </body>
   </file>

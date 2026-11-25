@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Végrehajtható algoritmusok`,
 's0868f4ad15f32174': `Az animáció leállítása`,
 's08c6c27f5b8452b1': `Csomópont alcímének hozzáadása`,
+'s0d971b1f7aa807a3': `Gráfjogosultságok`,
 's0f136ff2c086b760': `visszaállítás`,
 's109991b0423f1512': `Ibolya`,
 's11337fae701e3905': `Végezze el a kiválasztott algoritmust`,
@@ -34,8 +35,10 @@
 's42929dd473f85b2d': `csomópont alfeliratok`,
 's429f70243017494b': `Az „Szerkesztés” fül megjelenítése`,
 's42b445d0b8ef5e0c': `Az „Algoritmus” fül megjelenítése`,
+'s4394e7c4d91760ef': `Gráfjogosultságok beállítása`,
 's479a2b6569da2fd0': `Algoritmus végrehajtása a gráfban`,
 's4ddda90d75c39e3f': `Animációs lépések törlése`,
+'s4f238e9a505d8b67': `A súlyoknak nemnegatív számoknak kell lenniük.`,
 's5222ccfc3ee461f9': `Visszaállítási animáció hozzáadása`,
 's597d652edb302c38': `szél színei`,
 's5a4633ffef40fc2b': `Válasszon ki egy csomópontot vagy élt a részletek megtekintéséhez.`,
@@ -53,10 +56,12 @@
 's81446419d1cc2026': `Indítsd el az animációt`,
 's8b1360ffe490828f': `Kattintson két csomópontra, hogy élt hozzon létre közöttük.`,
 's8b2ae093ad5cd15c': `A szerkesztési módban az eszköztár segítségével adhat hozzá csomópontokat és éleket.`,
+'s8eaedca5792cc640': `Ez a gráf üres.`,
 's8f450dd0b7bdb8cb': `Narancssárga`,
 's91bd3118111af6ef': `csomópontok színei`,
 's93e1d90707d925b1': `Csomópontok hozzáadása`,
 's965e11e1dbf9b906': `Szín kiválasztása`,
+'s9b08fb82d7ba2cbf': `A táblázatnak él-listának (forrás, cél, súly) vagy négyzetes szomszédsági mátrixnak kell lennie.`,
 's9b3c2f9cc32d565a': `Cian`,
 's9ff1de19feac1b7c': `Piros`,
 'sa38c309ccd6a88f9': `Spanning Tree (Borůvka-algoritmus)`,
@@ -82,9 +87,10 @@
 'se9beed19c6a38fed': `Rózsaszín`,
 'seb1e51fbf69345e1': `Az „Animáció” fül megjelenítése`,
 'secf3d3a7c1693e2d': `Kék`,
+'sed9b451f9d66eaa7': `A fájl üres.`,
 'sf25d9576a8a29524': `Célcsomópont`,
 'sf312d3743ff8d4b3': `A fenti eszköztár segítségével adjon hozzá csomópontokat és éleket.`,
 'sf3659df71f61b3ec': `Lépés törlése`,
+'sf686293760e78931': `A fájl nem érvényes DOT-gráf.`,
 'sfeb99afb5a2e03ca': `A grafikon szerkesztése`,
     };
-  

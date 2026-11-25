@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Algoritmi eseguibili`,
 's0868f4ad15f32174': `Metti in pausa l'animazione`,
 's08c6c27f5b8452b1': `Aggiungi sottotesto al nodo`,
+'s0d971b1f7aa807a3': `Permessi del grafo`,
 's0f136ff2c086b760': `ripristina`,
 's109991b0423f1512': `Violetta`,
 's11337fae701e3905': `Esegui l'algoritmo selezionato`,
@@ -34,8 +35,10 @@
 's42929dd473f85b2d': `sottotesti dei nodi`,
 's429f70243017494b': `Mostra la scheda "Modifica"`,
 's42b445d0b8ef5e0c': `Mostra la scheda "Algoritmo"`,
+'s4394e7c4d91760ef': `Configura i permessi del grafo`,
 's479a2b6569da2fd0': `Eseguire un algoritmo sul grafo`,
 's4ddda90d75c39e3f': `Elimina i fotogrammi dell'animazione`,
+'s4f238e9a505d8b67': `I pesi devono essere numeri non negativi.`,
 's5222ccfc3ee461f9': `Aggiungi animazione di ripristino`,
 's597d652edb302c38': `colori dei bordi`,
 's5a4633ffef40fc2b': `Seleziona un nodo o un bordo per visualizzarne i dettagli.`,
@@ -53,10 +56,12 @@
 's81446419d1cc2026': `Riproduci l'animazione`,
 's8b1360ffe490828f': `Clicca su due nodi per aggiungere un collegamento tra di essi.`,
 's8b2ae093ad5cd15c': `Aggiungi nodi e bordi utilizzando la barra degli strumenti in modalità modifica.`,
+'s8eaedca5792cc640': `Questo grafo è vuoto.`,
 's8f450dd0b7bdb8cb': `Arancione`,
 's91bd3118111af6ef': `colori dei nodi`,
 's93e1d90707d925b1': `Aggiungi nodi`,
 's965e11e1dbf9b906': `Seleziona colore`,
+'s9b08fb82d7ba2cbf': `La tabella deve essere un elenco di archi (sorgente, destinazione, peso) o una matrice di adiacenza quadrata.`,
 's9b3c2f9cc32d565a': `Ciano`,
 's9ff1de19feac1b7c': `Rosso`,
 'sa38c309ccd6a88f9': `Spanning Tree (algoritmo di Borůvka)`,
@@ -82,9 +87,10 @@
 'se9beed19c6a38fed': `Rosa`,
 'seb1e51fbf69345e1': `Mostra la scheda "Animazione"`,
 'secf3d3a7c1693e2d': `Blu`,
+'sed9b451f9d66eaa7': `Il file è vuoto.`,
 'sf25d9576a8a29524': `Nodo di destinazione`,
 'sf312d3743ff8d4b3': `Aggiungi nodi e bordi utilizzando la barra degli strumenti in alto.`,
 'sf3659df71f61b3ec': `Elimina passaggio`,
+'sf686293760e78931': `Il file non è un grafo DOT valido.`,
 'sfeb99afb5a2e03ca': `Modifica il grafico`,
     };
-  

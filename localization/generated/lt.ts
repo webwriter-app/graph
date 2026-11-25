@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Vykdomieji algoritmai`,
 's0868f4ad15f32174': `Sustabdyti animaciją`,
 's08c6c27f5b8452b1': `Pridėti mazgo paaiškinimą`,
+'s0d971b1f7aa807a3': `Grafo leidimai`,
 's0f136ff2c086b760': `atstatyti`,
 's109991b0423f1512': `Violetinė`,
 's11337fae701e3905': `Vykdyti pasirinktą algoritmą`,
@@ -34,8 +35,10 @@
 's42929dd473f85b2d': `mazgo kontekstai`,
 's429f70243017494b': `Rodyti skirtuką „Redaguoti“`,
 's42b445d0b8ef5e0c': `Rodyti skirtuką „Algoritmas“`,
+'s4394e7c4d91760ef': `Konfigūruoti grafo leidimus`,
 's479a2b6569da2fd0': `Vykdyti algoritmą grafike`,
 's4ddda90d75c39e3f': `Ištrinti animacijos etapus`,
+'s4f238e9a505d8b67': `Svoris turi būti neneigiamas skaičius.`,
 's5222ccfc3ee461f9': `Pridėti atstatymo animaciją`,
 's597d652edb302c38': `kraštų spalvos`,
 's5a4633ffef40fc2b': `Pasirinkite mazgą arba briauną, kad peržiūrėtumėte išsamią informaciją.`,
@@ -53,10 +56,12 @@
 's81446419d1cc2026': `Paleisti animaciją`,
 's8b1360ffe490828f': `Spustelėkite du mazgus, kad tarp jų būtų sukurta briauna.`,
 's8b2ae093ad5cd15c': `Redagavimo režime naudodami įrankių juostą pridėkite mazgus ir briaunas.`,
+'s8eaedca5792cc640': `Šis grafas tuščias.`,
 's8f450dd0b7bdb8cb': `Oranžinė`,
 's91bd3118111af6ef': `mazgų spalvos`,
 's93e1d90707d925b1': `Pridėti mazgus`,
 's965e11e1dbf9b906': `Pasirinkite spalvą`,
+'s9b08fb82d7ba2cbf': `Lentelė turi būti briaunų sąrašas (šaltinis, tikslas, svoris) arba kvadratinė gretimumo matrica.`,
 's9b3c2f9cc32d565a': `Ciano`,
 's9ff1de19feac1b7c': `Raudona`,
 'sa38c309ccd6a88f9': `Sparčiausiasis medis (Borůvkos algoritmas)`,
@@ -82,9 +87,10 @@
 'se9beed19c6a38fed': `Rožinė`,
 'seb1e51fbf69345e1': `Rodyti skirtuką „Animacija“`,
 'secf3d3a7c1693e2d': `Mėlyna`,
+'sed9b451f9d66eaa7': `Failas tuščias.`,
 'sf25d9576a8a29524': `Tikslinis mazgas`,
 'sf312d3743ff8d4b3': `Pridėkite mazgus ir briaunas naudodami viršuje esantį įrankių juostą.`,
 'sf3659df71f61b3ec': `Ištrinti veiksmą`,
+'sf686293760e78931': `Failas nėra tinkamas DOT grafas.`,
 'sfeb99afb5a2e03ca': `Redaguoti diagramą`,
     };
-  

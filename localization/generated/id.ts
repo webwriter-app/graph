@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Algoritma yang dapat dijalankan`,
 's0868f4ad15f32174': `Jeda animasi`,
 's08c6c27f5b8452b1': `Tambahkan teks tambahan pada node`,
+'s0d971b1f7aa807a3': `Izin graf`,
 's0f136ff2c086b760': `atur ulang`,
 's109991b0423f1512': `Ungu`,
 's11337fae701e3905': `Jalankan algoritma yang dipilih`,
@@ -34,8 +35,10 @@
 's42929dd473f85b2d': `subteks node`,
 's429f70243017494b': `Tampilkan tab "Edit"`,
 's42b445d0b8ef5e0c': `Tampilkan tab "Algoritma"`,
+'s4394e7c4d91760ef': `Konfigurasikan izin graf`,
 's479a2b6569da2fd0': `Jalankan algoritma pada graf`,
 's4ddda90d75c39e3f': `Hapus langkah animasi`,
+'s4f238e9a505d8b67': `Bobot harus berupa angka nonnegatif.`,
 's5222ccfc3ee461f9': `Tambahkan animasi reset`,
 's597d652edb302c38': `warna tepi`,
 's5a4633ffef40fc2b': `Pilih sebuah simpul atau tepi untuk melihat detailnya.`,
@@ -53,10 +56,12 @@
 's81446419d1cc2026': `Putar animasi`,
 's8b1360ffe490828f': `Klik dua simpul untuk menambahkan tepi di antara keduanya.`,
 's8b2ae093ad5cd15c': `Tambahkan simpul dan tepi menggunakan bilah alat dalam mode edit.`,
+'s8eaedca5792cc640': `Graf ini kosong.`,
 's8f450dd0b7bdb8cb': `Oranye`,
 's91bd3118111af6ef': `warna node`,
 's93e1d90707d925b1': `Tambahkan node`,
 's965e11e1dbf9b906': `Pilih Warna`,
+'s9b08fb82d7ba2cbf': `Tabel harus berupa daftar sisi (sumber, target, bobot) atau matriks ketetanggaan persegi.`,
 's9b3c2f9cc32d565a': `Sian`,
 's9ff1de19feac1b7c': `Merah`,
 'sa38c309ccd6a88f9': `Pohon Jembatan (Algoritma Borůvka)`,
@@ -82,9 +87,10 @@
 'se9beed19c6a38fed': `Merah muda`,
 'seb1e51fbf69345e1': `Tampilkan tab "Animasi"`,
 'secf3d3a7c1693e2d': `Biru`,
+'sed9b451f9d66eaa7': `File kosong.`,
 'sf25d9576a8a29524': `Node tujuan`,
 'sf312d3743ff8d4b3': `Tambahkan simpul dan tepi menggunakan bilah alat di atas.`,
 'sf3659df71f61b3ec': `Hapus langkah`,
+'sf686293760e78931': `File bukan graf DOT yang valid.`,
 'sfeb99afb5a2e03ca': `Edit grafik`,
     };
-  

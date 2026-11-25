@@ -1,20 +1,4 @@
 {
-	"compilerOptions": {
-		"lib": ["ES2020", "DOM", "DOM.Iterable"],
-		"experimentalDecorators": false,
-		"useDefineForClassFields": true,
-		"target": "es2020",
-		"moduleResolution": "Bundler",
-		"allowImportingTsExtensions": true,
-		"allowSyntheticDefaultImports": true,
-		"resolveJsonModule": true,
-		"esModuleInterop": true,
-		"isolatedModules": true,
-		"noEmit": true,
-		"strict": true,
-		"forceConsistentCasingInFileNames": true,
-		"paths": {
-			"*": ["./*"]
-		}
-	}
+	"extends": "@webwriter/build/tsconfig.json",
+	"include": ["src", "tests"]
 }

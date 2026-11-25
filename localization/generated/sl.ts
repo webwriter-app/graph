@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Izvedljivi algoritmi`,
 's0868f4ad15f32174': `Zaustavi animacijo`,
 's08c6c27f5b8452b1': `Dodaj podnaslov vozlišča`,
+'s0d971b1f7aa807a3': `Dovoljenja grafa`,
 's0f136ff2c086b760': `ponastavi`,
 's109991b0423f1512': `Vijolična`,
 's11337fae701e3905': `Izvedi izbrani algoritem`,
@@ -34,8 +35,10 @@
 's42929dd473f85b2d': `podteksti vozlišča`,
 's429f70243017494b': `Prikaži zavihek »Uredi«`,
 's42b445d0b8ef5e0c': `Pokaži zavihek »Algoritem«`,
+'s4394e7c4d91760ef': `Nastavi dovoljenja grafa`,
 's479a2b6569da2fd0': `Izvedi algoritem na grafu`,
 's4ddda90d75c39e3f': `Izbriši korake animacije`,
+'s4f238e9a505d8b67': `Uteži morajo biti nenegativna števila.`,
 's5222ccfc3ee461f9': `Dodaj animacijo ponastavitve`,
 's597d652edb302c38': `barve robov`,
 's5a4633ffef40fc2b': `Izberite vozlišče ali povezavo, da si ogledate podrobnosti.`,
@@ -53,10 +56,12 @@
 's81446419d1cc2026': `Predvajaj animacijo`,
 's8b1360ffe490828f': `Kliknite na dve vozlišči, da med njima dodate povezavo.`,
 's8b2ae093ad5cd15c': `V načinu urejanja dodajajte vozlišča in povezave s pomočjo orodne vrstice.`,
+'s8eaedca5792cc640': `Ta graf je prazen.`,
 's8f450dd0b7bdb8cb': `Oranžna`,
 's91bd3118111af6ef': `barve vozlišč`,
 's93e1d90707d925b1': `Dodaj vozlišča`,
 's965e11e1dbf9b906': `Izberi barvo`,
+'s9b08fb82d7ba2cbf': `Tabela mora biti seznam povezav (izvor, cilj, utež) ali kvadratna matrika sosednosti.`,
 's9b3c2f9cc32d565a': `Cian`,
 's9ff1de19feac1b7c': `Rdeča`,
 'sa38c309ccd6a88f9': `Algoritem najširšega drevesa (Borůvkov algoritem)`,
@@ -82,9 +87,10 @@
 'se9beed19c6a38fed': `Roza`,
 'seb1e51fbf69345e1': `Pokaži zavihek »Animacija«`,
 'secf3d3a7c1693e2d': `Modra`,
+'sed9b451f9d66eaa7': `Datoteka je prazna.`,
 'sf25d9576a8a29524': `Ciljno vozlišče`,
 'sf312d3743ff8d4b3': `Dodajte vozlišča in povezave z orodno vrstico zgoraj.`,
 'sf3659df71f61b3ec': `Izbriši korak`,
+'sf686293760e78931': `Datoteka ni veljaven graf DOT.`,
 'sfeb99afb5a2e03ca': `Uredi graf`,
     };
-  

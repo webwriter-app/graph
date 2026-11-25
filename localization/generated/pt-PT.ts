@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Algoritmos executáveis`,
 's0868f4ad15f32174': `Pausar a animação`,
 's08c6c27f5b8452b1': `Adicionar subtítulo ao nó`,
+'s0d971b1f7aa807a3': `Permissões do grafo`,
 's0f136ff2c086b760': `reiniciar`,
 's109991b0423f1512': `Violeta`,
 's11337fae701e3905': `Executar o algoritmo selecionado`,
@@ -34,8 +35,10 @@
 's42929dd473f85b2d': `subtextos de nó`,
 's429f70243017494b': `Mostrar o separador «Editar»`,
 's42b445d0b8ef5e0c': `Mostrar o separador «Algoritmo»`,
+'s4394e7c4d91760ef': `Configurar permissões do grafo`,
 's479a2b6569da2fd0': `Executar um algoritmo no grafo`,
 's4ddda90d75c39e3f': `Eliminar passos da animação`,
+'s4f238e9a505d8b67': `Os pesos têm de ser números não negativos.`,
 's5222ccfc3ee461f9': `Adicionar animação de reinicialização`,
 's597d652edb302c38': `cores das bordas`,
 's5a4633ffef40fc2b': `Selecione um nó ou uma aresta para ver os detalhes.`,
@@ -53,10 +56,12 @@
 's81446419d1cc2026': `Reproduzir a animação`,
 's8b1360ffe490828f': `Clique em dois nós para adicionar uma aresta entre eles.`,
 's8b2ae093ad5cd15c': `Adicione nós e arestas utilizando a barra de ferramentas no modo de edição.`,
+'s8eaedca5792cc640': `Este grafo está vazio.`,
 's8f450dd0b7bdb8cb': `Laranja`,
 's91bd3118111af6ef': `cores dos nós`,
 's93e1d90707d925b1': `Adicionar nós`,
 's965e11e1dbf9b906': `Selecionar cor`,
+'s9b08fb82d7ba2cbf': `A tabela tem de ser uma lista de arestas (origem, destino, peso) ou uma matriz de adjacência quadrada.`,
 's9b3c2f9cc32d565a': `Ciano`,
 's9ff1de19feac1b7c': `Vermelho`,
 'sa38c309ccd6a88f9': `Árvore de expansão (Algoritmo de Borůvka)`,
@@ -82,9 +87,10 @@
 'se9beed19c6a38fed': `Rosa`,
 'seb1e51fbf69345e1': `Mostrar o separador «Animação»`,
 'secf3d3a7c1693e2d': `Azul`,
+'sed9b451f9d66eaa7': `O ficheiro está vazio.`,
 'sf25d9576a8a29524': `Nó de destino`,
 'sf312d3743ff8d4b3': `Adicione nós e arestas utilizando a barra de ferramentas acima.`,
 'sf3659df71f61b3ec': `Eliminar etapa`,
+'sf686293760e78931': `O ficheiro não é um grafo DOT válido.`,
 'sfeb99afb5a2e03ca': `Editar o gráfico`,
     };
-  

@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Īstenojami algoritmi`,
 's0868f4ad15f32174': `Pauzēt animāciju`,
 's08c6c27f5b8452b1': `Pievienot mezgla aprakstu`,
+'s0d971b1f7aa807a3': `Grafa atļaujas`,
 's0f136ff2c086b760': `atjaunot`,
 's109991b0423f1512': `Violeta`,
 's11337fae701e3905': `Izpildīt izvēlēto algoritmu`,
@@ -34,8 +35,10 @@
 's42929dd473f85b2d': `mezgla apakšteksti`,
 's429f70243017494b': `Rādīt cilni „Rediģēt“`,
 's42b445d0b8ef5e0c': `Rādīt cilni „Algoritms“`,
+'s4394e7c4d91760ef': `Konfigurēt grafa atļaujas`,
 's479a2b6569da2fd0': `Izpildīt algoritmu uz grafika`,
 's4ddda90d75c39e3f': `Dzēst animācijas posmus`,
+'s4f238e9a505d8b67': `Svariem jābūt nenegatīviem skaitļiem.`,
 's5222ccfc3ee461f9': `Pievienot atjaunošanas animāciju`,
 's597d652edb302c38': `malu krāsas`,
 's5a4633ffef40fc2b': `Izvēlieties mezglu vai malu, lai apskatītu informāciju.`,
@@ -53,10 +56,12 @@
 's81446419d1cc2026': `Atskaņot animāciju`,
 's8b1360ffe490828f': `Noklikšķiniet uz diviem mezgliem, lai izveidotu savienojumu starp tiem.`,
 's8b2ae093ad5cd15c': `Pievienojiet mezglus un malas, izmantojot rīkjoslu rediģēšanas režīmā.`,
+'s8eaedca5792cc640': `Šis grafs ir tukšs.`,
 's8f450dd0b7bdb8cb': `Oranža`,
 's91bd3118111af6ef': `mezglu krāsas`,
 's93e1d90707d925b1': `Pievienot mezglus`,
 's965e11e1dbf9b906': `Izvēlieties krāsu`,
+'s9b08fb82d7ba2cbf': `Tabulai jābūt malu sarakstam (avots, mērķis, svars) vai kvadrātiskai blakusmatricai.`,
 's9b3c2f9cc32d565a': `Cian`,
 's9ff1de19feac1b7c': `Sarkans`,
 'sa38c309ccd6a88f9': `Spanning Tree (Borůvkas algoritms)`,
@@ -82,9 +87,10 @@
 'se9beed19c6a38fed': `Rozā`,
 'seb1e51fbf69345e1': `Rādīt cilni „Animācija“`,
 'secf3d3a7c1693e2d': `Zils`,
+'sed9b451f9d66eaa7': `Fails ir tukšs.`,
 'sf25d9576a8a29524': `Mērķa mezgls`,
 'sf312d3743ff8d4b3': `Pievienojiet mezglus un malas, izmantojot rīkjoslu augšā.`,
 'sf3659df71f61b3ec': `Dzēst soli`,
+'sf686293760e78931': `Fails nav derīgs DOT grafs.`,
 'sfeb99afb5a2e03ca': `Rediģēt grafiku`,
     };
-  

@@ -4,113 +4,86 @@
   "modules": [
     {
       "kind": "javascript-module",
-      "path": "ww-graph.ts",
+      "path": "src/widgets/ww-graph.ts",
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "Visualize graphs, run graph algorithms step by step (BFS, DFS, Dijkstra, spanning tree, cycle detection, coloring) and record graph animations.\nThe graph, the recorded animation and the permissions are stored in the widget's data blocks. Permissions limit what readers may edit, run and replay.\n\nConversions: a `table` (edge list or square adjacency matrix) becomes a graph, and the graph becomes an adjacency matrix `table`.\nFiles: DOT (`.gv`, `.dot`) and an edge list as CSV (`.csv`), both ways. The graph is undirected, so a `digraph` is read without directions.\nFormats carry names, links and weights, not the layout or the animation; an import replaces the graph and clears the animation.\nSignals: `nodeCount` (number) and `edges` (table with columns source, target, weight).",
           "name": "WwGraph",
+          "cssParts": [
+            {
+              "description": "The area that holds the graph.",
+              "name": "graph"
+            },
+            {
+              "description": "A node of the graph.",
+              "name": "node"
+            }
+          ],
           "members": [
             {
               "kind": "field",
-              "name": "localize",
-              "privacy": "protected",
-              "default": "LOCALIZE"
+              "name": "actions",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{ configurePermissions: { label: (widget: { msg: MsgFn }) => widget.msg('Configure graph permissions') }, }"
             },
             {
               "kind": "field",
-              "name": "_graph",
-              "type": {
-                "text": "iGraph"
-              },
+              "name": "convertFrom",
+              "static": true,
+              "default": "convertFrom"
+            },
+            {
+              "kind": "field",
+              "name": "convertTo",
+              "static": true,
+              "default": "convertTo"
+            },
+            {
+              "kind": "field",
+              "name": "localize"
+            },
+            {
+              "kind": "field",
+              "name": "msg",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "#permissions",
               "privacy": "private",
-              "default": "{ nodes: [], links: [], }"
+              "default": "new Permissions(this)"
             },
             {
               "kind": "field",
-              "name": "graph",
-              "type": {
-                "text": "iGraph"
-              },
-              "privacy": "public",
-              "description": "The graph data, containing labeled nodes and weighted links.",
-              "attribute": "graph",
-              "reflects": true
+              "name": "#graphValue",
+              "privacy": "private"
             },
             {
               "kind": "field",
-              "name": "animation",
+              "name": "signals",
               "type": {
-                "text": "AnimationStep[]"
+                "text": "object"
               },
-              "default": "[]",
-              "description": "Array of animation steps. Each step can color nodes/links, set node subtexts, or reset previous steps.",
-              "attribute": "animation",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "svg",
-              "type": {
-                "text": "Selection<Element, unknown, null, undefined> | null"
-              },
-              "privacy": "private",
-              "default": "null"
-            },
-            {
-              "kind": "field",
-              "name": "animationStatus",
-              "type": {
-                "text": "AnimationStatusType"
-              },
-              "privacy": "private",
-              "default": "'STOP'"
-            },
-            {
-              "kind": "field",
-              "name": "animationPosition",
-              "type": {
-                "text": "number"
-              },
-              "privacy": "private",
-              "default": "0"
-            },
-            {
-              "kind": "field",
-              "name": "mode",
-              "type": {
-                "text": "'edit' | 'animation' | 'algorithm' | null"
-              },
-              "privacy": "private",
-              "default": "null"
-            },
-            {
-              "kind": "field",
-              "name": "_animationController",
-              "type": {
-                "text": "AbortController | null"
-              },
-              "privacy": "private",
-              "default": "null"
-            },
-            {
-              "kind": "field",
-              "name": "_stepStartTime",
-              "type": {
-                "text": "number | null"
-              },
-              "privacy": "private",
-              "default": "null"
-            },
-            {
-              "kind": "field",
-              "name": "_stepDuration",
-              "type": {
-                "text": "number"
-              },
-              "privacy": "private",
               "readonly": true,
-              "default": "2000"
+              "default": "{ nodeCount: computed(() => this.#graphValue.get().nodes.length), edges: computed(() => edgeTable(this.#graphValue.get())) }"
+            },
+            {
+              "kind": "field",
+              "name": "#data",
+              "privacy": "private",
+              "description": "The authored JSON data block: graph, animation and permissions."
+            },
+            {
+              "kind": "field",
+              "name": "access",
+              "type": {
+                "text": "PermissionsType"
+              },
+              "description": "Controls which features are available to the user (editing, algorithm execution, animation playback)."
             },
             {
               "kind": "field",
@@ -144,6 +117,85 @@
               "default": "null",
               "attribute": "targetNode",
               "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "animation",
+              "type": {
+                "text": "AnimationStep[]"
+              },
+              "default": "[]",
+              "description": "Array of animation steps. Each step can color nodes/links, set node subtexts, or reset previous steps."
+            },
+            {
+              "kind": "field",
+              "name": "graph",
+              "type": {
+                "text": "iGraph"
+              },
+              "privacy": "public",
+              "description": "The graph data, containing labeled nodes and weighted links."
+            },
+            {
+              "kind": "field",
+              "name": "permissionsDialogOpen",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "_graph",
+              "type": {
+                "text": "iGraph"
+              },
+              "privacy": "private",
+              "default": "{ nodes: [], links: [] }"
+            },
+            {
+              "kind": "field",
+              "name": "visual",
+              "type": {
+                "text": "Visual"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "graphView",
+              "type": {
+                "text": "Graph | null"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "animationStatus",
+              "type": {
+                "text": "AnimationStatusType"
+              },
+              "privacy": "private",
+              "default": "'STOP'"
+            },
+            {
+              "kind": "field",
+              "name": "animationPosition",
+              "type": {
+                "text": "number"
+              },
+              "privacy": "private",
+              "default": "0"
+            },
+            {
+              "kind": "field",
+              "name": "mode",
+              "type": {
+                "text": "'edit' | 'animation' | 'algorithm' | null"
+              },
+              "privacy": "private",
+              "default": "null"
             },
             {
               "kind": "field",
@@ -183,21 +235,11 @@
             },
             {
               "kind": "field",
-              "name": "edgeSource",
-              "type": {
-                "text": "number | null"
-              },
-              "privacy": "private",
-              "default": "null"
-            },
-            {
-              "kind": "field",
               "name": "nodeAnimationColor",
               "type": {
                 "text": "string"
               },
-              "privacy": "private",
-              "default": "SHOELACE.color.green[500]"
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -205,8 +247,7 @@
               "type": {
                 "text": "string"
               },
-              "privacy": "private",
-              "default": "SHOELACE.color.green[500]"
+              "privacy": "private"
             },
             {
               "kind": "field",
@@ -219,14 +260,99 @@
             },
             {
               "kind": "field",
-              "name": "permissions",
+              "name": "_animationController",
               "type": {
-                "text": "PermissionsType"
+                "text": "AbortController | null"
               },
-              "default": "{ general: { play: true, playbackRate: true, }, edit: { enabled: true, addNode: true, addEdge: true, editNode: true, editEdge: true, delNode: true, delEdge: true, }, algorithm: { enabled: true, executable: algorithms.map((a) => a.id), }, animation: { enabled: true, editStep: true, delStep: true, }, }",
-              "description": "Controls which features are available to the user (editing, algorithm execution, animation playback).",
-              "attribute": "permissions",
-              "reflects": true
+              "privacy": "private",
+              "default": "null"
+            },
+            {
+              "kind": "field",
+              "name": "_stepStartTime",
+              "type": {
+                "text": "number | null"
+              },
+              "privacy": "private",
+              "default": "null"
+            },
+            {
+              "kind": "field",
+              "name": "_visualBeforeStep",
+              "type": {
+                "text": "Visual"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_stepDuration",
+              "type": {
+                "text": "number"
+              },
+              "privacy": "private",
+              "readonly": true,
+              "default": "2000"
+            },
+            {
+              "kind": "field",
+              "name": "#abort",
+              "privacy": "private",
+              "type": {
+                "text": "AbortController | null"
+              },
+              "default": "null"
+            },
+            {
+              "kind": "method",
+              "name": "pick",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "pick",
+                  "type": {
+                    "text": "{ type: 'NODE'; id: number } | { type: 'LINK'; source: number; target: number } | { type: 'NONE' }"
+                  }
+                }
+              ],
+              "description": "Applies a click on the graph: select, add an edge, or toggle the node or link in the step being edited."
+            },
+            {
+              "kind": "method",
+              "name": "connect",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "source",
+                  "type": {
+                    "text": "number"
+                  }
+                },
+                {
+                  "name": "target",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ],
+              "description": "Adds the link that the reader drew and selects it; the mode ends with it."
+            },
+            {
+              "kind": "method",
+              "name": "editStep",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "edit",
+                  "type": {
+                    "text": "(step: AnimationStep) => AnimationStep | null"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "configurePermissions"
             },
             {
               "kind": "method",
@@ -242,34 +368,64 @@
                   "type": {
                     "text": "AnimationStep"
                   }
-                },
-                {
-                  "name": "signal",
-                  "optional": true,
-                  "type": {
-                    "text": "AbortSignal"
-                  }
                 }
               ],
               "description": "Applies a single animation step to the graph immediately."
             },
             {
               "kind": "method",
-              "name": "previewStep",
-              "parameters": [
-                {
-                  "name": "step",
-                  "type": {
-                    "text": "AnimationStep"
-                  }
-                }
-              ],
-              "description": "Shows the final state of a single animation step without playing the transition animation. Used when editing steps."
+              "name": "resetGraph",
+              "description": "Lays the nodes out again from scratch."
             },
             {
               "kind": "method",
-              "name": "resetGraph",
-              "description": "Resets the graph SVG layout by briefly clearing and restoring the graph data, triggering a re-render."
+              "name": "clearSelection",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "endEdge",
+                  "default": "true"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "executeAlgorithm",
+              "description": "Runs the currently selected algorithm on the graph and starts playing the resulting animation."
+            },
+            {
+              "kind": "method",
+              "name": "startAnimation",
+              "privacy": "public",
+              "description": "Starts or resumes the animation playback from the current position."
+            },
+            {
+              "kind": "method",
+              "name": "pauseAnimation",
+              "privacy": "private",
+              "description": "Pauses the animation. If the current step just started, it rewinds to replay it on resume."
+            },
+            {
+              "kind": "method",
+              "name": "stopAlgorithm",
+              "privacy": "private",
+              "description": "Stops the animation, resets the position to the start, and clears all visual highlights."
+            },
+            {
+              "kind": "method",
+              "name": "getDefaultAlgorithm",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "string | null"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_handleDocumentOutside",
+              "privacy": "private",
+              "readonly": true
             },
             {
               "kind": "method",
@@ -376,108 +532,9 @@
                   }
                 }
               ]
-            },
-            {
-              "kind": "method",
-              "name": "clearSelection",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "containsDeep",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "boolean"
-                }
-              },
-              "parameters": [
-                {
-                  "name": "node",
-                  "type": {
-                    "text": "Node | null"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "field",
-              "name": "_handleDocumentOutside",
-              "privacy": "private",
-              "readonly": true
-            },
-            {
-              "kind": "method",
-              "name": "executeAlgorithm",
-              "description": "Runs the currently selected algorithm on the graph and starts playing the resulting animation."
-            },
-            {
-              "kind": "method",
-              "name": "startAnimation",
-              "privacy": "public",
-              "description": "Starts or resumes the animation playback from the current position."
-            },
-            {
-              "kind": "method",
-              "name": "pauseAnimation",
-              "privacy": "private",
-              "description": "Pauses the animation. If the current step just started, it rewinds to replay it on resume."
-            },
-            {
-              "kind": "method",
-              "name": "stopAlgorithm",
-              "privacy": "private",
-              "description": "Stops the animation, resets the position to the start, and clears all visual highlights."
-            },
-            {
-              "kind": "method",
-              "name": "getDefaultNode",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "number | null"
-                }
-              }
-            },
-            {
-              "kind": "method",
-              "name": "getDefaultTargetNode",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "number | null"
-                }
-              }
-            },
-            {
-              "kind": "method",
-              "name": "getDefaultAlgorithm",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "string | null"
-                }
-              }
             }
           ],
           "attributes": [
-            {
-              "name": "graph",
-              "type": {
-                "text": "iGraph"
-              },
-              "description": "The graph data, containing labeled nodes and weighted links.",
-              "fieldName": "graph"
-            },
-            {
-              "name": "animation",
-              "type": {
-                "text": "AnimationStep[]"
-              },
-              "default": "[]",
-              "description": "Array of animation steps. Each step can color nodes/links, set node subtexts, or reset previous steps.",
-              "fieldName": "animation"
-            },
             {
               "name": "algorithm",
               "type": {
@@ -501,15 +558,6 @@
               },
               "default": "null",
               "fieldName": "targetNode"
-            },
-            {
-              "name": "permissions",
-              "type": {
-                "text": "PermissionsType"
-              },
-              "default": "{ general: { play: true, playbackRate: true, }, edit: { enabled: true, addNode: true, addEdge: true, editNode: true, editEdge: true, delNode: true, delEdge: true, }, algorithm: { enabled: true, executable: algorithms.map((a) => a.id), }, animation: { enabled: true, editStep: true, delStep: true, }, }",
-              "description": "Controls which features are available to the user (editing, algorithm execution, animation playback).",
-              "fieldName": "permissions"
             }
           ],
           "superclass": {
@@ -517,18 +565,16 @@
             "package": "@webwriter/lit"
           },
           "tagName": "ww-graph",
-          "customElement": true,
-          "modulePath": "ww-graph.ts",
-          "definitionPath": "ww-graph.ts"
+          "customElement": true
         }
       ],
       "exports": [
         {
           "kind": "js",
-          "name": "default",
+          "name": "WwGraph",
           "declaration": {
             "name": "WwGraph",
-            "module": "ww-graph.ts"
+            "module": "src/widgets/ww-graph.ts"
           }
         },
         {
@@ -536,7 +582,7 @@
           "name": "ww-graph",
           "declaration": {
             "name": "WwGraph",
-            "module": "ww-graph.ts"
+            "module": "src/widgets/ww-graph.ts"
           }
         }
       ]

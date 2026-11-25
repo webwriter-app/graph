@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Algorithmes exécutables`,
 's0868f4ad15f32174': `Mettre l'animation en pause`,
 's08c6c27f5b8452b1': `Ajouter le sous-texte du nœud`,
+'s0d971b1f7aa807a3': `Autorisations du graphe`,
 's0f136ff2c086b760': `réinitialiser`,
 's109991b0423f1512': `Violette`,
 's11337fae701e3905': `Exécuter l'algorithme sélectionné`,
@@ -34,8 +35,10 @@
 's42929dd473f85b2d': `sous-textes des nœuds`,
 's429f70243017494b': `Afficher l'onglet « Modifier »`,
 's42b445d0b8ef5e0c': `Afficher l'onglet « Algorithme »`,
+'s4394e7c4d91760ef': `Configurer les autorisations du graphe`,
 's479a2b6569da2fd0': `Appliquer un algorithme au graphe`,
 's4ddda90d75c39e3f': `Supprimer les étapes d'animation`,
+'s4f238e9a505d8b67': `Les poids doivent être des nombres positifs ou nuls.`,
 's5222ccfc3ee461f9': `Ajouter une animation de réinitialisation`,
 's597d652edb302c38': `couleurs des bords`,
 's5a4633ffef40fc2b': `Sélectionnez un nœud ou une arête pour afficher les détails.`,
@@ -53,10 +56,12 @@
 's81446419d1cc2026': `Lancer l'animation`,
 's8b1360ffe490828f': `Cliquez sur deux nœuds pour ajouter une arête entre eux.`,
 's8b2ae093ad5cd15c': `Ajoutez des nœuds et des arêtes à l'aide de la barre d'outils en mode édition.`,
+'s8eaedca5792cc640': `Ce graphe est vide.`,
 's8f450dd0b7bdb8cb': `Orange`,
 's91bd3118111af6ef': `couleurs des nœuds`,
 's93e1d90707d925b1': `Ajouter des nœuds`,
 's965e11e1dbf9b906': `Choisissez une couleur`,
+'s9b08fb82d7ba2cbf': `Le tableau doit être une liste d’arêtes (source, cible, poids) ou une matrice d’adjacence carrée.`,
 's9b3c2f9cc32d565a': `Cyan`,
 's9ff1de19feac1b7c': `Rouge`,
 'sa38c309ccd6a88f9': `Arbre de spanning (algorithme de Borůvka)`,
@@ -82,9 +87,10 @@
 'se9beed19c6a38fed': `Rose`,
 'seb1e51fbf69345e1': `Afficher l'onglet « Animation »`,
 'secf3d3a7c1693e2d': `Bleu`,
+'sed9b451f9d66eaa7': `Le fichier est vide.`,
 'sf25d9576a8a29524': `Nœud cible`,
 'sf312d3743ff8d4b3': `Ajoutez des nœuds et des arêtes à l'aide de la barre d'outils située en haut.`,
 'sf3659df71f61b3ec': `Supprimer l'étape`,
+'sf686293760e78931': `Le fichier n’est pas un graphe DOT valide.`,
 'sfeb99afb5a2e03ca': `Modifier le graphique`,
     };
-  

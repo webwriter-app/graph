@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Toteutettavat algoritmit`,
 's0868f4ad15f32174': `Keskeytä animaatio`,
 's08c6c27f5b8452b1': `Lisää solmun alaotsikko`,
+'s0d971b1f7aa807a3': `Graafin käyttöoikeudet`,
 's0f136ff2c086b760': `nollaa`,
 's109991b0423f1512': `Violetti`,
 's11337fae701e3905': `Suorita valittu algoritmi`,
@@ -34,8 +35,10 @@
 's42929dd473f85b2d': `solmun alaotsikot`,
 's429f70243017494b': `Näytä "Muokkaa"-välilehti`,
 's42b445d0b8ef5e0c': `Näytä ”Algoritmi”-välilehti`,
+'s4394e7c4d91760ef': `Määritä graafin käyttöoikeudet`,
 's479a2b6569da2fd0': `Suorita algoritmi graafilla`,
 's4ddda90d75c39e3f': `Poista animaatiovaiheet`,
+'s4f238e9a505d8b67': `Painojen on oltava epänegatiivisia lukuja.`,
 's5222ccfc3ee461f9': `Lisää palautusanimaatio`,
 's597d652edb302c38': `reunojen värit`,
 's5a4633ffef40fc2b': `Valitse solmu tai reuna nähdäksesi tiedot.`,
@@ -53,10 +56,12 @@
 's81446419d1cc2026': `Toista animaatio`,
 's8b1360ffe490828f': `Napsauta kahta solmua lisätäksesi niiden välille reunan.`,
 's8b2ae093ad5cd15c': `Lisää solmuja ja reunoja muokkaustilassa työkalurivin avulla.`,
+'s8eaedca5792cc640': `Tämä kaavio on tyhjä.`,
 's8f450dd0b7bdb8cb': `Oranssi`,
 's91bd3118111af6ef': `solmujen värit`,
 's93e1d90707d925b1': `Lisää solmuja`,
 's965e11e1dbf9b906': `Valitse väri`,
+'s9b08fb82d7ba2cbf': `Taulukon on oltava särmäluettelo (lähde, kohde, paino) tai neliömäinen vierekkäisyysmatriisi.`,
 's9b3c2f9cc32d565a': `Syaani`,
 's9ff1de19feac1b7c': `Punainen`,
 'sa38c309ccd6a88f9': `Spanning Tree (Borůvkan algoritmi)`,
@@ -82,9 +87,10 @@
 'se9beed19c6a38fed': `Vaaleanpunainen`,
 'seb1e51fbf69345e1': `Näytä "Animaatio"-välilehti`,
 'secf3d3a7c1693e2d': `Sininen`,
+'sed9b451f9d66eaa7': `Tiedosto on tyhjä.`,
 'sf25d9576a8a29524': `Kohdesolmu`,
 'sf312d3743ff8d4b3': `Lisää solmuja ja reunoja yläreunan työkaluriviltä.`,
 'sf3659df71f61b3ec': `Poista vaihe`,
+'sf686293760e78931': `Tiedosto ei ole kelvollinen DOT-kaavio.`,
 'sfeb99afb5a2e03ca': `Muokkaa kaaviota`,
     };
-  

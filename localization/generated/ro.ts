@@ -2,8 +2,8 @@
     // Do not modify this file by hand!
     // Re-generate this file by running lit-localize
 
-    
-    
+
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -15,6 +15,7 @@
 's07ada4fedbfa9525': `Algoritmi executabili`,
 's0868f4ad15f32174': `Oprește animația`,
 's08c6c27f5b8452b1': `Adăugare subtext nod`,
+'s0d971b1f7aa807a3': `Permisiuni graf`,
 's0f136ff2c086b760': `resetare`,
 's109991b0423f1512': `Violet`,
 's11337fae701e3905': `Execută algoritmul selectat`,
@@ -34,8 +35,10 @@
 's42929dd473f85b2d': `subtextele nodurilor`,
 's429f70243017494b': `Afișează fila „Editare”`,
 's42b445d0b8ef5e0c': `Afișează fila „Algoritm”`,
+'s4394e7c4d91760ef': `Configurează permisiunile grafului`,
 's479a2b6569da2fd0': `Execută un algoritm pe graf`,
 's4ddda90d75c39e3f': `Șterge pașii animației`,
+'s4f238e9a505d8b67': `Ponderile trebuie să fie numere nenegative.`,
 's5222ccfc3ee461f9': `Adaugă animație de resetare`,
 's597d652edb302c38': `culorile marginilor`,
 's5a4633ffef40fc2b': `Selectați un nod sau o muchie pentru a vizualiza detaliile.`,
@@ -53,10 +56,12 @@
 's81446419d1cc2026': `Redă animația`,
 's8b1360ffe490828f': `Faceți clic pe două noduri pentru a adăuga o muchie între ele.`,
 's8b2ae093ad5cd15c': `Adăugați noduri și muchii folosind bara de instrumente din modul de editare.`,
+'s8eaedca5792cc640': `Acest graf este gol.`,
 's8f450dd0b7bdb8cb': `Portocaliu`,
 's91bd3118111af6ef': `culorile nodurilor`,
 's93e1d90707d925b1': `Adăugați noduri`,
 's965e11e1dbf9b906': `Alegeți culoarea`,
+'s9b08fb82d7ba2cbf': `Tabelul trebuie să fie o listă de muchii (sursă, țintă, pondere) sau o matrice de adiacență pătrată.`,
 's9b3c2f9cc32d565a': `Cian`,
 's9ff1de19feac1b7c': `Roșu`,
 'sa38c309ccd6a88f9': `Spanning Tree (Algoritmul lui Borůvka)`,
@@ -82,9 +87,10 @@
 'se9beed19c6a38fed': `Roz`,
 'seb1e51fbf69345e1': `Afișează fila „Animație”`,
 'secf3d3a7c1693e2d': `Albastru`,
+'sed9b451f9d66eaa7': `Fișierul este gol.`,
 'sf25d9576a8a29524': `Nod țintă`,
 'sf312d3743ff8d4b3': `Adăugați noduri și muchii folosind bara de instrumente de mai sus.`,
 'sf3659df71f61b3ec': `Șterge pasul`,
+'sf686293760e78931': `Fișierul nu este un graf DOT valid.`,
 'sfeb99afb5a2e03ca': `Editează graficul`,
     };
-  
