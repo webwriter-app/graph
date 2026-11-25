@@ -565,9 +565,7 @@
             "package": "@webwriter/lit"
           },
           "tagName": "ww-graph",
-          "customElement": true,
-          "modulePath": "src/widgets/ww-graph.ts",
-          "definitionPath": "src/widgets/ww-graph.ts"
+          "customElement": true
         }
       ],
       "exports": [

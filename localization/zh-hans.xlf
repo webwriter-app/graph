@@ -1,7 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd" version="1.2">
-  <file original="lit-localize-inputs" datatype="plaintext" source-language="en" target-language="zh-hans">
+<?xml version='1.0' encoding='UTF-8'?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file target-language="zh-Hans" source-language="en" original="lit-localize-inputs" datatype="plaintext">
     <body>
+      <trans-unit id="s405fdfa767fb6359">
+        <source>Breadth First Search</source>
+        <target>广度优先搜索</target>
+      </trans-unit>
+      <trans-unit id="sb202f05c9211ece8">
+        <source>Depth First Search</source>
+        <target>深度优先搜索</target>
+      </trans-unit>
+      <trans-unit id="s5ed298f51c2bbc54">
+        <source>Dijkstra's Algorithm</source>
+        <target>迪杰斯特拉算法</target>
+      </trans-unit>
+      <trans-unit id="sa38c309ccd6a88f9">
+        <source>Spanning Tree (Borůvka's Algorithm)</source>
+        <target>生成树（博鲁夫卡算法）</target>
+      </trans-unit>
+      <trans-unit id="s6a01e45e773c6162">
+        <source>Cycle Detection</source>
+        <target>周期检测</target>
+      </trans-unit>
+      <trans-unit id="s1eac2cbaf3e3603e">
+        <source>Graph Coloring (Brute Force)</source>
+        <target>图着色（暴力法）</target>
+      </trans-unit>
       <trans-unit id="se8dca0132c66ae03">
         <source>Permissions</source>
         <target>权限</target>
@@ -30,6 +54,10 @@
         <source>Add node animation</source>
         <target>添加节点动画</target>
       </trans-unit>
+      <trans-unit id="s3becc96710a224ab">
+        <source>Add edge animation</source>
+        <target>添加边缘动画</target>
+      </trans-unit>
       <trans-unit id="s5222ccfc3ee461f9">
         <source>Add reset animation</source>
         <target>添加重置动画</target>
@@ -46,13 +74,45 @@
         <source>Select a node to edit its subtext.</source>
         <target>选择一个节点以编辑其子文本。</target>
       </trans-unit>
+      <trans-unit id="s030235bae1983f32">
+        <source>Change subtext:</source>
+        <target>更改副标题：</target>
+      </trans-unit>
+      <trans-unit id="s0f136ff2c086b760">
+        <source>reset</source>
+        <target>重置</target>
+      </trans-unit>
+      <trans-unit id="s91bd3118111af6ef">
+        <source>node colors</source>
+        <target>节点颜色</target>
+      </trans-unit>
+      <trans-unit id="s597d652edb302c38">
+        <source>edge colors</source>
+        <target>边框颜色</target>
+      </trans-unit>
+      <trans-unit id="s42929dd473f85b2d">
+        <source>node subtexts</source>
+        <target>节点子文本</target>
+      </trans-unit>
+      <trans-unit id="sf3659df71f61b3ec">
+        <source>Delete step</source>
+        <target>删除步骤</target>
+      </trans-unit>
       <trans-unit id="s8b1360ffe490828f">
         <source>Click on two nodes to add an edge between them.</source>
         <target>点击两个节点，即可在它们之间添加一条边。</target>
       </trans-unit>
+      <trans-unit id="sbb09e02e1b0afeef">
+        <source>Node label</source>
+        <target>节点标签</target>
+      </trans-unit>
       <trans-unit id="sdc673e73b5c13aea">
         <source>Delete</source>
         <target>删除</target>
+      </trans-unit>
+      <trans-unit id="s22a7cbddf50e8584">
+        <source>Edge weight</source>
+        <target>边权重</target>
       </trans-unit>
       <trans-unit id="s5a4633ffef40fc2b">
         <source>Select a node or an edge to view details.</source>
@@ -70,13 +130,29 @@
         <source>Create or customize the algorithm animation</source>
         <target>创建或自定义算法动画</target>
       </trans-unit>
+      <trans-unit id="se63c78875f5b2178">
+        <source>Add node</source>
+        <target>添加节点</target>
+      </trans-unit>
       <trans-unit id="s02c6eb5adcf9b685">
         <source>Add a node to the graph</source>
         <target>向图中添加一个节点</target>
       </trans-unit>
+      <trans-unit id="sceb35fbe10efb7a1">
+        <source>Add edge</source>
+        <target>添加边框</target>
+      </trans-unit>
       <trans-unit id="sbe6971c94588088a">
         <source>Add an edge to the graph</source>
         <target>在图中添加一条边</target>
+      </trans-unit>
+      <trans-unit id="sc4fdeccf14be5378">
+        <source>Execute</source>
+        <target>执行</target>
+      </trans-unit>
+      <trans-unit id="scd105819b5a10243">
+        <source>Play</source>
+        <target>播放</target>
       </trans-unit>
       <trans-unit id="s11337fae701e3905">
         <source>Execute the selected algorithm</source>
@@ -86,9 +162,17 @@
         <source>Play the animation</source>
         <target>播放动画</target>
       </trans-unit>
+      <trans-unit id="s061cc20e3432dead">
+        <source>Pause</source>
+        <target>暂停</target>
+      </trans-unit>
       <trans-unit id="s0868f4ad15f32174">
         <source>Pause the animation</source>
         <target>暂停动画</target>
+      </trans-unit>
+      <trans-unit id="sd9ad53251f2330a5">
+        <source>Stop</source>
+        <target>停止</target>
       </trans-unit>
       <trans-unit id="s3aff6f35c46b2d1c">
         <source>Stop the animation</source>
@@ -218,89 +302,9 @@
         <source>Delete animation steps</source>
         <target>删除动画步骤</target>
       </trans-unit>
-      <trans-unit id="s405fdfa767fb6359">
-        <source>Breadth First Search</source>
-        <target>广度优先搜索</target>
-      </trans-unit>
-      <trans-unit id="sb202f05c9211ece8">
-        <source>Depth First Search</source>
-        <target>深度优先搜索</target>
-      </trans-unit>
-      <trans-unit id="s5ed298f51c2bbc54">
-        <source>Dijkstra's Algorithm</source>
-        <target>迪杰斯特拉算法</target>
-      </trans-unit>
-      <trans-unit id="sa38c309ccd6a88f9">
-        <source>Spanning Tree (Borůvka's Algorithm)</source>
-        <target>生成树（博鲁夫卡算法）</target>
-      </trans-unit>
-      <trans-unit id="s6a01e45e773c6162">
-        <source>Cycle Detection</source>
-        <target>周期检测</target>
-      </trans-unit>
-      <trans-unit id="s1eac2cbaf3e3603e">
-        <source>Graph Coloring (Brute Force)</source>
-        <target>图着色（暴力法）</target>
-      </trans-unit>
-      <trans-unit id="s3becc96710a224ab">
-        <source>Add edge animation</source>
-        <target>添加边缘动画</target>
-      </trans-unit>
-      <trans-unit id="s0f136ff2c086b760">
-        <source>reset</source>
-        <target>重置</target>
-      </trans-unit>
-      <trans-unit id="s91bd3118111af6ef">
-        <source>node colors</source>
-        <target>节点颜色</target>
-      </trans-unit>
-      <trans-unit id="s42929dd473f85b2d">
-        <source>node subtexts</source>
-        <target>节点子文本</target>
-      </trans-unit>
-      <trans-unit id="sf3659df71f61b3ec">
-        <source>Delete step</source>
-        <target>删除步骤</target>
-      </trans-unit>
-      <trans-unit id="sbb09e02e1b0afeef">
-        <source>Node label</source>
-        <target>节点标签</target>
-      </trans-unit>
-      <trans-unit id="s22a7cbddf50e8584">
-        <source>Edge weight</source>
-        <target>边权重</target>
-      </trans-unit>
-      <trans-unit id="se63c78875f5b2178">
-        <source>Add node</source>
-        <target>添加节点</target>
-      </trans-unit>
-      <trans-unit id="sceb35fbe10efb7a1">
-        <source>Add edge</source>
-        <target>添加边框</target>
-      </trans-unit>
-      <trans-unit id="sc4fdeccf14be5378">
-        <source>Execute</source>
-        <target>执行</target>
-      </trans-unit>
-      <trans-unit id="scd105819b5a10243">
-        <source>Play</source>
-        <target>播放</target>
-      </trans-unit>
-      <trans-unit id="s061cc20e3432dead">
-        <source>Pause</source>
-        <target>暂停</target>
-      </trans-unit>
-      <trans-unit id="sd9ad53251f2330a5">
-        <source>Stop</source>
-        <target>停止</target>
-      </trans-unit>
-      <trans-unit id="s597d652edb302c38">
-        <source>edge colors</source>
-        <target>边框颜色</target>
-      </trans-unit>
-      <trans-unit id="s030235bae1983f32">
-        <source>Change subtext:</source>
-        <target>更改副标题：</target>
+      <trans-unit id="s4394e7c4d91760ef">
+        <source>Configure graph permissions</source>
+        <target>配置图的权限</target>
       </trans-unit>
       <trans-unit id="sf312d3743ff8d4b3">
         <source>Add nodes and edges using the toolbar above.</source>
@@ -310,12 +314,30 @@
         <source>Add nodes and edges using the toolbar in edit mode.</source>
         <target>在编辑模式下，使用工具栏添加节点和边。</target>
       </trans-unit>
-    <trans-unit id="s4394e7c4d91760ef">
-  <source>Configure graph permissions</source>
-<target>配置图的权限</target></trans-unit>
-<trans-unit id="s0d971b1f7aa807a3">
-  <source>Graph permissions</source>
-<target>图的权限</target></trans-unit>
-</body>
+      <trans-unit id="s0d971b1f7aa807a3">
+        <source>Graph permissions</source>
+        <target>图的权限</target>
+      </trans-unit>
+      <trans-unit id="sed9b451f9d66eaa7">
+        <source>The file is empty.</source>
+        <target>文件为空。</target>
+      </trans-unit>
+      <trans-unit id="sf686293760e78931">
+        <source>The file is not a valid DOT graph.</source>
+        <target>该文件不是有效的 DOT 图。</target>
+      </trans-unit>
+      <trans-unit id="s9b08fb82d7ba2cbf">
+        <source>The table must be an edge list (source, target, weight) or a square adjacency matrix.</source>
+        <target>该表必须是边列表（源、目标、权重）或方形邻接矩阵。</target>
+      </trans-unit>
+      <trans-unit id="s4f238e9a505d8b67">
+        <source>Weights must be numbers that are not negative.</source>
+        <target>权重必须是非负数。</target>
+      </trans-unit>
+      <trans-unit id="s8eaedca5792cc640">
+        <source>This graph is empty.</source>
+        <target>此图为空。</target>
+      </trans-unit>
+    </body>
   </file>
 </xliff>
