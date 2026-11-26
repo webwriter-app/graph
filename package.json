@@ -1,6 +1,6 @@
 {
   "name": "@webwriter/graph",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Visualize graphs, simulate common graph algorithms (Kruskal, Dijkstra, BFS, DFS, etc.), and record your own graph animations.",
   "keywords": [
     "webwriter-widget",
@@ -167,6 +167,7 @@
     "./snippets/dijkstra.html": "./snippets/dijkstra.html",
     "./snippets/kruskal.html": "./snippets/kruskal.html",
     "./icon": "./icon.svg",
+    "./preview": "./assets/preview.mp4",
     "./custom-elements.json": "./custom-elements.json",
     "./editing-config.json": "./editing-config.json",
     "./tests/document.*": {
