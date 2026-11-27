@@ -1,5 +1,5 @@
-# Graph (`@webwriter/graph@2.1.1`)
-[License: MIT](LICENSE) | Version: 2.1.1
+# Graph (`@webwriter/graph@2.1.2`)
+[License: MIT](LICENSE) | Version: 2.1.2
 
 Visualize graphs, simulate common graph algorithms (Kruskal, Dijkstra, BFS, DFS, etc.), and record your own graph animations.
 
